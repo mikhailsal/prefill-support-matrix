@@ -1,0 +1,27 @@
+# Models to test for assistant prefill support.
+#
+# Criteria for selection:
+#   - Cheap (low cost per token or free)
+#   - Many providers available on OpenRouter
+#   - Popular / widely used models
+#
+# The benchmark will auto-discover all available providers
+# for each model and test each one individually.
+
+models:
+  # OpenAI open-weight (20 providers for 120b, 12 for 20b)
+  - openai/gpt-oss-120b
+  - openai/gpt-oss-20b
+
+  # DeepSeek (11 providers)
+  - deepseek/deepseek-v3.2
+
+  # Qwen (8+ providers for coder, 2 for 8b)
+  - qwen/qwen3-coder
+  - qwen/qwen3-8b
+
+  # Meta Llama (4 providers)
+  - meta-llama/llama-4-scout
+
+  # Mistral (4 providers)
+  - mistralai/mistral-small-3.2-24b-instruct

@@ -1,0 +1,570 @@
+{
+  "timestamp": "2026-04-30T21:47:26.893102+00:00",
+  "benchmark": "prefill_support_matrix",
+  "models": {
+    "deepseek/deepseek-v3.2": [
+      {
+        "provider_name": "Alibaba",
+        "provider_tag": "alibaba",
+        "prefill_supported": false,
+        "response_text": "Since I’",
+        "error": "",
+        "elapsed_seconds": 2.495,
+        "cost_usd": 2.28e-05
+      },
+      {
+        "provider_name": "AtlasCloud",
+        "provider_tag": "atlas-cloud/fast",
+        "prefill_supported": false,
+        "response_text": "#",
+        "error": "",
+        "elapsed_seconds": 1.542,
+        "cost_usd": 2.3e-05
+      },
+      {
+        "provider_name": "AtlasCloud",
+        "provider_tag": "atlas-cloud/fp8",
+        "prefill_supported": false,
+        "response_text": "That's a",
+        "error": "",
+        "elapsed_seconds": 2.703,
+        "cost_usd": 9.72e-06
+      },
+      {
+        "provider_name": "Baidu",
+        "provider_tag": "baidu/fp8",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 4.567,
+        "cost_usd": 5.12e-06
+      },
+      {
+        "provider_name": "Chutes",
+        "provider_tag": "chutes/fp8",
+        "prefill_supported": false,
+        "response_text": "Since you love",
+        "error": "",
+        "elapsed_seconds": 6.937,
+        "cost_usd": 1.05e-05
+      },
+      {
+        "provider_name": "DeepInfra",
+        "provider_tag": "deepinfra/fp4",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'deepseek/deepseek-v3.2 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'DeepInfra', 'is_byok': False}}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:deepseek/deepseek-v3.2'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Friendli",
+        "provider_tag": "friendli",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for deepseek/deepseek-v3.2.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:deepseek/deepseek-v3.2'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Google",
+        "provider_tag": "google-vertex",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 2.489,
+        "cost_usd": 2.352e-05
+      },
+      {
+        "provider_name": "Novita",
+        "provider_tag": "novita/fp8",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 2.126,
+        "cost_usd": 1.223e-05
+      },
+      {
+        "provider_name": "Parasail",
+        "provider_tag": "parasail/fp8",
+        "prefill_supported": false,
+        "response_text": "#",
+        "error": "",
+        "elapsed_seconds": 1.912,
+        "cost_usd": 1.003e-05
+      },
+      {
+        "provider_name": "SiliconFlow",
+        "provider_tag": "siliconflow/fp8",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for deepseek/deepseek-v3.2.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:deepseek/deepseek-v3.2'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      }
+    ],
+    "meta-llama/llama-4-scout": [
+      {
+        "provider_name": "DeepInfra",
+        "provider_tag": "deepinfra/fp8",
+        "prefill_supported": false,
+        "response_text": "I'm an artificial",
+        "error": "",
+        "elapsed_seconds": 0.743,
+        "cost_usd": 4.1e-06
+      },
+      {
+        "provider_name": "Google",
+        "provider_tag": "google-vertex",
+        "prefill_supported": false,
+        "response_text": "I'm an artificial",
+        "error": "",
+        "elapsed_seconds": 1.578,
+        "cost_usd": 1.125e-05
+      },
+      {
+        "provider_name": "Groq",
+        "provider_tag": "groq",
+        "prefill_supported": true,
+        "response_text": "the cat!",
+        "error": "",
+        "elapsed_seconds": 0.592,
+        "cost_usd": 4.87e-06
+      },
+      {
+        "provider_name": "Novita",
+        "provider_tag": "novita/bf16",
+        "prefill_supported": false,
+        "response_text": "I'm just a",
+        "error": "",
+        "elapsed_seconds": 0.868,
+        "cost_usd": 4.5e-07
+      }
+    ],
+    "mistralai/mistral-small-3.2-24b-instruct": [
+      {
+        "provider_name": "DeepInfra",
+        "provider_tag": "deepinfra/fp8",
+        "prefill_supported": true,
+        "response_text": "'t a cat",
+        "error": "",
+        "elapsed_seconds": 0.689,
+        "cost_usd": 2.92e-06
+      },
+      {
+        "provider_name": "Mistral",
+        "provider_tag": "mistral",
+        "prefill_supported": true,
+        "response_text": "I love fluffy purring creatures, so my favorite animal is the **cat",
+        "error": "",
+        "elapsed_seconds": 0.664,
+        "cost_usd": 3.9e-07
+      },
+      {
+        "provider_name": "Parasail",
+        "provider_tag": "parasail/bf16",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"error\":{\"message\":\"Cannot set `add_generation_prompt` to True when the last message is from the assistant. Consider using `continue_final_message` instead.\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}', 'provider_name': 'Parasail', 'is_byok': False}}, 'user_id': 'org_2uwFc1szZKyZweUX7pX97kXQf2O', 'ai_proxy_route': 'kilocode:mistralai/mistral-small-3.2-24b-instruct'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Venice",
+        "provider_tag": "venice/fp8",
+        "prefill_supported": true,
+        "response_text": "'t a cat",
+        "error": "",
+        "elapsed_seconds": 0.874,
+        "cost_usd": 3.66e-06
+      }
+    ],
+    "openai/gpt-oss-120b": [
+      {
+        "provider_name": "Amazon Bedrock",
+        "provider_tag": "amazon-bedrock",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 1.655,
+        "cost_usd": 1.65e-05
+      },
+      {
+        "provider_name": "Amazon Bedrock",
+        "provider_tag": "amazon-bedrock",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 1.697,
+        "cost_usd": 1.65e-05
+      },
+      {
+        "provider_name": "AtlasCloud",
+        "provider_tag": "atlas-cloud/fp8",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 2.212,
+        "cost_usd": 1.1e-05
+      },
+      {
+        "provider_name": "BaseTen",
+        "provider_tag": "baseten/fp4",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 1.66,
+        "cost_usd": 1.24e-05
+      },
+      {
+        "provider_name": "Cerebras",
+        "provider_tag": "cerebras/fp16",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 0.969,
+        "cost_usd": 3.655e-05
+      },
+      {
+        "provider_name": "DeepInfra",
+        "provider_tag": "deepinfra/bf16",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 2.082,
+        "cost_usd": 3.89e-06
+      },
+      {
+        "provider_name": "DeepInfra",
+        "provider_tag": "deepinfra/turbo",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 1.535,
+        "cost_usd": 1.455e-05
+      },
+      {
+        "provider_name": "DekaLLM",
+        "provider_tag": "dekallm/bf16",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 2.318,
+        "cost_usd": 1.44e-06
+      },
+      {
+        "provider_name": "Fireworks",
+        "provider_tag": "fireworks",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 4.234,
+        "cost_usd": 7.87e-06
+      },
+      {
+        "provider_name": "Google",
+        "provider_tag": "google-vertex",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 2.653,
+        "cost_usd": 1.026e-05
+      },
+      {
+        "provider_name": "Groq",
+        "provider_tag": "groq",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 1.545,
+        "cost_usd": 1.71e-05
+      },
+      {
+        "provider_name": "Io Net",
+        "provider_tag": "io-net/fp16",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 1.711,
+        "cost_usd": 1.13e-05
+      },
+      {
+        "provider_name": "Nebius",
+        "provider_tag": "nebius/fp4",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 0.731,
+        "cost_usd": 1.62e-05
+      },
+      {
+        "provider_name": "Novita",
+        "provider_tag": "novita/fp4",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 14.507,
+        "cost_usd": 5.75e-06
+      },
+      {
+        "provider_name": "Parasail",
+        "provider_tag": "parasail/fp4",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 2.17,
+        "cost_usd": 9.17e-06
+      },
+      {
+        "provider_name": "Phala",
+        "provider_tag": "phala",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 3.611,
+        "cost_usd": 1.127e-05
+      },
+      {
+        "provider_name": "SambaNova",
+        "provider_tag": "sambanova",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for openai/gpt-oss-120b.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:openai/gpt-oss-120b'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "SiliconFlow",
+        "provider_tag": "siliconflow/fp8",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for openai/gpt-oss-120b.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:openai/gpt-oss-120b'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Together",
+        "provider_tag": "together",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for openai/gpt-oss-120b.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:openai/gpt-oss-120b'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "WandB",
+        "provider_tag": "wandb/fp4",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 2.355,
+        "cost_usd": 1.62e-05
+      }
+    ],
+    "openai/gpt-oss-20b": [
+      {
+        "provider_name": "Amazon Bedrock",
+        "provider_tag": "amazon-bedrock",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 0.715,
+        "cost_usd": 7.31e-06
+      },
+      {
+        "provider_name": "Amazon Bedrock",
+        "provider_tag": "amazon-bedrock",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 0.724,
+        "cost_usd": 7.31e-06
+      },
+      {
+        "provider_name": "DeepInfra",
+        "provider_tag": "deepinfra/bf16",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 1.109,
+        "cost_usd": 2.97e-06
+      },
+      {
+        "provider_name": "Fireworks",
+        "provider_tag": "fireworks",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 1.274,
+        "cost_usd": 5.69e-06
+      },
+      {
+        "provider_name": "Google",
+        "provider_tag": "google-vertex",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 1.882,
+        "cost_usd": 7.61e-06
+      },
+      {
+        "provider_name": "Groq",
+        "provider_tag": "groq",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 0.633,
+        "cost_usd": 8.55e-06
+      },
+      {
+        "provider_name": "NextBit",
+        "provider_tag": "nextbit/fp8",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for openai/gpt-oss-20b.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:openai/gpt-oss-20b'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Novita",
+        "provider_tag": "novita/fp4",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 0.958,
+        "cost_usd": 4.45e-06
+      },
+      {
+        "provider_name": "Parasail",
+        "provider_tag": "parasail/fp4",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 0.75,
+        "cost_usd": 3.24e-06
+      },
+      {
+        "provider_name": "SiliconFlow",
+        "provider_tag": "siliconflow/fp8",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for openai/gpt-oss-20b.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:openai/gpt-oss-20b'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Together",
+        "provider_tag": "together",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for openai/gpt-oss-20b.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:openai/gpt-oss-20b'}",
+        "elapsed_seconds": 0.0,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "WandB",
+        "provider_tag": "wandb/fp4",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 0.706,
+        "cost_usd": 5.4e-06
+      }
+    ],
+    "qwen/qwen3-8b": [
+      {
+        "provider_name": "Alibaba",
+        "provider_tag": "alibaba",
+        "prefill_supported": false,
+        "response_text": "I understand",
+        "error": "",
+        "elapsed_seconds": 8.91,
+        "cost_usd": 0.00039619
+      },
+      {
+        "provider_name": "AtlasCloud",
+        "provider_tag": "atlas-cloud/fp8",
+        "prefill_supported": false,
+        "response_text": "I love",
+        "error": "",
+        "elapsed_seconds": 50.619,
+        "cost_usd": 0.0006025
+      }
+    ],
+    "qwen/qwen3-coder": [
+      {
+        "provider_name": "Alibaba",
+        "provider_tag": "alibaba/opensource",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 1.637,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "AtlasCloud",
+        "provider_tag": "atlas-cloud/fp8",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 1.514,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "DeepInfra",
+        "provider_tag": "deepinfra/turbo",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 1.688,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Google",
+        "provider_tag": "google-vertex",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 1.859,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Novita",
+        "provider_tag": "novita/fp8",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 1.662,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Together",
+        "provider_tag": "together/fp8",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 1.918,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "Venice",
+        "provider_tag": "venice/fp8",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 1.706,
+        "cost_usd": 0.0
+      },
+      {
+        "provider_name": "WandB",
+        "provider_tag": "wandb/bf16",
+        "prefill_supported": false,
+        "response_text": "I don't",
+        "error": "",
+        "elapsed_seconds": 1.621,
+        "cost_usd": 0.0
+      }
+    ]
+  },
+  "total_cost_usd": 0.001414
+}

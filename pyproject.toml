@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prefill-support-matrix"
+version = "0.1.0"
+description = "Benchmark: test assistant content prefill support across OpenRouter providers and models."
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.30.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+prefill-bench = "src.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
