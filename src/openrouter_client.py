@@ -133,6 +133,75 @@ def _providers_match(configured: str, resolved: str) -> bool:
     return False
 
 
+def _is_reasoning_param_error(status_code: int | None, error_msg: str) -> bool:
+    """Detect 400 errors caused by unsupported/invalid reasoning payloads."""
+    if status_code != 400:
+        return False
+    if "reasoning" not in error_msg:
+        return False
+
+    incompatible_markers = (
+        "invalid",
+        "unsupported",
+        "unknown",
+        "not allowed",
+        "not supported",
+        "schema",
+        "enum",
+        "bad request",
+    )
+    return any(marker in error_msg for marker in incompatible_markers)
+
+
+def _reasoning_requests_disable(reasoning_cfg: dict[str, Any]) -> bool:
+    """Return True when reasoning config attempts to disable reasoning."""
+    effort = reasoning_cfg.get("effort")
+    if isinstance(effort, str) and effort.strip().lower() == "none":
+        return True
+
+    enabled = reasoning_cfg.get("enabled")
+    if enabled is False:
+        return True
+
+    max_tokens = reasoning_cfg.get("max_tokens")
+    if isinstance(max_tokens, (int, float)) and not isinstance(max_tokens, bool):
+        if max_tokens <= 0:
+            return True
+
+    return False
+
+
+def _build_full_reasoning_suppression(
+    reasoning: dict[str, Any] | None,
+) -> dict[str, Any] | None:
+    """Build a comprehensive reasoning suppression payload.
+
+    When the caller provides a reasoning config that attempts to disable
+    reasoning (effort=none, enabled=false, max_tokens=0, or exclude=true),
+    we merge ALL known suppression mechanisms so every provider variant
+    gets the signal it understands:
+
+      effort=none   — OpenAI / Minimax style
+      max_tokens=0  — token-budget style
+      exclude=true  — OpenRouter exclusion flag
+
+    If the config doesn't attempt to suppress reasoning (or is None),
+    returns None so no reasoning field is sent.
+    """
+    if reasoning is None:
+        return None
+
+    if not _reasoning_requests_disable(reasoning) and not reasoning.get("exclude"):
+        return dict(reasoning)
+
+    return {
+        **reasoning,
+        "effort": reasoning.get("effort", "none"),
+        "max_tokens": reasoning.get("max_tokens", 0),
+        "exclude": True,
+    }
+
+
 def _extract_reasoning_content(msg: Any) -> str | None:
     """Extract reasoning text from a completion message."""
     raw = getattr(msg, "reasoning", None)
@@ -239,12 +308,22 @@ class OpenRouterClient:
             log.warning("Model %s not found in OpenRouter catalog", model_id)
             return []
 
-        url = f"{OPENROUTER_API_URL}/models/{canonical}/endpoints"
-        resp = requests.get(url, timeout=30)
-        resp.raise_for_status()
+        # Important: model variants (especially :free) can have a different
+        # provider set than the canonical slug. Query by the exact model id first.
+        slugs_to_try = [model_id]
+        if canonical != model_id:
+            slugs_to_try.append(canonical)
 
-        raw = resp.json().get("data", {})
-        endpoints = raw.get("endpoints", [])
+        endpoints: list[dict[str, Any]] = []
+        for slug in slugs_to_try:
+            url = f"{OPENROUTER_API_URL}/models/{slug}/endpoints"
+            resp = requests.get(url, timeout=30)
+            resp.raise_for_status()
+            raw = resp.json().get("data", {})
+            eps = raw.get("endpoints", [])
+            if eps:
+                endpoints = eps
+                break
 
         providers: list[ProviderEndpoint] = []
         for ep in endpoints:
@@ -270,19 +349,31 @@ class OpenRouterClient:
         model: str,
         user_message: str,
         assistant_prefill: str,
-        max_tokens: int = 3,
+        max_tokens: int = 50,
         temperature: float = 0.0,
         *,
         provider_tag: str | None = None,
+        reasoning: dict[str, Any] | None = None,
+        include_reasoning: bool | None = None,
     ) -> dict[str, Any]:
         """Send a chat completion with an assistant prefill message.
 
-        Reasoning is explicitly disabled via ``reasoning.effort = "none"``
-        to keep token usage minimal.
+        Key extra-body parameters:
 
-        Returns a dict with: content, elapsed, prompt_tokens, completion_tokens,
-        reasoning_tokens, reasoning_content, cost_usd, finish_reason,
-        http_status, resolved_provider, error.
+        * ``continue_final_message: true`` — tells vLLM-backed providers
+          to continue the assistant message instead of treating it as a
+          completed turn.  Non-vLLM providers silently ignore it.
+        * ``reasoning`` — optional model-specific reasoning config from
+          benchmark config. When reasoning suppression is requested, we
+          send ALL known suppression mechanisms simultaneously:
+          ``effort=none``, ``max_tokens=0``, ``exclude=true``, and
+          ``include_reasoning=false``.  If a provider rejects reasoning
+          parameters or requires mandatory reasoning, we retry without.
+        * ``include_reasoning`` — legacy flag that works alongside the
+          ``reasoning`` object for maximum compatibility.
+
+        Reasoning tokens and content are always captured so leaks can be
+        detected and reported.
         """
         messages: list[dict[str, str]] = [
             {"role": "user", "content": user_message},
@@ -303,13 +394,23 @@ class OpenRouterClient:
             "error": "",
         }
 
-        reasoning_disabled = True
+        current_reasoning = _build_full_reasoning_suppression(reasoning)
+        if current_reasoning is None and include_reasoning is False:
+            current_reasoning = _build_full_reasoning_suppression({"exclude": True})
+        include_reasoning_control = current_reasoning is not None
+        effective_include_reasoning = include_reasoning
+        if include_reasoning_control and effective_include_reasoning is None:
+            effective_include_reasoning = False
         last_error: Exception | None = None
         for attempt in range(self.MAX_RETRIES + 1):
             try:
-                extra_body: dict[str, Any] = {}
-                if reasoning_disabled:
-                    extra_body["reasoning"] = {"effort": "none"}
+                extra_body: dict[str, Any] = {
+                    "continue_final_message": True,
+                }
+                if include_reasoning_control:
+                    extra_body["reasoning"] = dict(current_reasoning or {})
+                if effective_include_reasoning is not None:
+                    extra_body["include_reasoning"] = effective_include_reasoning
                 if provider_tag:
                     extra_body["provider"] = {
                         "order": [provider_tag],
@@ -358,15 +459,29 @@ class OpenRouterClient:
                 result["http_status"] = status_code
                 error_msg = str(e).lower()
 
-                # Some models require reasoning — retry without disabling it
                 if (
-                    reasoning_disabled
+                    include_reasoning_control
                     and status_code == 400
                     and "reasoning is mandatory" in error_msg
                 ):
-                    reasoning_disabled = False
+                    if current_reasoning and _reasoning_requests_disable(current_reasoning):
+                        current_reasoning = {"exclude": True}
+                        log.info(
+                            "Model %s requires reasoning; retrying with reasoning.exclude=true",
+                            model,
+                        )
+                    else:
+                        include_reasoning_control = False
+                        log.info(
+                            "Model %s requires reasoning, retrying without reasoning field",
+                            model,
+                        )
+                    continue
+                if include_reasoning_control and _is_reasoning_param_error(status_code, error_msg):
+                    include_reasoning_control = False
+                    effective_include_reasoning = None
                     log.info(
-                        "Model %s requires reasoning, retrying without effort=none",
+                        "Provider rejected reasoning controls for %s, retrying without reasoning field",
                         model,
                     )
                     continue
