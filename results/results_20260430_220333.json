@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-04-30T22:03:33.038168+00:00",
+  "benchmark": "prefill_support_matrix",
+  "models": {
+    "qwen/qwen3-8b": [
+      {
+        "provider_name": "Alibaba",
+        "provider_tag": "alibaba",
+        "prefill_supported": false,
+        "response_text": "I love fluffy",
+        "error": "",
+        "elapsed_seconds": 0.802,
+        "prompt_tokens": 38,
+        "completion_tokens": 3,
+        "reasoning_tokens": 0,
+        "cost_usd": 5.81e-06,
+        "resolved_provider": "Alibaba",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "AtlasCloud",
+        "provider_tag": "atlas-cloud/fp8",
+        "prefill_supported": false,
+        "response_text": "I love fluffy",
+        "error": "",
+        "elapsed_seconds": 0.911,
+        "prompt_tokens": 38,
+        "completion_tokens": 3,
+        "reasoning_tokens": 0,
+        "cost_usd": 3.1e-06,
+        "resolved_provider": "AtlasCloud",
+        "provider_mismatch": null
+      }
+    ]
+  },
+  "total_cost_usd": 9e-06
+}

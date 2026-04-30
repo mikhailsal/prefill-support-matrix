@@ -13,6 +13,7 @@ import click
 from rich.console import Console
 
 from src.config import (
+    CACHE_DIR,
     DEFAULT_PARALLEL,
     TestResult,
     ensure_dirs,
@@ -27,7 +28,7 @@ from src.matrix import (
     export_results_json,
 )
 from src.openrouter_client import OpenRouterClient
-from src.runner import test_provider
+from src.runner import load_cached_result, test_provider
 
 console = Console()
 
@@ -36,6 +37,44 @@ def _parse_model_ids(models_str: str | None) -> list[str] | None:
     if not models_str:
         return None
     return [m.strip() for m in models_str.split(",") if m.strip()]
+
+
+def _load_all_cached() -> dict[str, list[TestResult]]:
+    """Load all results from cache directory."""
+    if not CACHE_DIR.exists():
+        return {}
+
+    all_results: dict[str, list[TestResult]] = {}
+    for d in sorted(CACHE_DIR.iterdir()):
+        if not d.is_dir():
+            continue
+        model_id = d.name.replace("--", "/", 1)
+        results: list[TestResult] = []
+        for f in sorted(d.glob("*.json")):
+            cached = load_cached_result(model_id, f.stem)
+            if cached:
+                r = TestResult(
+                    model_id=cached.get("model_id", model_id),
+                    provider_name=cached.get("provider_name", f.stem),
+                    provider_tag=cached.get("provider_tag", f.stem),
+                    prefill_supported=cached.get("prefill_supported"),
+                    response_text=cached.get("response_text", ""),
+                    error=cached.get("error", ""),
+                    elapsed_seconds=cached.get("elapsed_seconds", 0.0),
+                    prompt_tokens=cached.get("prompt_tokens", 0),
+                    completion_tokens=cached.get("completion_tokens", 0),
+                    reasoning_tokens=cached.get("reasoning_tokens", 0),
+                    reasoning_content=cached.get("reasoning_content"),
+                    cost_usd=cached.get("cost_usd", 0.0),
+                    http_status=cached.get("http_status"),
+                    resolved_provider=cached.get("resolved_provider"),
+                    provider_mismatch=cached.get("provider_mismatch"),
+                )
+                results.append(r)
+        if results:
+            all_results[model_id] = results
+
+    return all_results
 
 
 def _run_model(
@@ -91,21 +130,39 @@ def _run_model(
 
 
 def _print_result_inline(r: TestResult) -> None:
+    extras: list[str] = []
+
+    if r.provider_mismatch:
+        console.print(
+            f"[bold red]PROVIDER MISMATCH[/bold red] — {r.provider_mismatch}"
+        )
+        return
+
+    if r.reasoning_tokens > 0 or r.reasoning_content:
+        detail = f"{r.reasoning_tokens} reasoning tokens"
+        if r.reasoning_content:
+            preview = r.reasoning_content[:40].replace("\n", " ")
+            detail += f", content: \"{preview}\""
+        extras.append(f"[bold yellow]REASONING LEAK: {detail}[/bold yellow]")
+
+    suffix = f" ({r.elapsed_seconds:.1f}s, ${r.cost_usd:.6f})"
+
     if r.prefill_supported is True:
         console.print(
-            f"[green]YES[/green] — \"{r.response_text}\" "
-            f"({r.elapsed_seconds:.1f}s)"
+            f"[green]YES[/green] — \"{r.response_text}\"{suffix}"
         )
     elif r.prefill_supported is False:
         console.print(
-            f"[red]NO[/red] — \"{r.response_text}\" "
-            f"({r.elapsed_seconds:.1f}s)"
+            f"[red]NO[/red] — \"{r.response_text}\"{suffix}"
         )
     elif r.error:
         err_short = r.error[:80]
         console.print(f"[yellow]ERR[/yellow] — {err_short}")
     else:
         console.print("[dim]?[/dim]")
+
+    for extra in extras:
+        console.print(f"    {extra}")
 
 
 @click.group()
@@ -146,7 +203,6 @@ def run(models: str | None, parallel: int, force: bool) -> None:
         console.print("  [yellow]Force mode: re-testing all providers[/yellow]")
     console.print()
 
-    # Validate models
     console.print("[dim]Validating models against OpenRouter catalog...[/dim]")
     valid_ids: list[str] = []
     for mid in model_ids:
@@ -171,6 +227,9 @@ def run(models: str | None, parallel: int, force: bool) -> None:
         console.print("[yellow]No results collected.[/yellow]")
         return
 
+    # Show warnings summary for reasoning leaks and provider mismatches
+    _print_warnings_summary(all_results)
+
     display_summary(all_results)
 
     json_path = export_results_json(all_results)
@@ -180,49 +239,63 @@ def run(models: str | None, parallel: int, force: bool) -> None:
     console.print(f"[dim]Markdown report: {md_path}[/dim]")
 
 
+def _print_warnings_summary(all_results: dict[str, list[TestResult]]) -> None:
+    """Print consolidated warnings for reasoning leaks and provider mismatches."""
+    reasoning_leaks: list[tuple[str, str, int, str | None]] = []
+    mismatches: list[tuple[str, str, str]] = []
+
+    for model_id, results in all_results.items():
+        for r in results:
+            if r.reasoning_tokens > 0 or r.reasoning_content:
+                reasoning_leaks.append((model_id, r.provider_tag, r.reasoning_tokens, r.reasoning_content))
+            if r.provider_mismatch:
+                mismatches.append((model_id, r.provider_tag, r.provider_mismatch))
+
+    if reasoning_leaks:
+        console.print(
+            "\n[bold yellow]"
+            "╔══════════════════════════════════════════════════════════╗\n"
+            "║  REASONING LEAK WARNING                                 ║\n"
+            "║  The following providers used reasoning tokens despite   ║\n"
+            "║  reasoning.effort being set to \"none\".                 ║\n"
+            "║  This wastes tokens and inflates costs.                  ║\n"
+            "╚══════════════════════════════════════════════════════════╝"
+            "[/bold yellow]"
+        )
+        for model_id, tag, tokens, content_preview in reasoning_leaks:
+            detail = f"{tokens} reasoning tokens"
+            if content_preview:
+                detail += f" (\"{content_preview[:30]}...\")"
+            console.print(f"  [yellow]{model_id} @ {tag}: {detail}[/yellow]")
+
+    if mismatches:
+        console.print(
+            "\n[bold red]"
+            "╔══════════════════════════════════════════════════════════╗\n"
+            "║  PROVIDER MISMATCH WARNING                              ║\n"
+            "║  The gateway ignored provider constraints. These results ║\n"
+            "║  are INVALID and excluded from the matrix.               ║\n"
+            "╚══════════════════════════════════════════════════════════╝"
+            "[/bold red]"
+        )
+        for model_id, tag, msg in mismatches:
+            console.print(f"  [red]{model_id} @ {tag}: {msg}[/red]")
+
+
 @cli.command()
 @click.option("--models", "-m", default=None, help="Comma-separated model IDs. Defaults to all cached.")
 def matrix(models: str | None) -> None:
     """Display the support matrix from cached results."""
-    from src.runner import load_cached_result
-    from src.config import CACHE_DIR, TestResult
-
-    model_ids = _parse_model_ids(models)
-    if model_ids is None:
-        if not CACHE_DIR.exists():
-            console.print("[dim]No cached results found. Run the benchmark first.[/dim]")
-            return
-        model_ids = []
-        for d in sorted(CACHE_DIR.iterdir()):
-            if d.is_dir():
-                model_ids.append(d.name.replace("--", "/", 1))
-
-    all_results: dict[str, list[TestResult]] = {}
-    for mid in model_ids:
-        slug = mid.replace("/", "--")
-        model_dir = CACHE_DIR / slug
-        if not model_dir.exists():
-            continue
-        results: list[TestResult] = []
-        for f in sorted(model_dir.glob("*.json")):
-            cached = load_cached_result(mid, f.stem)
-            if cached:
-                r = TestResult(
-                    model_id=cached.get("model_id", mid),
-                    provider_name=cached.get("provider_name", f.stem),
-                    provider_tag=cached.get("provider_tag", f.stem),
-                    prefill_supported=cached.get("prefill_supported"),
-                    response_text=cached.get("response_text", ""),
-                    error=cached.get("error", ""),
-                    elapsed_seconds=cached.get("elapsed_seconds", 0.0),
-                    cost_usd=cached.get("cost_usd", 0.0),
-                )
-                results.append(r)
-        if results:
-            all_results[mid] = results
+    if models:
+        model_ids = _parse_model_ids(models)
+        # Filter cached results by model ids
+        all_cached = _load_all_cached()
+        all_results = {mid: rs for mid, rs in all_cached.items() if mid in (model_ids or [])}
+    else:
+        all_results = _load_all_cached()
 
     if not all_results:
-        console.print("[dim]No results found.[/dim]")
+        console.print("[dim]No results found. Run the benchmark first.[/dim]")
         return
 
     for mid, results in all_results.items():
@@ -241,42 +314,13 @@ def matrix(models: str | None) -> None:
 def generate_report(models: str | None, output: str | None) -> None:
     """Generate a Markdown support matrix report."""
     from pathlib import Path as P
-    from src.runner import load_cached_result
-    from src.config import CACHE_DIR
 
-    model_ids = _parse_model_ids(models)
-    if model_ids is None:
-        if not CACHE_DIR.exists():
-            console.print("[dim]No cached results found.[/dim]")
-            return
-        model_ids = []
-        for d in sorted(CACHE_DIR.iterdir()):
-            if d.is_dir():
-                model_ids.append(d.name.replace("--", "/", 1))
-
-    all_results: dict[str, list[TestResult]] = {}
-    for mid in model_ids:
-        slug = mid.replace("/", "--")
-        model_dir = CACHE_DIR / slug
-        if not model_dir.exists():
-            continue
-        results: list[TestResult] = []
-        for f in sorted(model_dir.glob("*.json")):
-            cached = load_cached_result(mid, f.stem)
-            if cached:
-                r = TestResult(
-                    model_id=cached.get("model_id", mid),
-                    provider_name=cached.get("provider_name", f.stem),
-                    provider_tag=cached.get("provider_tag", f.stem),
-                    prefill_supported=cached.get("prefill_supported"),
-                    response_text=cached.get("response_text", ""),
-                    error=cached.get("error", ""),
-                    elapsed_seconds=cached.get("elapsed_seconds", 0.0),
-                    cost_usd=cached.get("cost_usd", 0.0),
-                )
-                results.append(r)
-        if results:
-            all_results[mid] = results
+    if models:
+        model_ids = _parse_model_ids(models)
+        all_cached = _load_all_cached()
+        all_results = {mid: rs for mid, rs in all_cached.items() if mid in (model_ids or [])}
+    else:
+        all_results = _load_all_cached()
 
     if not all_results:
         console.print("[dim]No results found.[/dim]")

@@ -7,7 +7,6 @@ generation for the prefill support matrix.
 from __future__ import annotations
 
 import json
-from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -20,23 +19,21 @@ from src.config import RESULTS_DIR, TestResult
 
 console = Console()
 
-STATUS_YES = Text("YES", style="bold green")
-STATUS_NO = Text("NO", style="bold red")
-STATUS_ERR = Text("ERR", style="bold yellow")
-STATUS_UNKNOWN = Text("?", style="dim")
-
-
 def _status_text(result: TestResult) -> Text:
+    if result.provider_mismatch:
+        return Text("MISMATCH", style="bold magenta")
     if result.prefill_supported is True:
-        return STATUS_YES
+        return Text("YES", style="bold green")
     elif result.prefill_supported is False:
-        return STATUS_NO
+        return Text("NO", style="bold red")
     elif result.error:
-        return STATUS_ERR
-    return STATUS_UNKNOWN
+        return Text("ERR", style="bold yellow")
+    return Text("?", style="dim")
 
 
 def _status_str(result: TestResult) -> str:
+    if result.provider_mismatch:
+        return "MISMATCH"
     if result.prefill_supported is True:
         return "YES"
     elif result.prefill_supported is False:
@@ -61,17 +58,29 @@ def display_model_results(model_id: str, results: list[TestResult]) -> None:
         padding=(0, 1),
     )
     table.add_column("#", justify="right", style="dim", width=3)
-    table.add_column("Provider", style="bold", min_width=20, no_wrap=True)
-    table.add_column("Tag", style="dim", min_width=15, no_wrap=True)
-    table.add_column("Prefill", justify="center", width=8)
-    table.add_column("Response", max_width=40, overflow="ellipsis")
+    table.add_column("Provider", style="bold", min_width=18, no_wrap=True)
+    table.add_column("Tag", style="dim", min_width=14, no_wrap=True)
+    table.add_column("Prefill", justify="center", width=10)
+    table.add_column("Response", max_width=30, overflow="ellipsis")
+    table.add_column("Tokens", justify="right", width=6)
+    table.add_column("Cost", justify="right", width=10)
     table.add_column("Time", justify="right", width=6)
-    table.add_column("Error", style="red", max_width=40, overflow="ellipsis")
+    table.add_column("Notes", style="dim", max_width=30, overflow="ellipsis")
 
     for i, r in enumerate(sorted(results, key=lambda x: x.provider_name), 1):
-        response_preview = r.response_text[:40] if r.response_text else ""
-        error_preview = r.error[:40] if r.error else ""
+        response_preview = r.response_text[:30] if r.response_text else ""
         elapsed = f"{r.elapsed_seconds:.1f}s" if r.elapsed_seconds else ""
+        cost_str = f"${r.cost_usd:.6f}" if r.cost_usd > 0 else "$0"
+        tokens_str = str(r.completion_tokens) if r.completion_tokens else ""
+
+        notes_parts: list[str] = []
+        if r.reasoning_tokens > 0:
+            notes_parts.append(f"reasoning:{r.reasoning_tokens}t")
+        if r.provider_mismatch:
+            notes_parts.append("MISMATCH")
+        if r.error and not r.provider_mismatch:
+            notes_parts.append(r.error[:20])
+        notes = " | ".join(notes_parts)
 
         table.add_row(
             str(i),
@@ -79,8 +88,10 @@ def display_model_results(model_id: str, results: list[TestResult]) -> None:
             r.provider_tag,
             _status_text(r),
             response_preview,
+            tokens_str,
+            cost_str,
             elapsed,
-            error_preview,
+            notes,
         )
 
     console.print(table)
@@ -277,7 +288,12 @@ def export_results_json(all_results: dict[str, list[TestResult]]) -> Path:
                 "response_text": r.response_text,
                 "error": r.error,
                 "elapsed_seconds": round(r.elapsed_seconds, 3),
+                "prompt_tokens": r.prompt_tokens,
+                "completion_tokens": r.completion_tokens,
+                "reasoning_tokens": r.reasoning_tokens,
                 "cost_usd": round(r.cost_usd, 8),
+                "resolved_provider": r.resolved_provider,
+                "provider_mismatch": r.provider_mismatch,
             })
         data["models"][model_id] = providers
 

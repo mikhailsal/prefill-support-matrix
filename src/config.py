@@ -86,8 +86,12 @@ class TestResult:
     elapsed_seconds: float = 0.0
     prompt_tokens: int = 0
     completion_tokens: int = 0
+    reasoning_tokens: int = 0
+    reasoning_content: str | None = None
     cost_usd: float = 0.0
     http_status: int | None = None
+    resolved_provider: str | None = None
+    provider_mismatch: str | None = None
 
 
 # ---------------------------------------------------------------------------

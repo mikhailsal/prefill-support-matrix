@@ -27,6 +27,175 @@ from src.config import (
 log = logging.getLogger(__name__)
 
 
+class ProviderMismatchError(RuntimeError):
+    """Raised when the gateway routed the request to a different provider."""
+
+    def __init__(self, expected: str, actual: str, model: str) -> None:
+        self.expected = expected
+        self.actual = actual
+        self.model = model
+        super().__init__(
+            f"Provider mismatch for {model}: expected '{expected}', "
+            f"gateway resolved to '{actual}'."
+        )
+
+
+def _to_plain_object(value: Any) -> Any:
+    """Recursively convert SDK objects to plain dicts/lists."""
+    if hasattr(value, "model_dump"):
+        return value.model_dump()
+    if isinstance(value, dict):
+        return {k: _to_plain_object(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_to_plain_object(item) for item in value]
+    if hasattr(value, "__dict__"):
+        return {
+            k: _to_plain_object(v)
+            for k, v in value.__dict__.items()
+            if not k.startswith("_")
+        }
+    return value
+
+
+def _extract_resolved_provider(response: Any) -> str | None:
+    """Extract the actual provider from the response.
+
+    OpenRouter returns a top-level ``provider`` field. Our proxy may
+    also embed routing info under
+    ``choices[].message.provider_metadata.gateway.routing.finalProvider``.
+    """
+    top_level = getattr(response, "provider", None)
+    if isinstance(top_level, str) and top_level.strip():
+        return top_level.strip()
+
+    choices = getattr(response, "choices", None) or []
+    if not choices:
+        return None
+    message = getattr(choices[0], "message", None)
+    if message is None:
+        return None
+
+    pm = getattr(message, "provider_metadata", None)
+    if pm is None:
+        raw = _to_plain_object(message)
+        pm = raw.get("provider_metadata") if isinstance(raw, dict) else None
+    else:
+        pm = _to_plain_object(pm)
+
+    if not isinstance(pm, dict):
+        return None
+    gateway = pm.get("gateway")
+    if not isinstance(gateway, dict):
+        return None
+    routing = gateway.get("routing")
+    if not isinstance(routing, dict):
+        return None
+    final = routing.get("finalProvider")
+    if isinstance(final, str) and final.strip():
+        return final.strip()
+    return None
+
+
+def _normalize_provider_name(name: str) -> str:
+    """Normalize a provider name/tag for comparison.
+
+    Strips quantization suffixes (``/fp8``, ``/bf16``, ``/turbo``, etc.),
+    removes hyphens/underscores, and lowercases.
+    """
+    s = name.lower().strip()
+    # Strip quantization / variant suffix: atlas-cloud/fp8 -> atlas-cloud
+    if "/" in s:
+        s = s.split("/")[0]
+    return s.replace("-", "").replace("_", "").replace(" ", "")
+
+
+def _providers_match(configured: str, resolved: str) -> bool:
+    """Case-insensitive comparison with normalization and alias handling.
+
+    The ``configured`` value is typically a provider tag like ``atlas-cloud/fp8``
+    and ``resolved`` is a provider name like ``AtlasCloud``.
+    """
+    c = _normalize_provider_name(configured)
+    r = _normalize_provider_name(resolved)
+    if c == r:
+        return True
+    if c in r or r in c:
+        return True
+    ALIASES: dict[str, set[str]] = {
+        "amazonbedrock": {"bedrock", "amazonbedrock", "awsbedrock"},
+        "googleaistudio": {"google", "googleaistudio", "googlevertex"},
+        "moonshotai": {"moonshot", "moonshotai"},
+    }
+    for _canonical, aliases in ALIASES.items():
+        group = aliases | {_canonical}
+        if c in group and r in group:
+            return True
+    return False
+
+
+def _extract_reasoning_content(msg: Any) -> str | None:
+    """Extract reasoning text from a completion message."""
+    raw = getattr(msg, "reasoning", None)
+    if raw and isinstance(raw, str):
+        return raw.strip()
+
+    raw = getattr(msg, "reasoning_content", None)
+    if raw and isinstance(raw, str):
+        return raw.strip()
+
+    details = getattr(msg, "reasoning_details", None)
+    if details and isinstance(details, list):
+        text_parts: list[str] = []
+        for item in details:
+            if not isinstance(item, dict):
+                continue
+            if item.get("type") == "reasoning.text" and item.get("text"):
+                text_parts.append(item["text"])
+        if text_parts:
+            return "\n".join(text_parts).strip()
+
+    return None
+
+
+def _extract_cost(usage_obj: Any) -> float:
+    """Extract cost from usage, falling back to market_cost for byok proxies."""
+    raw_cost = getattr(usage_obj, "cost", None)
+    if isinstance(raw_cost, (int, float)) and not isinstance(raw_cost, bool) and raw_cost > 0:
+        return float(raw_cost)
+
+    if isinstance(raw_cost, str) and raw_cost.strip():
+        try:
+            val = float(raw_cost)
+            if val > 0:
+                return val
+        except ValueError:
+            pass
+
+    market_cost = getattr(usage_obj, "market_cost", None)
+    if isinstance(market_cost, (int, float)) and not isinstance(market_cost, bool) and market_cost > 0:
+        return float(market_cost)
+
+    if isinstance(market_cost, str) and market_cost.strip():
+        try:
+            val = float(market_cost)
+            if val > 0:
+                return val
+        except ValueError:
+            pass
+
+    return 0.0
+
+
+def _extract_reasoning_tokens(usage_obj: Any) -> int:
+    """Extract reasoning token count from completion_tokens_details."""
+    details = getattr(usage_obj, "completion_tokens_details", None)
+    if details:
+        rt = getattr(details, "reasoning_tokens", None)
+        if rt is not None:
+            return int(rt)
+    return 0
+
+
 class OpenRouterClient:
     MAX_RETRIES = 2
     RETRY_BACKOFF_BASE = 2.0
@@ -108,8 +277,12 @@ class OpenRouterClient:
     ) -> dict[str, Any]:
         """Send a chat completion with an assistant prefill message.
 
+        Reasoning is explicitly disabled via ``reasoning.effort = "none"``
+        to keep token usage minimal.
+
         Returns a dict with: content, elapsed, prompt_tokens, completion_tokens,
-        cost_usd, finish_reason, http_status, error.
+        reasoning_tokens, reasoning_content, cost_usd, finish_reason,
+        http_status, resolved_provider, error.
         """
         messages: list[dict[str, str]] = [
             {"role": "user", "content": user_message},
@@ -121,16 +294,22 @@ class OpenRouterClient:
             "elapsed": 0.0,
             "prompt_tokens": 0,
             "completion_tokens": 0,
+            "reasoning_tokens": 0,
+            "reasoning_content": None,
             "cost_usd": 0.0,
             "finish_reason": "",
             "http_status": None,
+            "resolved_provider": None,
             "error": "",
         }
 
+        reasoning_disabled = True
         last_error: Exception | None = None
         for attempt in range(self.MAX_RETRIES + 1):
             try:
                 extra_body: dict[str, Any] = {}
+                if reasoning_disabled:
+                    extra_body["reasoning"] = {"effort": "none"}
                 if provider_tag:
                     extra_body["provider"] = {
                         "order": [provider_tag],
@@ -156,12 +335,10 @@ class OpenRouterClient:
                 if response.usage:
                     result["prompt_tokens"] = int(response.usage.prompt_tokens or 0)
                     result["completion_tokens"] = int(response.usage.completion_tokens or 0)
-                    raw_cost = getattr(response.usage, "cost", None)
-                    if raw_cost is not None:
-                        try:
-                            result["cost_usd"] = float(raw_cost)
-                        except (ValueError, TypeError):
-                            pass
+                    result["reasoning_tokens"] = _extract_reasoning_tokens(response.usage)
+                    result["cost_usd"] = _extract_cost(response.usage)
+
+                result["resolved_provider"] = _extract_resolved_provider(response)
 
                 if response.choices:
                     result["finish_reason"] = response.choices[0].finish_reason or ""
@@ -169,12 +346,30 @@ class OpenRouterClient:
                     if content:
                         result["content"] = content.strip()
 
+                    result["reasoning_content"] = _extract_reasoning_content(
+                        response.choices[0].message
+                    )
+
                 return result
 
             except Exception as e:
                 last_error = e
                 status_code = getattr(e, "status_code", None)
                 result["http_status"] = status_code
+                error_msg = str(e).lower()
+
+                # Some models require reasoning — retry without disabling it
+                if (
+                    reasoning_disabled
+                    and status_code == 400
+                    and "reasoning is mandatory" in error_msg
+                ):
+                    reasoning_disabled = False
+                    log.info(
+                        "Model %s requires reasoning, retrying without effort=none",
+                        model,
+                    )
+                    continue
 
                 if status_code and status_code in self.RETRYABLE_STATUS_CODES:
                     if attempt < self.MAX_RETRIES:
