@@ -372,6 +372,8 @@ def _format_price_per_million(price_str: str) -> str:
         return "?"
     if per_token == 0:
         return "free"
+    if per_token < 0:
+        return "var"
     per_million = per_token * 1_000_000
     if per_million >= 100:
         return f"${per_million:.0f}"
@@ -383,30 +385,30 @@ def _format_price_per_million(price_str: str) -> str:
 def _format_model_line(model: dict[str, Any], index: int, total: int) -> str:
     """Format a single model entry for the interactive picker menu."""
     model_id = model.get("id", "?")
-    name = model.get("name", model_id)
     created = model.get("created", 0)
     pricing = model.get("pricing", {})
     ctx = model.get("context_length", 0)
-    modality = model.get("architecture", {}).get("modality", "?")
 
     price_in = _format_price_per_million(pricing.get("prompt", "0"))
     price_out = _format_price_per_million(pricing.get("completion", "0"))
 
     if created:
-        age = datetime.fromtimestamp(created, tz=timezone.utc).strftime("%Y-%m-%d")
+        age = datetime.fromtimestamp(created, tz=timezone.utc).strftime("%b %d")
     else:
-        age = "unknown"
+        age = "  ?  "
 
     ctx_display = f"{ctx // 1000}k" if ctx >= 1000 else str(ctx)
 
     idx_width = len(str(total))
     idx_str = str(index).rjust(idx_width)
 
+    model_id_display = model_id[:44]
+
     return (
-        f"{idx_str}. {model_id:<52s}  "
-        f"in:{price_in:>8s}  out:{price_out:>8s}  "
-        f"ctx:{ctx_display:>6s}  "
-        f"{age}  {modality}"
+        f"{idx_str}. {model_id_display:<44s} "
+        f"{price_in:>7s}/{price_out:<7s} "
+        f"{ctx_display:>5s} "
+        f"{age}"
     )
 
 
@@ -426,11 +428,12 @@ def _pick_model_interactive(
             entries,
             title=(
                 "\n  Prefill Bench — Pick a model to benchmark\n"
-                "  Use ↑↓ to navigate, type to search, Enter to select, q/Esc to quit\n"
+                "  ↑↓ navigate | / search | Enter select | q quit\n"
             ),
-            search_key=None,
+            search_key="/",
             show_search_hint=True,
-            status_bar="Search by model ID or name — press / to search",
+            show_search_hint_text='Press "/" to filter by model name',
+            status_bar="  in$/M / out$/M   ctx  date",
         )
         chosen = menu.show()
     except OSError:
