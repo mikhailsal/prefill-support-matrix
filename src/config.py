@@ -12,6 +12,7 @@ import os
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Any
 
 from dotenv import load_dotenv
 
@@ -40,7 +41,7 @@ API_CALL_TIMEOUT = 30
 # ---------------------------------------------------------------------------
 # Prefill test parameters
 # ---------------------------------------------------------------------------
-PREFILL_MAX_TOKENS = 3
+PREFILL_MAX_TOKENS = 50
 PREFILL_TEMPERATURE = 0.0
 
 USER_PROMPT = "I don't like cats. What is your favorite animal and why?"
@@ -94,6 +95,15 @@ class TestResult:
     provider_mismatch: str | None = None
 
 
+@dataclass(frozen=True)
+class ModelTarget:
+    """Model configuration for benchmark execution."""
+    model_id: str
+    reasoning: dict[str, Any] | None = None
+    include_reasoning: bool | None = None
+    allow_reasoning: bool = False
+
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -124,8 +134,8 @@ def load_api_key() -> str:
     return key
 
 
-def load_model_list(path: Path | None = None) -> list[str]:
-    """Load the list of model IDs to test from a YAML config file."""
+def load_model_targets(path: Path | None = None) -> list[ModelTarget]:
+    """Load model targets and optional reasoning config from YAML."""
     import yaml
 
     config_path = path or CONFIGS_PATH
@@ -136,4 +146,43 @@ def load_model_list(path: Path | None = None) -> list[str]:
     if not data or "models" not in data:
         return []
 
-    return [str(m) for m in data["models"] if m]
+    targets: list[ModelTarget] = []
+    for raw in data["models"]:
+        if not raw:
+            continue
+
+        if isinstance(raw, str):
+            targets.append(ModelTarget(model_id=raw))
+            continue
+
+        if isinstance(raw, dict):
+            model_id = str(raw.get("id") or raw.get("model") or "").strip()
+            if not model_id:
+                continue
+            reasoning_raw = raw.get("reasoning")
+            reasoning_cfg = reasoning_raw if isinstance(reasoning_raw, dict) else None
+            include_reasoning_raw = raw.get("include_reasoning")
+            include_reasoning_cfg = (
+                include_reasoning_raw
+                if isinstance(include_reasoning_raw, bool)
+                else None
+            )
+            allow_reasoning_raw = raw.get("allow_reasoning")
+            allow_reasoning_cfg = (
+                allow_reasoning_raw is True
+            )
+            targets.append(
+                ModelTarget(
+                    model_id=model_id,
+                    reasoning=reasoning_cfg,
+                    include_reasoning=include_reasoning_cfg,
+                    allow_reasoning=allow_reasoning_cfg,
+                )
+            )
+
+    return targets
+
+
+def load_model_list(path: Path | None = None) -> list[str]:
+    """Backward-compatible helper returning only model IDs."""
+    return [target.model_id for target in load_model_targets(path)]

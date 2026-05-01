@@ -15,10 +15,11 @@ from rich.console import Console
 from src.config import (
     CACHE_DIR,
     DEFAULT_PARALLEL,
+    ModelTarget,
     TestResult,
     ensure_dirs,
     load_api_key,
-    load_model_list,
+    load_model_targets,
 )
 from src.matrix import (
     display_full_matrix,
@@ -79,12 +80,13 @@ def _load_all_cached() -> dict[str, list[TestResult]]:
 
 def _run_model(
     client: OpenRouterClient,
-    model_id: str,
+    target: ModelTarget,
     *,
     parallel: int,
     force: bool,
 ) -> list[TestResult]:
     """Discover providers for a model and test each one."""
+    model_id = target.model_id
     console.print(f"\n[bold blue]Discovering providers for {model_id}...[/bold blue]")
     providers = client.fetch_providers(model_id)
 
@@ -101,14 +103,31 @@ def _run_model(
     if parallel <= 1:
         for p in providers:
             console.print(f"  Testing [bold]{p.provider_name}[/bold]...", end=" ")
-            r = test_provider(client, model_id, p, force=force)
+            r = test_provider(
+                client,
+                model_id,
+                p,
+                force=force,
+                reasoning=target.reasoning,
+                include_reasoning=target.include_reasoning,
+                allow_reasoning=target.allow_reasoning,
+            )
             _print_result_inline(r)
             results.append(r)
     else:
         n_workers = min(parallel, len(providers))
         with ThreadPoolExecutor(max_workers=n_workers) as pool:
             futures = {
-                pool.submit(test_provider, client, model_id, p, force=force): p
+                pool.submit(
+                    test_provider,
+                    client,
+                    model_id,
+                    p,
+                    force=force,
+                    reasoning=target.reasoning,
+                    include_reasoning=target.include_reasoning,
+                    allow_reasoning=target.allow_reasoning,
+                ): p
                 for p in providers
             }
             for future in as_completed(futures):
@@ -180,9 +199,13 @@ def cli() -> None:
 @click.option("--force", "-f", is_flag=True, default=False, help="Re-test even if cached.")
 def run(models: str | None, parallel: int, force: bool) -> None:
     """Run the prefill support benchmark."""
-    model_ids = _parse_model_ids(models)
-    if model_ids is None:
-        model_ids = load_model_list()
+    parsed_model_ids = _parse_model_ids(models)
+    if parsed_model_ids is None:
+        model_targets = load_model_targets()
+    else:
+        model_targets = [ModelTarget(model_id=mid) for mid in parsed_model_ids]
+
+    model_ids = [t.model_id for t in model_targets]
 
     if not model_ids:
         console.print(
@@ -204,24 +227,24 @@ def run(models: str | None, parallel: int, force: bool) -> None:
     console.print()
 
     console.print("[dim]Validating models against OpenRouter catalog...[/dim]")
-    valid_ids: list[str] = []
-    for mid in model_ids:
-        if client.validate_model(mid):
-            console.print(f"  [green]OK[/green] {mid}")
-            valid_ids.append(mid)
+    valid_targets: list[ModelTarget] = []
+    for target in model_targets:
+        if client.validate_model(target.model_id):
+            console.print(f"  [green]OK[/green] {target.model_id}")
+            valid_targets.append(target)
         else:
-            console.print(f"  [red]NOT FOUND[/red] {mid}")
+            console.print(f"  [red]NOT FOUND[/red] {target.model_id}")
 
-    if not valid_ids:
+    if not valid_targets:
         console.print("[red]No valid models found. Aborting.[/red]")
         sys.exit(1)
 
     all_results: dict[str, list[TestResult]] = {}
-    for mid in valid_ids:
-        results = _run_model(client, mid, parallel=parallel, force=force)
+    for target in valid_targets:
+        results = _run_model(client, target, parallel=parallel, force=force)
         if results:
-            all_results[mid] = results
-            display_model_results(mid, results)
+            all_results[target.model_id] = results
+            display_model_results(target.model_id, results)
 
     if not all_results:
         console.print("[yellow]No results collected.[/yellow]")
@@ -232,10 +255,14 @@ def run(models: str | None, parallel: int, force: bool) -> None:
 
     display_summary(all_results)
 
-    json_path = export_results_json(all_results)
+    # Export reports from full cache so historical models are preserved.
+    all_cached_results = _load_all_cached()
+    report_results = all_cached_results if all_cached_results else all_results
+
+    json_path = export_results_json(report_results)
     console.print(f"\n[dim]JSON results: {json_path}[/dim]")
 
-    md_path = export_markdown_report(all_results)
+    md_path = export_markdown_report(report_results)
     console.print(f"[dim]Markdown report: {md_path}[/dim]")
 
 
@@ -257,7 +284,7 @@ def _print_warnings_summary(all_results: dict[str, list[TestResult]]) -> None:
             "╔══════════════════════════════════════════════════════════╗\n"
             "║  REASONING LEAK WARNING                                 ║\n"
             "║  The following providers used reasoning tokens despite   ║\n"
-            "║  reasoning.effort being set to \"none\".                 ║\n"
+            "║  configured reasoning controls in the request.           ║\n"
             "║  This wastes tokens and inflates costs.                  ║\n"
             "╚══════════════════════════════════════════════════════════╝"
             "[/bold yellow]"

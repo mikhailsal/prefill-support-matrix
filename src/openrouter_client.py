@@ -171,35 +171,43 @@ def _reasoning_requests_disable(reasoning_cfg: dict[str, Any]) -> bool:
     return False
 
 
-def _build_full_reasoning_suppression(
+_DEFAULT_REASONING_SUPPRESSION: dict[str, Any] = {"effort": "none", "exclude": True}
+
+
+def _build_reasoning_payload(
     reasoning: dict[str, Any] | None,
+    *,
+    allow_reasoning: bool = False,
 ) -> dict[str, Any] | None:
-    """Build a comprehensive reasoning suppression payload.
+    """Build the ``reasoning`` extra-body payload.
 
-    When the caller provides a reasoning config that attempts to disable
-    reasoning (effort=none, enabled=false, max_tokens=0, or exclude=true),
-    we merge ALL known suppression mechanisms so every provider variant
-    gets the signal it understands:
+    The benchmark's default is to suppress reasoning — it wastes tokens
+    and money on thinking that is irrelevant to prefill detection.
 
-      effort=none   — OpenAI / Minimax style
-      max_tokens=0  — token-budget style
-      exclude=true  — OpenRouter exclusion flag
+    When ``allow_reasoning`` is True (set per-model in models.yaml),
+    no suppression is applied; ``reasoning`` config, if any, is passed
+    through verbatim.
 
-    If the config doesn't attempt to suppress reasoning (or is None),
-    returns None so no reasoning field is sent.
+    When reasoning IS suppressed (the default), we preserve the caller's
+    chosen mechanism (``effort`` OR ``max_tokens``) without adding the
+    other, because some providers reject requests that specify both.
+    ``exclude: true`` is always added so the response omits reasoning
+    content even when a provider ignores the suppression signal.
     """
+    if allow_reasoning:
+        return dict(reasoning) if reasoning else None
+
     if reasoning is None:
-        return None
+        return dict(_DEFAULT_REASONING_SUPPRESSION)
 
     if not _reasoning_requests_disable(reasoning) and not reasoning.get("exclude"):
         return dict(reasoning)
 
-    return {
-        **reasoning,
-        "effort": reasoning.get("effort", "none"),
-        "max_tokens": reasoning.get("max_tokens", 0),
-        "exclude": True,
-    }
+    result = dict(reasoning)
+    if "effort" not in result and "max_tokens" not in result:
+        result["effort"] = "none"
+    result["exclude"] = True
+    return result
 
 
 def _extract_reasoning_content(msg: Any) -> str | None:
@@ -355,22 +363,29 @@ class OpenRouterClient:
         provider_tag: str | None = None,
         reasoning: dict[str, Any] | None = None,
         include_reasoning: bool | None = None,
+        allow_reasoning: bool = False,
     ) -> dict[str, Any]:
         """Send a chat completion with an assistant prefill message.
+
+        By default, reasoning is suppressed for all requests to avoid
+        wasting tokens on thinking irrelevant to prefill detection.
 
         Key extra-body parameters:
 
         * ``continue_final_message: true`` — tells vLLM-backed providers
           to continue the assistant message instead of treating it as a
           completed turn.  Non-vLLM providers silently ignore it.
-        * ``reasoning`` — optional model-specific reasoning config from
-          benchmark config. When reasoning suppression is requested, we
-          send ALL known suppression mechanisms simultaneously:
-          ``effort=none``, ``max_tokens=0``, ``exclude=true``, and
-          ``include_reasoning=false``.  If a provider rejects reasoning
-          parameters or requires mandatory reasoning, we retry without.
-        * ``include_reasoning`` — legacy flag that works alongside the
-          ``reasoning`` object for maximum compatibility.
+        * ``reasoning`` — model-specific reasoning config from the
+          benchmark YAML.  Merged with default suppression unless
+          ``allow_reasoning`` is set.
+        * ``allow_reasoning`` — when True, skips default reasoning
+          suppression.  Used for models where prefill works through
+          reasoning content (e.g. grok-4.1-fast).
+        * ``include_reasoning`` — legacy flag; auto-set to False when
+          reasoning is suppressed.
+
+        If a provider rejects reasoning parameters or requires mandatory
+        reasoning, we retry with progressively relaxed constraints.
 
         Reasoning tokens and content are always captured so leaks can be
         detected and reported.
@@ -394,9 +409,9 @@ class OpenRouterClient:
             "error": "",
         }
 
-        current_reasoning = _build_full_reasoning_suppression(reasoning)
-        if current_reasoning is None and include_reasoning is False:
-            current_reasoning = _build_full_reasoning_suppression({"exclude": True})
+        current_reasoning = _build_reasoning_payload(
+            reasoning, allow_reasoning=allow_reasoning,
+        )
         include_reasoning_control = current_reasoning is not None
         effective_include_reasoning = include_reasoning
         if include_reasoning_control and effective_include_reasoning is None:
