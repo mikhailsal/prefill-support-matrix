@@ -10,9 +10,9 @@
   "prompt_tokens": 98,
   "completion_tokens": 50,
   "reasoning_tokens": 0,
-  "reasoning_content": null,
+  "reasoning_content": "The user says they don't like cats, asks \"What is your favorite animal and why?\" We need to respond as ChatGPT. Should be friendly, mention favorite animal, maybe a dog or something, explain why. No disallowed content",
   "cost_usd": 7.18e-05,
-  "elapsed_seconds": 3.502,
+  "elapsed_seconds": 0.941,
   "http_status": 200,
-  "timestamp": "2026-05-01T11:38:13.447959+00:00"
+  "timestamp": "2026-05-01T11:49:12.162939+00:00"
 }

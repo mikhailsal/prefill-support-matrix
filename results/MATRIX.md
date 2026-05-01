@@ -1,6 +1,6 @@
 # Assistant Prefill Support Matrix
 
-> Auto-generated from benchmark results. Last updated: 2026-05-01 11:41 UTC
+> Auto-generated from benchmark results. Last updated: 2026-05-01 11:55 UTC
 
 
 ## deepseek/deepseek-v3.2
@@ -34,14 +34,14 @@ Providers tested: 4 | Supported: 1 | Not supported: 2 | Errors: 1
 
 ## minimax/minimax-m2.7
 
-Providers tested: 4 | Supported: 0 | Not supported: 3 | Errors: 1
+Providers tested: 4 | Supported: 0 | Not supported: 0 | Errors: 4
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | Fireworks | `fireworks` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
-| Minimax | `minimax/fp8` | ❌ NO |  |  |
-| Minimax | `minimax/highspeed` | ❌ NO |  |  |
-| Together | `together/fp4` | ❌ NO |  |  |
+| Minimax | `minimax/fp8` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Minimax | `minimax/highspeed` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Together | `together/fp4` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 
 ## mistralai/mistral-small-3.2-24b-instruct
 
@@ -56,47 +56,47 @@ Providers tested: 4 | Supported: 2 | Not supported: 1 | Errors: 1
 
 ## openai/gpt-oss-120b
 
-Providers tested: 19 | Supported: 0 | Not supported: 18 | Errors: 1
+Providers tested: 19 | Supported: 0 | Not supported: 4 | Errors: 15
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Amazon Bedrock | `amazon-bedrock` | ❌ NO |  |  |
-| AtlasCloud | `atlas-cloud/fp8` | ❌ NO |  |  |
+| Amazon Bedrock | `amazon-bedrock` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| AtlasCloud | `atlas-cloud/fp8` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 | BaseTen | `baseten/fp4` | ❌ NO |  |  |
 | Cerebras | `cerebras/fp16` | ❌ NO |  |  |
-| DeepInfra | `deepinfra/bf16` | ❌ NO |  |  |
-| DeepInfra | `deepinfra/turbo` | ❌ NO |  |  |
-| DekaLLM | `dekallm/bf16` | ❌ NO |  |  |
+| DeepInfra | `deepinfra/bf16` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| DeepInfra | `deepinfra/turbo` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| DekaLLM | `dekallm/bf16` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 | Fireworks | `fireworks` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
-| Google | `google-vertex` | ❌ NO |  |  |
-| Groq | `groq` | ❌ NO |  |  |
-| Io Net | `io-net/fp16` | ❌ NO |  |  |
-| Nebius | `nebius/fp4` | ❌ NO |  |  |
-| Novita | `novita/fp4` | ❌ NO |  |  |
-| Parasail | `parasail/fp4` | ❌ NO |  |  |
-| Phala | `phala` | ❌ NO |  |  |
-| SambaNova | `sambanova` | ❌ NO |  |  |
+| Google | `google-vertex` | ❌ NO | I’m |  |
+| Groq | `groq` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Io Net | `io-net/fp16` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Nebius | `nebius/fp4` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Novita | `novita/fp4` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Parasail | `parasail/fp4` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Phala | `phala` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| SambaNova | `sambanova` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 | SiliconFlow | `siliconflow/fp8` | ❌ NO | ...<\|end\|><\|start\|>assistant<\|channel\|>analy |  |
-| Together | `together` | ❌ NO |  |  |
-| WandB | `wandb/fp4` | ❌ NO |  |  |
+| Together | `together` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| WandB | `wandb/fp4` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 
 ## openai/gpt-oss-20b
 
-Providers tested: 11 | Supported: 0 | Not supported: 10 | Errors: 1
+Providers tested: 11 | Supported: 0 | Not supported: 0 | Errors: 11
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Amazon Bedrock | `amazon-bedrock` | ❌ NO |  |  |
-| DeepInfra | `deepinfra/bf16` | ❌ NO |  |  |
-| Fireworks | `fireworks` | ❌ NO |  |  |
-| Google | `google-vertex` | ❌ NO |  |  |
-| Groq | `groq` | ❌ NO |  |  |
-| NextBit | `nextbit/fp8` | ❌ NO |  |  |
-| Novita | `novita/fp4` | ❌ NO |  |  |
-| Parasail | `parasail/fp4` | ❌ NO |  |  |
+| Amazon Bedrock | `amazon-bedrock` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| DeepInfra | `deepinfra/bf16` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Fireworks | `fireworks` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Google | `google-vertex` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Groq | `groq` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| NextBit | `nextbit/fp8` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Novita | `novita/fp4` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Parasail | `parasail/fp4` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 | SiliconFlow | `siliconflow/fp8` | ⚠️ ERR |  | Request timed out. |
-| Together | `together` | ❌ NO |  |  |
-| WandB | `wandb/fp4` | ❌ NO |  |  |
+| Together | `together` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| WandB | `wandb/fp4` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 
 ## qwen/qwen3-8b
 
@@ -142,9 +142,9 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 - **Total tests:** 65
 - **Prefill supported:** 8
-- **Not supported:** 52
-- **Errors:** 5
-- **Total cost:** $0.003356
+- **Not supported:** 25
+- **Errors:** 32
+- **Total cost:** $0.002354
 
 ## Methodology
 

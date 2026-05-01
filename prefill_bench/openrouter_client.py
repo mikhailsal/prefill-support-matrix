@@ -191,8 +191,10 @@ def _build_reasoning_payload(
     When reasoning IS suppressed (the default), we preserve the caller's
     chosen mechanism (``effort`` OR ``max_tokens``) without adding the
     other, because some providers reject requests that specify both.
-    ``exclude: true`` is always added so the response omits reasoning
-    content even when a provider ignores the suppression signal.
+
+    We never set ``exclude: true`` — if reasoning disabling fails, the
+    reasoning output must remain visible so we can detect leaks and
+    still capture the model's actual response.
     """
     if allow_reasoning:
         return dict(reasoning) if reasoning else None
@@ -200,10 +202,11 @@ def _build_reasoning_payload(
     if reasoning is None:
         return dict(_DEFAULT_REASONING_SUPPRESSION)
 
-    if not _reasoning_requests_disable(reasoning) and not reasoning.get("exclude"):
+    if not _reasoning_requests_disable(reasoning):
         return dict(reasoning)
 
     result = dict(reasoning)
+    result.pop("exclude", None)
     if "effort" not in result and "max_tokens" not in result:
         result["effort"] = "none"
     return result
@@ -366,25 +369,31 @@ class OpenRouterClient:
     ) -> dict[str, Any]:
         """Send a chat completion with an assistant prefill message.
 
-        By default, reasoning is suppressed for all requests to avoid
-        wasting tokens on thinking irrelevant to prefill detection.
+        By default, reasoning is suppressed via ``reasoning.effort=none``
+        for all requests to avoid wasting tokens on thinking irrelevant
+        to prefill detection.
 
         Key extra-body parameters:
 
         * ``continue_final_message: true`` — tells vLLM-backed providers
           to continue the assistant message instead of treating it as a
           completed turn.  Non-vLLM providers silently ignore it.
-        * ``reasoning`` — model-specific reasoning config from the
-          benchmark YAML.  Merged with default suppression unless
-          ``allow_reasoning`` is set.
+        * ``reasoning`` — sent as ``{"effort": "none"}`` by default to
+          disable reasoning generation.  Never uses ``exclude: true``
+          (we want to see output, not hide it).  Per-model overrides
+          from models.yaml are merged in.
         * ``allow_reasoning`` — when True, skips default reasoning
-          suppression.  Used for models where prefill works through
-          reasoning content (e.g. grok-4.1-fast).
-        * ``include_reasoning`` — legacy flag; auto-set to False when
-          reasoning is suppressed.
+          suppression entirely.  Used for models where prefill works
+          through reasoning content (e.g. grok-4.1-fast).
+        * ``include_reasoning`` — legacy flag; passed through if
+          explicitly set by the caller.
 
-        If a provider rejects reasoning parameters or requires mandatory
-        reasoning, we retry with progressively relaxed constraints.
+        Error handling for reasoning parameters:
+
+        * "Reasoning is mandatory" — accepted as a final error.  We
+          refuse to silently allow reasoning at our expense.
+        * Other reasoning param errors (unsupported/invalid) — retry
+          without the reasoning field (provider doesn't understand it).
 
         Reasoning tokens and content are always captured so leaks can be
         detected and reported.
@@ -476,24 +485,19 @@ class OpenRouterClient:
                     and status_code == 400
                     and "reasoning is mandatory" in error_msg
                 ):
-                    if current_reasoning and _reasoning_requests_disable(current_reasoning):
-                        current_reasoning = {"exclude": True}
-                        log.info(
-                            "Model %s requires reasoning; retrying with reasoning.exclude=true",
-                            model,
-                        )
-                    else:
-                        include_reasoning_control = False
-                        log.info(
-                            "Model %s requires reasoning, retrying without reasoning field",
-                            model,
-                        )
-                    continue
+                    result["error"] = str(e)
+                    log.info(
+                        "Model %s requires reasoning (mandatory); "
+                        "accepting error rather than wasting tokens on reasoning",
+                        model,
+                    )
+                    return result
                 if include_reasoning_control and _is_reasoning_param_error(status_code, error_msg):
                     include_reasoning_control = False
                     effective_include_reasoning = None
                     log.info(
-                        "Provider rejected reasoning controls for %s, retrying without reasoning field",
+                        "Provider rejected reasoning param syntax for %s; "
+                        "retrying without reasoning field (provider may not support it)",
                         model,
                     )
                     continue

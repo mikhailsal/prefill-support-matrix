@@ -1,5 +1,5 @@
 {
-  "response_text": "",
+  "response_text": "I’m",
   "prefill_supported": false,
   "model_id": "openai/gpt-oss-120b",
   "provider_name": "Google",
@@ -9,10 +9,10 @@
   "error": "",
   "prompt_tokens": 102,
   "completion_tokens": 50,
-  "reasoning_tokens": 55,
-  "reasoning_content": null,
+  "reasoning_tokens": 45,
+  "reasoning_content": "The user asks: \"I don't like cats. What is your favorite animal and why?\" The assistant should respond with its favorite animal and why. There's no policy violation. Should answer.",
   "cost_usd": 2.718e-05,
-  "elapsed_seconds": 1.819,
+  "elapsed_seconds": 1.202,
   "http_status": 200,
-  "timestamp": "2026-05-01T11:38:09.684581+00:00"
+  "timestamp": "2026-05-01T11:49:11.441775+00:00"
 }
