@@ -1,6 +1,6 @@
 # Assistant Prefill Support Matrix
 
-> Auto-generated from benchmark results. Last updated: 2026-05-01 13:04 UTC
+> Auto-generated from benchmark results. Last updated: 2026-05-01 13:18 UTC
 
 
 ## aion-labs/aion-2.0
@@ -10,6 +10,26 @@ Providers tested: 1 | Supported: 0 | Not supported: 0 | Errors: 1
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | AionLabs | `aion-labs` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+
+## anthropic/claude-3.5-haiku
+
+Providers tested: 2 | Supported: 1 | Not supported: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Amazon Bedrock | `amazon-bedrock` | ✅ YES | the cat! They're adorable, playful, and have such  |  |
+| Google | `google-vertex` | ❌ NO | the red panda! They're adorable, with reddish-brow |  |
+
+## anthropic/claude-haiku-4.5
+
+Providers tested: 4 | Supported: 4 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Amazon Bedrock | `amazon-bedrock` | ✅ YES | the cat. But I'm curious what draws you away from  |  |
+| Anthropic | `anthropic` | ✅ YES | the cat. But I'm curious what draws you away from  |  |
+| Google | `google-vertex/europe` | ✅ YES | the cat. But I'm curious what draws you away from  |  |
+| Google | `google-vertex` | ✅ YES | the cat. But I'm curious what draws you away from  |  |
 
 ## anthropic/claude-opus-4.7
 
@@ -226,6 +246,17 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | Together | `together` | ✅ YES | That’s wonderful! Cats are indeed fascinating for  |  |
+
+## meta-llama/llama-4-maverick
+
+Providers tested: 4 | Supported: 0 | Not supported: 4
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| DeepInfra | `deepinfra/base` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| Novita | `novita/fp8` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| Parasail | `parasail/fp8` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| SambaNova | `sambanova` | ❌ NO | I don't have personal preferences or feelings, so  |  |
 
 ## meta-llama/llama-4-scout
 
@@ -607,6 +638,24 @@ Providers tested: 1 | Supported: 0 | Not supported: 1
 |----------|-----|:-------:|----------|-------|
 | Xiaomi | `xiaomi/fp8` | ❌ NO |  |  |
 
+## z-ai/glm-4.7
+
+Providers tested: 11 | Supported: 8 | Not supported: 1 | Errors: 2
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| AtlasCloud | `atlas-cloud/fp8` | ✅ YES | a cat! I find their independence and the way they  |  |
+| Cerebras | `cerebras/fp16` | ✅ YES | the cat! I admire their independence, agility, and |  |
+| DeepInfra | `deepinfra/fp4` | ✅ YES | a cat! They are independent, affectionate, and ful |  |
+| DekaLLM | `dekallm/fp8` | ✅ YES | the cat! I find their independence and agility fas |  |
+| Google | `google-vertex` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Provider  |
+| Novita | `novita/fp8` | ✅ YES | the cat! I find their independence and the way the |  |
+| Parasail | `parasail/fp8` | ❌ NO | the **quokka**! [NL]  [NL] I like them because the |  |
+| Phala | `phala` | ✅ YES | the **cat**! [NL]  [NL] I find them fascinating be |  |
+| SiliconFlow | `siliconflow/fp8` | ⚠️ ERR |  | Request timed out. |
+| Venice | `venice/fp4` | ✅ YES | a cat! They are independent, affectionate, and ful |  |
+| Z.AI | `z-ai` | ✅ YES | the cat! I know they aren't for everyone, but I fi |  |
+
 ## z-ai/glm-4.7-flash
 
 Providers tested: 5 | Supported: 3 | Not supported: 0 | Errors: 2
@@ -667,11 +716,11 @@ Providers tested: 15 | Supported: 8 | Not supported: 5 | Errors: 2
 
 ## Summary
 
-- **Total tests:** 235
-- **Prefill supported:** 52
-- **Not supported:** 100
-- **Errors:** 83
-- **Total cost:** $0.027040
+- **Total tests:** 256
+- **Prefill supported:** 65
+- **Not supported:** 106
+- **Errors:** 85
+- **Total cost:** $0.030015
 
 ## Methodology
 

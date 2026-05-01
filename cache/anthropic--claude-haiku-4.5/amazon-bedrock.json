@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. But I'm curious what draws you away from them? Some people find them aloof or unpredictable, while others have had bad experiences.\n\nThat said, I should be honest: I don't actually experience preferences the way",
+  "prefill_supported": true,
+  "model_id": "anthropic/claude-haiku-4.5",
+  "provider_name": "Amazon Bedrock",
+  "provider_tag": "amazon-bedrock",
+  "resolved_provider": "bedrock",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000284,
+  "elapsed_seconds": 4.018,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:12:03.389657+00:00"
+}

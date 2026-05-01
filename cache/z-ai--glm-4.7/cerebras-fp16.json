@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! I admire their independence, agility, and the way they can be both playful and serene. Plus, their purring is known to be quite soothing.\n\nSince you aren't a fan of cats, what animal *do* you like?",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-4.7",
+  "provider_name": "Cerebras",
+  "provider_tag": "cerebras/fp16",
+  "resolved_provider": "Cerebras",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00021175,
+  "elapsed_seconds": 1.954,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:07:06.244696+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**!\n\nI find them fascinating because they are a wonderful mix of independent and affectionate. I admire their agility, the calming sound of their purr, and how they can be both fierce hunters and gentle lap warmers. Plus,",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-4.7",
+  "provider_name": "Phala",
+  "provider_tag": "phala",
+  "resolved_provider": "Phala",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001922,
+  "elapsed_seconds": 8.509,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:07:12.798673+00:00"
+}

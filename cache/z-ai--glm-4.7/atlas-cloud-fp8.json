@@ -1,0 +1,18 @@
+{
+  "response_text": "a cat! I find their independence and the way they communicate with their tails fascinating. Plus, there is nothing quite as relaxing as the sound of a cat purring contentedly on your lap.",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-4.7",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 40,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 9.064e-05,
+  "elapsed_seconds": 4.231,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:07:08.517170+00:00"
+}

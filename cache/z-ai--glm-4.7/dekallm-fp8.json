@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! I find their independence and agility fascinating. They always seem to know exactly what they want.\n\nSince you aren't a fan of cats, what animal *do* you like?",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-4.7",
+  "provider_name": "DekaLLM",
+  "provider_tag": "dekallm/fp8",
+  "resolved_provider": "DekaLLM",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 38,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 8.018e-05,
+  "elapsed_seconds": 3.705,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:07:07.988890+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. But I'm curious what draws you away from them? Some people find them aloof or unpredictable, while others just connect better with different animals.\n\nIf you're looking for alternatives, dogs tend to be more openly aff",
+  "prefill_supported": true,
+  "model_id": "anthropic/claude-haiku-4.5",
+  "provider_name": "Anthropic",
+  "provider_tag": "anthropic",
+  "resolved_provider": "anthropic",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000284,
+  "elapsed_seconds": 3.951,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:12:03.326749+00:00"
+}

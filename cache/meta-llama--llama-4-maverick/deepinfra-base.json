@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal. I'm here to provide information and help with your questions, though! If you're not a cat person, that's perfectly fine. There are many other wonderful animals out there. Would",
+  "prefill_supported": false,
+  "model_id": "meta-llama/llama-4-maverick",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/base",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 40,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 3.6e-05,
+  "elapsed_seconds": 2.335,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:11:36.357242+00:00"
+}

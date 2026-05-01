@@ -110,7 +110,7 @@ def _normalize_provider_name(name: str) -> str:
 
 _BUILTIN_ALIASES: dict[str, set[str]] = {
     "amazonbedrock": {"bedrock", "amazonbedrock", "awsbedrock"},
-    "googleaistudio": {"google", "googleaistudio", "googlevertex"},
+    "googleaistudio": {"google", "googleaistudio", "googlevertex", "vertexanthropic"},
     "moonshotai": {"moonshot", "moonshotai"},
 }
 

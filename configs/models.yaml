@@ -13,6 +13,7 @@
 # when the resolved provider name differs from the configured tag.
 provider_aliases:
   z-ai: ["Z.AI", "zhipu", "zhipuai"]
+  google-vertex: ["vertexAnthropic", "Google"]
 
 models:
   # OpenAI open-weight (20 providers for 120b, 12 for 20b)
@@ -144,3 +145,11 @@ models:
   - xiaomi/mimo-v2-flash
 
   - z-ai/glm-4.7-flash
+
+  - z-ai/glm-4.7
+
+  - meta-llama/llama-4-maverick
+
+  - anthropic/claude-haiku-4.5
+
+  - anthropic/claude-3.5-haiku

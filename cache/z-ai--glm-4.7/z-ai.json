@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! I know they aren't for everyone, but I find their independence and agility fascinating. Plus, the way they can go from \"tiny tiger\" to \"liquid blanket\" in seconds is pretty amazing.\n\nSince you aren't a fan of",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-4.7",
+  "provider_name": "Z.AI",
+  "provider_tag": "z-ai",
+  "resolved_provider": "Z.AI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00012882,
+  "elapsed_seconds": 4.167,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:07:08.456516+00:00"
+}

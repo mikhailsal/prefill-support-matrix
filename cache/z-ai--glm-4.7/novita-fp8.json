@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! I find their independence and the way they communicate through body language fascinating. Since you aren't a fan of cats, what animal *do* you like?",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-4.7",
+  "provider_name": "Novita",
+  "provider_tag": "novita/fp8",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 35,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 8.712e-05,
+  "elapsed_seconds": 4.478,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:07:08.764727+00:00"
+}

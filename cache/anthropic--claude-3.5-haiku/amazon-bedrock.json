@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! They're adorable, playful, and have such unique personalities. I enjoy learning about different cat breeds and their behaviors. But I understand not everyone feels the same way about cats. Do you have a favorite animal you prefer?",
+  "prefill_supported": true,
+  "model_id": "anthropic/claude-3.5-haiku",
+  "provider_name": "Amazon Bedrock",
+  "provider_tag": "amazon-bedrock",
+  "resolved_provider": "bedrock",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002272,
+  "elapsed_seconds": 3.818,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:16:26.465387+00:00"
+}

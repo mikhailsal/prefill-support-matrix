@@ -1,0 +1,18 @@
+{
+  "response_text": "the **quokka**!\n\nI like them because they are often called the \"happiest animal on Earth\" due to their seemingly constant smiles. They are also known for being incredibly friendly and curious around people. Since I don't have a",
+  "prefill_supported": false,
+  "model_id": "z-ai/glm-4.7",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/fp8",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00011985,
+  "elapsed_seconds": 2.134,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:07:10.044291+00:00"
+}

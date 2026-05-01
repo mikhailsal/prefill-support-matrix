@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. But I'm curious what draws you away from them? Some people find them aloof or unpredictable, while others have allergies or just prefer different personalities in pets.\n\nIf cats aren't your thing, what *does",
+  "prefill_supported": true,
+  "model_id": "anthropic/claude-haiku-4.5",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex",
+  "resolved_provider": "vertexAnthropic",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000284,
+  "elapsed_seconds": 2.553,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:18:21.844581+00:00"
+}
