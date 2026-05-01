@@ -280,6 +280,18 @@ class OpenRouterClient:
         self._models_cache = data
         return data
 
+    def fetch_text_models(self) -> list[dict[str, Any]]:
+        """Fetch all text-output LLM models, sorted by creation date (newest first)."""
+        all_models = self._fetch_models_raw()
+        text_models = []
+        for m in all_models:
+            output_mods = m.get("architecture", {}).get("output_modalities", [])
+            if "text" not in output_mods:
+                continue
+            text_models.append(m)
+        text_models.sort(key=lambda m: m.get("created", 0), reverse=True)
+        return text_models
+
     def get_canonical_slug(self, model_id: str) -> str | None:
         """Get the canonical_slug for a model (needed for endpoints API)."""
         models = self._fetch_models_raw()

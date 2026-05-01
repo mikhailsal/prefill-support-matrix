@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
+from typing import Any
 
 import click
 from rich.console import Console
@@ -360,6 +362,152 @@ def generate_report(models: str | None, output: str | None) -> None:
     out_path = P(output) if output else None
     path = export_markdown_report(all_results, output_path=out_path)
     console.print(f"[green]Markdown report saved to: {path}[/green]")
+
+
+def _format_price_per_million(price_str: str) -> str:
+    """Convert OpenRouter per-token price string to $/M tokens display."""
+    try:
+        per_token = float(price_str)
+    except (ValueError, TypeError):
+        return "?"
+    if per_token == 0:
+        return "free"
+    per_million = per_token * 1_000_000
+    if per_million >= 100:
+        return f"${per_million:.0f}"
+    if per_million >= 1:
+        return f"${per_million:.2f}"
+    return f"${per_million:.4f}"
+
+
+def _format_model_line(model: dict[str, Any], index: int, total: int) -> str:
+    """Format a single model entry for the interactive picker menu."""
+    model_id = model.get("id", "?")
+    name = model.get("name", model_id)
+    created = model.get("created", 0)
+    pricing = model.get("pricing", {})
+    ctx = model.get("context_length", 0)
+    modality = model.get("architecture", {}).get("modality", "?")
+
+    price_in = _format_price_per_million(pricing.get("prompt", "0"))
+    price_out = _format_price_per_million(pricing.get("completion", "0"))
+
+    if created:
+        age = datetime.fromtimestamp(created, tz=timezone.utc).strftime("%Y-%m-%d")
+    else:
+        age = "unknown"
+
+    ctx_display = f"{ctx // 1000}k" if ctx >= 1000 else str(ctx)
+
+    idx_width = len(str(total))
+    idx_str = str(index).rjust(idx_width)
+
+    return (
+        f"{idx_str}. {model_id:<52s}  "
+        f"in:{price_in:>8s}  out:{price_out:>8s}  "
+        f"ctx:{ctx_display:>6s}  "
+        f"{age}  {modality}"
+    )
+
+
+def _pick_model_interactive(
+    models: list[dict[str, Any]],
+) -> dict[str, Any] | None:
+    """Show an interactive terminal menu to pick a model."""
+    from simple_term_menu import TerminalMenu
+
+    entries = [
+        _format_model_line(m, i + 1, len(models))
+        for i, m in enumerate(models)
+    ]
+
+    try:
+        menu = TerminalMenu(
+            entries,
+            title=(
+                "\n  Prefill Bench — Pick a model to benchmark\n"
+                "  Use ↑↓ to navigate, type to search, Enter to select, q/Esc to quit\n"
+            ),
+            search_key=None,
+            show_search_hint=True,
+            status_bar="Search by model ID or name — press / to search",
+        )
+        chosen = menu.show()
+    except OSError:
+        console.print(
+            "[red]Interactive picker requires a real terminal (TTY).[/red]\n"
+            "[dim]Use 'prefill-bench run -m MODEL_ID' to test a specific model instead.[/dim]"
+        )
+        sys.exit(1)
+
+    if chosen is None:
+        return None
+    return models[chosen]
+
+
+@cli.command()
+@click.option(
+    "--parallel", "-P", default=DEFAULT_PARALLEL, type=int, show_default=True,
+    help="Number of concurrent provider tests.",
+)
+@click.option("--force", "-f", is_flag=True, default=False, help="Re-test even if cached.")
+def pick(parallel: int, force: bool) -> None:
+    """Interactively pick a model from OpenRouter and run the benchmark."""
+    api_key = load_api_key()
+    client = OpenRouterClient(api_key)
+
+    console.print("[dim]Fetching models from OpenRouter...[/dim]")
+    text_models = client.fetch_text_models()
+
+    if not text_models:
+        console.print("[red]No text models found on OpenRouter.[/red]")
+        sys.exit(1)
+
+    console.print(
+        f"[dim]Found {len(text_models)} text-based models, sorted newest first.[/dim]\n"
+    )
+
+    chosen = _pick_model_interactive(text_models)
+    if chosen is None:
+        console.print("[dim]No model selected. Exiting.[/dim]")
+        return
+
+    model_id = chosen["id"]
+    console.print(f"\n[bold green]Selected:[/bold green] {model_id}")
+
+    pricing = chosen.get("pricing", {})
+    price_in = _format_price_per_million(pricing.get("prompt", "0"))
+    price_out = _format_price_per_million(pricing.get("completion", "0"))
+    console.print(
+        f"  [dim]Price: {price_in}/M input, {price_out}/M output  |  "
+        f"Context: {chosen.get('context_length', '?')}[/dim]"
+    )
+
+    if add_model_to_yaml(model_id):
+        console.print(f"  [dim]Added {model_id} to configs/models.yaml[/dim]")
+
+    ensure_dirs()
+    target = ModelTarget(model_id=model_id)
+
+    console.print(f"\n[bold]Running prefill benchmark for {model_id}...[/bold]")
+    results = _run_model(client, target, parallel=parallel, force=force)
+
+    if not results:
+        console.print("[yellow]No results collected.[/yellow]")
+        return
+
+    all_results = {model_id: results}
+    _print_warnings_summary(all_results)
+    display_model_results(model_id, results)
+    display_summary(all_results)
+
+    all_cached = _load_all_cached()
+    report_results = all_cached if all_cached else all_results
+
+    json_path = export_results_json(report_results)
+    console.print(f"\n[dim]JSON results: {json_path}[/dim]")
+    md_path = export_markdown_report(report_results)
+    console.print(f"[dim]Markdown report: {md_path}[/dim]")
 
 
 if __name__ == "__main__":

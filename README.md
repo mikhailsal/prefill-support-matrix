@@ -27,6 +27,9 @@ This approach is:
 # Install
 pip install -e .
 
+# Interactive model picker — browse all OpenRouter models and benchmark one
+prefill-bench pick
+
 # Run with default model list from configs/models.yaml
 prefill-bench run
 
