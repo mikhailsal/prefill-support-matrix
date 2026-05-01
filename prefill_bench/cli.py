@@ -12,24 +12,25 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import click
 from rich.console import Console
 
-from src.config import (
+from prefill_bench.config import (
     CACHE_DIR,
     DEFAULT_PARALLEL,
     ModelTarget,
     TestResult,
+    add_model_to_yaml,
     ensure_dirs,
     load_api_key,
     load_model_targets,
 )
-from src.matrix import (
+from prefill_bench.matrix import (
     display_full_matrix,
     display_model_results,
     display_summary,
     export_markdown_report,
     export_results_json,
 )
-from src.openrouter_client import OpenRouterClient
-from src.runner import load_cached_result, test_provider
+from prefill_bench.openrouter_client import OpenRouterClient
+from prefill_bench.runner import load_cached_result, test_provider
 
 console = Console()
 
@@ -204,6 +205,9 @@ def run(models: str | None, parallel: int, force: bool) -> None:
         model_targets = load_model_targets()
     else:
         model_targets = [ModelTarget(model_id=mid) for mid in parsed_model_ids]
+        for mid in parsed_model_ids:
+            if add_model_to_yaml(mid):
+                console.print(f"[dim]Added {mid} to configs/models.yaml[/dim]")
 
     model_ids = [t.model_id for t in model_targets]
 

@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from src.config import (
+from prefill_bench.config import (
     ASSISTANT_PREFILL,
     CACHE_DIR,
     EXPECTED_KEYWORD,
@@ -27,7 +27,7 @@ from src.config import (
     TestResult,
     model_id_to_slug,
 )
-from src.openrouter_client import (
+from prefill_bench.openrouter_client import (
     OpenRouterClient,
     ProviderMismatchError,
     _providers_match,

@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal. However, I can share interesting facts about various animals if you'd like! For example, did you know that octopuses have three hearts and blue blood?",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.5-plus-20260420",
+  "provider_name": "Alibaba",
+  "provider_tag": "alibaba",
+  "resolved_provider": "Alibaba",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001388,
+  "elapsed_seconds": 3.048,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:01:33.902119+00:00"
+}

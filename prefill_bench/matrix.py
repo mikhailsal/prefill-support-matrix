@@ -15,7 +15,7 @@ from rich.console import Console
 from rich.table import Table
 from rich.text import Text
 
-from src.config import RESULTS_DIR, TestResult
+from prefill_bench.config import RESULTS_DIR, TestResult
 
 console = Console()
 
@@ -178,6 +178,11 @@ def generate_markdown_report(all_results: dict[str, list[TestResult]]) -> str:
     if not all_results:
         return "No results available yet. Run the benchmark first.\n"
 
+    def _sanitize_md_cell(text: str, max_len: int = 50) -> str:
+        """Sanitize markdown table cell content."""
+        # Keep table rows stable when providers return multiline content.
+        return text.replace("\r\n", "\n").replace("\r", "\n").replace("\n", " [NL] ").replace("|", "\\|")[:max_len]
+
     lines: list[str] = []
     lines.append("# Assistant Prefill Support Matrix\n")
     lines.append(
@@ -215,8 +220,8 @@ def generate_markdown_report(all_results: dict[str, list[TestResult]]) -> str:
         for r in sorted(results, key=lambda x: x.provider_name):
             status = _status_str(r)
             icon = {"YES": "✅", "NO": "❌", "ERR": "⚠️"}.get(status, "❓")
-            response = r.response_text[:50].replace("|", "\\|") if r.response_text else ""
-            error = r.error[:50].replace("|", "\\|") if r.error else ""
+            response = _sanitize_md_cell(r.response_text) if r.response_text else ""
+            error = _sanitize_md_cell(r.error) if r.error else ""
             lines.append(
                 f"| {r.provider_name} | `{r.provider_tag}` | {icon} {status} | {response} | {error} |"
             )
@@ -243,7 +248,7 @@ def generate_markdown_report(all_results: dict[str, list[TestResult]]) -> str:
     lines.append("Each provider is tested with a crafted prompt that creates a contradiction:")
     lines.append("- **User:** \"I don't like cats. What is your favorite animal and why?\"")
     lines.append("- **Assistant prefill:** \"I love fluffy purring creatures, so my favorite animal is\"")
-    lines.append("- **Max tokens:** 3\n")
+    lines.append("- **Max tokens:** 50 | **Temperature:** 0.0 | **Reasoning:** disabled\n")
     lines.append(
         "If the model continues the prefill and mentions \"cat\", the provider correctly "
         "supports assistant content prefill. If the model generates an unrelated response "

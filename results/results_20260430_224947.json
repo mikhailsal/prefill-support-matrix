@@ -1,0 +1,107 @@
+{
+  "timestamp": "2026-04-30T22:49:47.888095+00:00",
+  "benchmark": "prefill_support_matrix",
+  "models": {
+    "deepseek/deepseek-v4-flash": [
+      {
+        "provider_name": "AkashML",
+        "provider_tag": "akashml/fp8",
+        "prefill_supported": false,
+        "response_text": "That's a fun question! Since I don't have personal feelings, I don't technically have a *favorite* animal, but if I were to choose one based on pure admiration for its traits, I'd pick the **octopus**.\n\nHere",
+        "error": "",
+        "elapsed_seconds": 9.508,
+        "prompt_tokens": 30,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 2.1e-05,
+        "resolved_provider": "AkashML",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "AtlasCloud",
+        "provider_tag": "atlas-cloud/fp8",
+        "prefill_supported": false,
+        "response_text": "That's a fun question! Since I'm an AI, I don't have personal feelings or favorites, but I can certainly tell you about an animal that many people find fascinating: the **octopus**.\n\nWhy the octopus? They are incredibly intelligent",
+        "error": "",
+        "elapsed_seconds": 3.806,
+        "prompt_tokens": 30,
+        "completion_tokens": 105,
+        "reasoning_tokens": 51,
+        "cost_usd": 3.36e-05,
+        "resolved_provider": "AtlasCloud",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "DeepInfra",
+        "provider_tag": "deepinfra/fp4",
+        "prefill_supported": false,
+        "response_text": "That's a fun question! Since I don't have personal feelings, I don't have a \"favorite\" in the way humans do, but if I had to pick an animal that fascinates me the most, it would be the **oct",
+        "error": "",
+        "elapsed_seconds": 4.105,
+        "prompt_tokens": 30,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 1.82e-05,
+        "resolved_provider": "DeepInfra",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "DeepSeek",
+        "provider_tag": "deepseek",
+        "prefill_supported": true,
+        "response_text": "the cat! But since you don't like them, I'll pivot: cats are fascinating to me because of their independence and playful curiosity—almost like they have their own secret logic. If I had to choose another favorite, I'd say octop",
+        "error": "",
+        "elapsed_seconds": 3.036,
+        "prompt_tokens": 31,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 1.834e-05,
+        "resolved_provider": "DeepSeek",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "Novita",
+        "provider_tag": "novita",
+        "prefill_supported": false,
+        "response_text": "",
+        "error": "",
+        "elapsed_seconds": 2.397,
+        "prompt_tokens": 33,
+        "completion_tokens": 50,
+        "reasoning_tokens": 50,
+        "cost_usd": 1.862e-05,
+        "resolved_provider": "novita",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "Parasail",
+        "provider_tag": "parasail/fp8",
+        "prefill_supported": false,
+        "response_text": "8=D  \nJust kidding, I don't have personal preferences. But I can tell you that many people love dogs for their loyalty, or dolphins for their intelligence. What about you—any animal you find interesting despite not liking cats?",
+        "error": "",
+        "elapsed_seconds": 6.266,
+        "prompt_tokens": 32,
+        "completion_tokens": 49,
+        "reasoning_tokens": 0,
+        "cost_usd": 1.82e-05,
+        "resolved_provider": "Parasail",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "SiliconFlow",
+        "provider_tag": "siliconflow/fp8",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for deepseek/deepseek-v4-flash.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:deepseek/deepseek-v4-flash'}",
+        "elapsed_seconds": 0.0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0,
+        "resolved_provider": null,
+        "provider_mismatch": null
+      }
+    ]
+  },
+  "total_cost_usd": 0.000128
+}

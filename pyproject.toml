@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.scripts]
-prefill-bench = "src.cli:cli"
+prefill-bench = "prefill_bench.cli:cli"
 
 [tool.setuptools.packages.find]
-include = ["src*"]
+include = ["prefill_bench*"]

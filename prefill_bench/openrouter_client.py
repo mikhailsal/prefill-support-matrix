@@ -16,7 +16,7 @@ import httpx
 import requests
 from openai import OpenAI
 
-from src.config import (
+from prefill_bench.config import (
     API_CALL_TIMEOUT,
     OPENROUTER_API_URL,
     OPENROUTER_MODELS_URL,
@@ -171,7 +171,7 @@ def _reasoning_requests_disable(reasoning_cfg: dict[str, Any]) -> bool:
     return False
 
 
-_DEFAULT_REASONING_SUPPRESSION: dict[str, Any] = {"effort": "none", "exclude": True}
+_DEFAULT_REASONING_SUPPRESSION: dict[str, Any] = {"effort": "none"}
 
 
 def _build_reasoning_payload(
@@ -206,7 +206,6 @@ def _build_reasoning_payload(
     result = dict(reasoning)
     if "effort" not in result and "max_tokens" not in result:
         result["effort"] = "none"
-    result["exclude"] = True
     return result
 
 
@@ -414,8 +413,6 @@ class OpenRouterClient:
         )
         include_reasoning_control = current_reasoning is not None
         effective_include_reasoning = include_reasoning
-        if include_reasoning_control and effective_include_reasoning is None:
-            effective_include_reasoning = False
         last_error: Exception | None = None
         for attempt in range(self.MAX_RETRIES + 1):
             try:

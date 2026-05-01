@@ -186,3 +186,27 @@ def load_model_targets(path: Path | None = None) -> list[ModelTarget]:
 def load_model_list(path: Path | None = None) -> list[str]:
     """Backward-compatible helper returning only model IDs."""
     return [target.model_id for target in load_model_targets(path)]
+
+
+def add_model_to_yaml(model_id: str, path: Path | None = None) -> bool:
+    """Append *model_id* to models.yaml if it is not already listed.
+
+    Uses raw-text append to preserve comments and manual formatting.
+    Returns True when the model was newly added, False when it was
+    already present.
+    """
+    config_path = path or CONFIGS_PATH
+
+    existing_ids = set(load_model_list(config_path))
+    if model_id in existing_ids:
+        return False
+
+    if config_path.exists():
+        content = config_path.read_text(encoding="utf-8")
+    else:
+        config_path.parent.mkdir(parents=True, exist_ok=True)
+        content = "models:\n"
+
+    content = content.rstrip("\n") + f"\n\n  - {model_id}\n"
+    config_path.write_text(content, encoding="utf-8")
+    return True

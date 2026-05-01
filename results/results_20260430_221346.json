@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-04-30T22:13:46.904344+00:00",
+  "benchmark": "prefill_support_matrix",
+  "models": {
+    "qwen/qwen3-coder": [
+      {
+        "provider_name": "Alibaba",
+        "provider_tag": "alibaba/opensource",
+        "prefill_supported": true,
+        "response_text": "I don't actually have personal preferences or favorites since I'm an AI, but I find it interesting how different people connect with different animals! \n\nIt sounds like you have a soft spot for cats - there's something special about that combination of fluff",
+        "error": "",
+        "elapsed_seconds": 2.379,
+        "prompt_tokens": 34,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002769,
+        "resolved_provider": "Alibaba",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "AtlasCloud",
+        "provider_tag": "atlas-cloud/fp8",
+        "prefill_supported": false,
+        "response_text": "I find myself drawn to octopuses! I'm fascinated by their intelligence and problem-solving abilities - they can navigate mazes, use tools, and even show what seems like playful curiosity. Their ability to completely transform their appearance for camouflage is like having",
+        "error": "",
+        "elapsed_seconds": 2.343,
+        "prompt_tokens": 39,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00022042,
+        "resolved_provider": "AtlasCloud",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "DeepInfra",
+        "provider_tag": "deepinfra/turbo",
+        "prefill_supported": true,
+        "response_text": "the cat! I find their independent yet affectionate nature fascinating - how they can be so dignified and aloof one moment, then suddenly decide they want all your attention and cuddles. There's something almost magical about how content they seem just loung",
+        "error": "",
+        "elapsed_seconds": 2.3,
+        "prompt_tokens": 34,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 5.7e-05,
+        "resolved_provider": "DeepInfra",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "Google",
+        "provider_tag": "google-vertex",
+        "prefill_supported": true,
+        "response_text": "It sounds like you have a soft spot for cats! I can see why - there's something special about those fluffy, purring companions.\n\nAs for me, I find myself drawn to octopuses. I'm fascinated by their intelligence and problem-solving",
+        "error": "",
+        "elapsed_seconds": 2.932,
+        "prompt_tokens": 39,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 9.858e-05,
+        "resolved_provider": "Google",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "Novita",
+        "provider_tag": "novita/fp8",
+        "prefill_supported": true,
+        "response_text": "I don't actually have personal preferences or favorites since I'm an AI, but I find it interesting how different people connect with different animals! \n\nIt sounds like you're a cat person - there's something special about those fluffy, purring companions.",
+        "error": "",
+        "elapsed_seconds": 2.476,
+        "prompt_tokens": 34,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 7.52e-05,
+        "resolved_provider": "Novita",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "Together",
+        "provider_tag": "together/fp8",
+        "prefill_supported": null,
+        "response_text": "",
+        "error": "Error code: 404 - {'error': {'message': 'No endpoints found for qwen/qwen3-coder.', 'code': 404}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:qwen/qwen3-coder'}",
+        "elapsed_seconds": 0.0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0,
+        "resolved_provider": null,
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "Venice",
+        "provider_tag": "venice/fp8",
+        "prefill_supported": true,
+        "response_text": "the domestic cat! I find their independent yet affectionate nature fascinating - how they can be so self-sufficient yet still form such strong bonds with humans. Their playful energy, those wonderful purrs, and even their occasional dramatic flair for expressing displeasure",
+        "error": "",
+        "elapsed_seconds": 2.252,
+        "prompt_tokens": 34,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 8.69e-05,
+        "resolved_provider": "Venice",
+        "provider_mismatch": null
+      },
+      {
+        "provider_name": "WandB",
+        "provider_tag": "wandb/bf16",
+        "prefill_supported": false,
+        "response_text": "I find myself drawn to octopuses! I'm fascinated by their intelligence and problem-solving abilities - they can navigate mazes, use tools, and even show what seems like playful curiosity. Their ability to change color and texture for camouflage is like having",
+        "error": "",
+        "elapsed_seconds": 2.179,
+        "prompt_tokens": 39,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000114,
+        "resolved_provider": "WandB",
+        "provider_mismatch": null
+      }
+    ]
+  },
+  "total_cost_usd": 0.000929
+}

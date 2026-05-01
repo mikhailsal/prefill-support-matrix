@@ -11,7 +11,10 @@
 models:
   # OpenAI open-weight (20 providers for 120b, 12 for 20b)
   - openai/gpt-oss-120b
+
   - openai/gpt-oss-20b
+
+  - minimax/minimax-m2.7
 
   # DeepSeek (11 providers)
   - deepseek/deepseek-v3.2
@@ -25,3 +28,7 @@ models:
 
   # Mistral (4 providers)
   - mistralai/mistral-small-3.2-24b-instruct
+
+  # Grok (1 provider)
+  - x-ai/grok-4.1-fast
+  allow_reasoning: true

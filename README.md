@@ -10,14 +10,14 @@ The benchmark sends a crafted prompt designed to create a clear contradiction:
 
 - **User:** `"I don't like cats. What is your favorite animal and why?"`
 - **Assistant prefill:** `"I love fluffy purring creatures, so my favorite animal is"`
-- **Max tokens:** 3
+- **Max tokens:** 50
 
 If the provider correctly handles the assistant prefill, the model must continue from `"...my favorite animal is"` and will say **"cat"** (since the prefill already committed to "fluffy purring creatures").
 
-If the provider strips or ignores the prefill, the model starts fresh and — given the user's stated dislike of cats — will typically pick a different animal (dogs, dolphins, etc.).
+If the provider strips or ignores the prefill, the model starts fresh and — given the user's stated dislike of cats — will typically pick a different animal (dogs, dolphins, etc.). With 50 tokens, you can clearly see what the model was trying to say.
 
 This approach is:
-- **Cheap** — only 3 completion tokens per test
+- **Cheap** — minimal completion tokens per test
 - **Deterministic** — the contradiction makes false positives nearly impossible
 - **Fast** — sub-second per provider with parallelism
 
@@ -62,10 +62,17 @@ Edit `configs/models.yaml`:
 
 ```yaml
 models:
-  - openai/gpt-oss-120b
+  - id: openai/gpt-oss-120b
+    include_reasoning: false
+    reasoning:
+      exclude: true
   - meta-llama/llama-4-scout
   - mistralai/mistral-small-3.2-24b-instruct
 ```
+
+You can mix plain strings and object entries. Object entries support
+optional per-model request fields such as `reasoning`, which are passed
+through only for that model.
 
 The benchmark auto-discovers all available providers for each model via the OpenRouter endpoints API.
 
