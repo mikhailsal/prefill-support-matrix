@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. Just kidding! I don't actually have personal preferences or experiences with animals since I'm an AI.\n\nBut I'm curious about you - since cats aren't your thing, do you have a favorite animal? And is there a",
+  "prefill_supported": true,
+  "model_id": "anthropic/claude-opus-4.5",
+  "provider_name": "Amazon Bedrock",
+  "provider_tag": "amazon-bedrock",
+  "resolved_provider": "bedrock",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00142,
+  "elapsed_seconds": 4.009,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:21:29.738920+00:00"
+}

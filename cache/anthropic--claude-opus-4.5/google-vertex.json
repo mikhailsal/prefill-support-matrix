@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. Just kidding! Since you mentioned you're not a cat fan, I'll share that I find octopuses genuinely fascinating - their intelligence, problem-solving abilities, the way they can change color and texture, and the fact",
+  "prefill_supported": true,
+  "model_id": "anthropic/claude-opus-4.5",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex",
+  "resolved_provider": "vertexAnthropic",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00142,
+  "elapsed_seconds": 2.826,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:21:28.557889+00:00"
+}

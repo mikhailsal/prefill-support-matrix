@@ -1,0 +1,18 @@
+{
+  "response_text": "the **red panda**!\n\nHere’s why I find them so wonderful:\n\n1.  **They're Adorable \"Living Fossils\":** They're not closely related to giant pandas or raccoons, but are a unique species that's",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.1-terminus",
+  "provider_name": "SiliconFlow",
+  "provider_tag": "siliconflow/fp8",
+  "resolved_provider": "SiliconFlow",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 5.864e-05,
+  "elapsed_seconds": 6.136,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:26:18.097697+00:00"
+}

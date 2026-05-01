@@ -1,0 +1,18 @@
+{
+  "response_text": "... the red panda! \n\nThey have that perfect combination of adorable features - the russet fur, the ringed tail, the way they waddle around and stand on their hind legs. They're also surprisingly acrobatic despite",
+  "prefill_supported": false,
+  "model_id": "anthropic/claude-sonnet-4.5",
+  "provider_name": "Amazon Bedrock",
+  "provider_tag": "amazon-bedrock",
+  "resolved_provider": "bedrock",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000852,
+  "elapsed_seconds": 4.491,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:19:41.641412+00:00"
+}

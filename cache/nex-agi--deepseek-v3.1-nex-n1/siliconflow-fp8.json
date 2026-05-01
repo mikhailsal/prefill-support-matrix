@@ -1,0 +1,18 @@
+{
+  "response_text": "I don’t have personal preferences or feelings, so I don’t have a favorite animal. But if you’d like, I can suggest some animals that are often described as fluffy and purring—like cats, rabbits, or certain small",
+  "prefill_supported": false,
+  "model_id": "nex-agi/deepseek-v3.1-nex-n1",
+  "provider_name": "SiliconFlow",
+  "provider_tag": "siliconflow/fp8",
+  "resolved_provider": "SiliconFlow",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 617,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001083,
+  "elapsed_seconds": 2.624,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:25:55.694239+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the red panda. They're like living teddy bears with their round faces, bushy tails, and playful antics—plus, they munch on bamboo in the misty mountains of Asia, which just",
+  "prefill_supported": true,
+  "model_id": "x-ai/grok-4-fast",
+  "provider_name": "xAI",
+  "provider_tag": "xai",
+  "resolved_provider": "xAI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 199,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 4.065e-05,
+  "elapsed_seconds": 2.46,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:22:52.922008+00:00"
+}

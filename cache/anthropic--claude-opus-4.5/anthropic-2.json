@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. Just kidding! I don't actually have personal preferences or experiences with animals since I'm an AI.\n\nBut I find it interesting to think about what makes different animals compelling to people. Since you mentioned not liking cats, I",
+  "prefill_supported": true,
+  "model_id": "anthropic/claude-opus-4.5",
+  "provider_name": "Anthropic",
+  "provider_tag": "anthropic/2",
+  "resolved_provider": "anthropic",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00142,
+  "elapsed_seconds": 3.311,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:21:29.044528+00:00"
+}

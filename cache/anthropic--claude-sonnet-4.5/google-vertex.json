@@ -1,0 +1,18 @@
+{
+  "response_text": "... the red panda!\n\nThey're these adorable tree-dwelling mammals with russet fur and ringed tails. What draws me to them is how they seem to embody contradictions - they're called pandas but are more closely related",
+  "prefill_supported": null,
+  "model_id": "anthropic/claude-sonnet-4.5",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex",
+  "resolved_provider": "anthropic",
+  "provider_mismatch": "Provider mismatch: requested 'google-vertex', gateway used 'anthropic'. Result invalid.",
+  "error": "Provider mismatch: requested 'google-vertex', gateway used 'anthropic'. Result invalid.",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000852,
+  "elapsed_seconds": 4.058,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:19:41.209620+00:00"
+}
