@@ -1,0 +1,18 @@
+{
+  "response_text": "…I know this might sound contradictory, but I still have to say cats.  \nFor me it’s not just the softness or the soothing vibration of a purr; it’s the whole package: the way they can be both fiercely independent and unexpectedly affection",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2-0905",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 41,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001496,
+  "elapsed_seconds": 3.56,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:56.693633+00:00"
+}

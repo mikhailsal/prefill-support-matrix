@@ -1,0 +1,18 @@
+{
+  "response_text": "…actually, I don’t have personal preferences the way people do, but if I had to pick an animal that fascinates me most, I’d go with the octopus.  \n\nThey’re basically the closest thing we have to intelligent aliens on Earth",
+  "prefill_supported": true,
+  "model_id": "moonshotai/kimi-k2-0905",
+  "provider_name": "SiliconFlow",
+  "provider_tag": "siliconflow/fp8",
+  "resolved_provider": "SiliconFlow",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 55,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000122,
+  "elapsed_seconds": 5.805,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:58.935400+00:00"
+}

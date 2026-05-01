@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**. \n\nI appreciate their mix of independence and affection, their graceful movement, and how they've essentially domesticated themselves by choosing to live alongside humans. Plus their purring is genuinely calming—there's research suggesting it may even promote healing in",
+  "prefill_supported": true,
+  "model_id": "moonshotai/kimi-k2.5",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/fp4",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00012172,
+  "elapsed_seconds": 6.526,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:25.795494+00:00"
+}

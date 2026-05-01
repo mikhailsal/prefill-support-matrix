@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or experiences, so I don't have a favorite animal.\n\nBut I find it interesting to consider what makes different animals appealing to different people. Some value dogs for their social loyalty, admire birds for their freedom of flight, or appreciate",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.5",
+  "provider_name": "SiliconFlow",
+  "provider_tag": "siliconflow/int4",
+  "resolved_provider": "SiliconFlow",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 22,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001224,
+  "elapsed_seconds": 3.165,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:22.435385+00:00"
+}

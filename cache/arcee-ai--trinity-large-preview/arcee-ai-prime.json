@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! They're independent, curious, and make great companions.",
+  "prefill_supported": true,
+  "model_id": "arcee-ai/trinity-large-preview",
+  "provider_name": "Arcee AI",
+  "provider_tag": "arcee-ai/prime",
+  "resolved_provider": "Arcee AI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 39,
+  "completion_tokens": 15,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.26e-05,
+  "elapsed_seconds": 1.573,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:18:28.295177+00:00"
+}

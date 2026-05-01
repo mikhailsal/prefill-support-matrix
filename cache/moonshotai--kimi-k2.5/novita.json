@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal. I'm an AI without subjective experiences.\n\nBut I can engage with your prompt! If you're completing that sentence based on your stated love of \"fluffy purring creatures,\" you'd",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.5",
+  "provider_name": "Novita",
+  "provider_tag": "novita",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 38,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00016416,
+  "elapsed_seconds": 4.405,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:23.676811+00:00"
+}

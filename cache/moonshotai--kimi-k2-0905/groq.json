@@ -1,0 +1,18 @@
+{
+  "response_text": "the fox. It’s the perfect blend of wild and cunning, with eyes that seem ready to pull a practical joke on you. They look like a cross between a dog and a cat—enjoying head pats but always plotting their next",
+  "prefill_supported": true,
+  "model_id": "moonshotai/kimi-k2-0905",
+  "provider_name": "Groq",
+  "provider_tag": "groq",
+  "resolved_provider": "Groq",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 51,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000201,
+  "elapsed_seconds": 2.112,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:55.246698+00:00"
+}

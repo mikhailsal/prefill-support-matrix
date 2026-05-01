@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal. But I can share why many people find certain animals fascinating:\n\n**Dogs** are often appreciated for their loyalty, emotional intelligence, and the deep bonds they form with humans",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.5",
+  "provider_name": "ModelRun",
+  "provider_tag": "modelrun/fp4",
+  "resolved_provider": "ModelRun",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 58,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001944,
+  "elapsed_seconds": 2.546,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:21.818939+00:00"
+}

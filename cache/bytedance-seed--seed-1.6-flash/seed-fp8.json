@@ -1,0 +1,18 @@
+{
+  "response_text": "the red panda! They’re like a mix of a cat, a raccoon, and a teddy bear—with their rusty-red fur, bushy ringed tails, and round, expressive eyes. What I adore most is their gentle",
+  "prefill_supported": true,
+  "model_id": "bytedance-seed/seed-1.6-flash",
+  "provider_name": "Seed",
+  "provider_tag": "seed/fp8",
+  "resolved_provider": "Seed",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.755e-05,
+  "elapsed_seconds": 2.595,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:20:21.450302+00:00"
+}

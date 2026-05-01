@@ -1,0 +1,18 @@
+{
+  "response_text": "the **red panda**.\n\nThey're fascinating: they look like a mix of raccoon, fox, and bear, but they're actually most closely related to raccoons and weasels. They spend most of their lives in trees, have a",
+  "prefill_supported": true,
+  "model_id": "moonshotai/kimi-k2.5",
+  "provider_name": "Venice",
+  "provider_tag": "venice",
+  "resolved_provider": "Venice",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00019404,
+  "elapsed_seconds": 2.738,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:22.009902+00:00"
+}

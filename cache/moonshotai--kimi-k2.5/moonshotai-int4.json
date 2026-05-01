@@ -1,0 +1,18 @@
+{
+  "response_text": "I appreciate you sharing that! I don't have personal preferences or feelings, but I find **octopuses** fascinating to learn about.\n\nThey're remarkably intelligent problem-solvers with distributed brains (most neurons are in their arms), they can change color",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.5",
+  "provider_name": "Moonshot AI",
+  "provider_tag": "moonshotai/int4",
+  "resolved_provider": "Moonshot AI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 38,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001728,
+  "elapsed_seconds": 3.326,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:22.599529+00:00"
+}

@@ -1,6 +1,6 @@
 # Assistant Prefill Support Matrix
 
-> Auto-generated from benchmark results. Last updated: 2026-05-01 21:11 UTC
+> Auto-generated from benchmark results. Last updated: 2026-05-01 21:33 UTC
 
 
 ## aion-labs/aion-2.0
@@ -74,15 +74,39 @@ Providers tested: 5 | Supported: 3 | Not supported: 0 | Errors: 2
 | Google | `google-vertex/global` | ❓ MISMATCH | ... the red panda! [NL]  [NL] They're these adorab | Provider mismatch: requested 'google-vertex/global |
 | Google | `google-vertex` | ❓ MISMATCH | ... the red panda! [NL]  [NL] They're these adorab | Provider mismatch: requested 'google-vertex', gate |
 
-## arcee-ai/trinity-large-thinking
+## arcee-ai/trinity-large-preview
 
-Providers tested: 3 | Supported: 0 | Not supported: 0 | Errors: 3
+Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Arcee AI | `arcee-ai` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
-| Parasail | `parasail/fp8` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
-| Venice | `venice/fp8` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Arcee AI | `arcee-ai/prime` | ✅ YES | the cat! They're independent, curious, and make gr |  |
+
+## arcee-ai/trinity-large-thinking
+
+Providers tested: 3 | Supported: 0 | Not supported: 3
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Arcee AI | `arcee-ai` | ❌ NO | 💭 Hmm, the user says they don't like cats, but the |  |
+| Parasail | `parasail/fp8` | ❌ NO | 💭 Hmm, the user says they don't like cats, then as |  |
+| Venice | `venice/fp8` | ❌ NO | 💭 Hmm, the user says they don't like cats, then as |  |
+
+## arcee-ai/trinity-mini
+
+Providers tested: 1 | Supported: 0 | Not supported: 0 | Errors: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Clarifai | `clarifai/bf16` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+
+## baidu/ernie-4.5-21b-a3b
+
+Providers tested: 1 | Supported: 0 | Not supported: 0 | Errors: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Novita | `novita/bf16` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
 
 ## baidu/qianfan-ocr-fast:free
 
@@ -91,6 +115,14 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | Baidu | `baidu/fp8` | ✅ YES | I love fluffy purring creatures, so my favorite animal is |  |
+
+## bytedance-seed/seed-1.6-flash
+
+Providers tested: 1 | Supported: 1 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Seed | `seed/fp8` | ✅ YES | the red panda! They’re like a mix of a cat, a racc |  |
 
 ## bytedance-seed/seed-2.0-lite
 
@@ -155,17 +187,17 @@ Providers tested: 7 | Supported: 2 | Not supported: 4 | Errors: 1
 
 ## deepseek/deepseek-v4-pro
 
-Providers tested: 7 | Supported: 0 | Not supported: 1 | Errors: 6
+Providers tested: 7 | Supported: 1 | Not supported: 5 | Errors: 1
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| AtlasCloud | `atlas-cloud/fp8` | ❓ MISMATCH | 💭 …orite animal is ". It seems cut off. The assistant message | Provider mismatch: requested 'atlas-cloud/fp8', ga |
-| DeepSeek | `deepseek` | ❓ MISMATCH | I understand—cats aren't for everyone, and that's  | Provider mismatch: requested 'deepseek', gateway u |
-| GMICloud | `gmicloud/fp8` | ❓ MISMATCH | That’s totally fair—everyone has their own prefere | Provider mismatch: requested 'gmicloud/fp8', gatew |
-| Novita | `novita` | ❌ NO | 💭 …orite animal is " [NL]  [NL] It |  |
-| Parasail | `parasail/fp8` | ❓ MISMATCH | 💭 …orite animal is  | Provider mismatch: requested 'parasail/fp8', gatew |
-| SiliconFlow | `siliconflow/fp8` | ❓ MISMATCH | 💭 We need to parse the user's message. The user sa | Provider mismatch: requested 'siliconflow/fp8', ga |
-| Together | `together` | ❓ MISMATCH | 💭 …orite animal is ". That response was cut off. The | Provider mismatch: requested 'together', gateway u |
+| AtlasCloud | `atlas-cloud/fp8` | ❌ NO | I don't have personal feelings or favorites, but I |  |
+| DeepSeek | `deepseek` | ✅ YES | definitely the cat. I find their independent yet a |  |
+| GMICloud | `gmicloud/fp8` | ❌ NO | 💭 We need to parse the user's message and respond  |  |
+| Novita | `novita` | ❌ NO | I don't have personal feelings or favorites, but I |  |
+| Parasail | `parasail/fp8` | ⚠️ ERR |  | Request timed out. |
+| SiliconFlow | `siliconflow/fp8` | ❌ NO | I don't actually have personal preferences or feel |  |
+| Together | `together` | ❌ NO | I don't have personal feelings or preferences, so  |  |
 
 ## google/gemini-2.0-flash-lite-001
 
@@ -472,6 +504,39 @@ Providers tested: 4 | Supported: 2 | Not supported: 1 | Errors: 1
 | Mistral | `mistral` | ✅ YES | …orite animal is the **red panda**! They’re adorable, with their fox-l |  |
 | Parasail | `parasail/bf16` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Provider  |
 | Venice | `venice/fp8` | ✅ YES | 't a cat—it's an **octopus**! Here’s why: [NL]  [N |  |
+
+## moonshotai/kimi-k2-0905
+
+Providers tested: 4 | Supported: 3 | Not supported: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| AtlasCloud | `atlas-cloud/fp8` | ❌ NO | …I know this might sound contradictory, but I stil |  |
+| Groq | `groq` | ✅ YES | the fox. It’s the perfect blend of wild and cunnin |  |
+| Novita | `novita/fp8` | ✅ YES | …actually, the cat.   [NL] But since you’re not a  |  |
+| SiliconFlow | `siliconflow/fp8` | ✅ YES | …actually, I don’t have personal preferences the w |  |
+
+## moonshotai/kimi-k2.5
+
+Providers tested: 15 | Supported: 2 | Not supported: 10 | Errors: 3
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| AtlasCloud | `atlas-cloud/int4` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| BaseTen | `baseten/fp4` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
+| Chutes | `chutes/int4` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| Cloudflare | `cloudflare` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| DeepInfra | `deepinfra/fp4` | ✅ YES | the **cat**.  [NL]  [NL] I appreciate their mix of |  |
+| Fireworks | `fireworks` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
+| Inceptron | `inceptron/int4` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
+| ModelRun | `modelrun/fp4` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| Moonshot AI | `moonshotai/int4` | ❌ NO | I appreciate you sharing that! I don't have person |  |
+| Novita | `novita` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| Parasail | `parasail/int4` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| Phala | `phala` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| SiliconFlow | `siliconflow/int4` | ❌ NO | I don't have personal preferences or experiences,  |  |
+| Together | `together` | ❌ NO | I don't have personal preferences or feelings, so  |  |
+| Venice | `venice` | ✅ YES | the **red panda**. [NL]  [NL] They're fascinating: |  |
 
 ## moonshotai/kimi-k2.6
 
@@ -1016,11 +1081,11 @@ Providers tested: 15 | Supported: 12 | Not supported: 1 | Errors: 2
 
 ## Summary
 
-- **Total tests:** 339
-- **Prefill supported:** 127
-- **Not supported:** 117
-- **Errors:** 95
-- **Total cost:** $0.052971
+- **Total tests:** 362
+- **Prefill supported:** 135
+- **Not supported:** 135
+- **Errors:** 92
+- **Total cost:** $0.053700
 
 ## Methodology
 

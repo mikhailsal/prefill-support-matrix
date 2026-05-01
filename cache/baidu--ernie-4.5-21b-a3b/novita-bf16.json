@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": null,
+  "model_id": "baidu/ernie-4.5-21b-a3b",
+  "provider_name": "Novita",
+  "provider_tag": "novita/bf16",
+  "resolved_provider": null,
+  "provider_mismatch": null,
+  "error": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'baidu/ernie-4.5-21b-a3b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Novita', 'is_byok': False}}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:baidu/ernie-4.5-21b-a3b+novita/bf16'}",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 0.0,
+  "http_status": 429,
+  "timestamp": "2026-05-01T21:20:06.662365+00:00"
+}

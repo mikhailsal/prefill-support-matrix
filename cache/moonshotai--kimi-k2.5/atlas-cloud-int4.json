@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal. But I can engage with your interest!\n\nIt sounds like you're describing **cats** with \"fluffy purring creatures\" — though you mentioned you don't like them. Are",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.5",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/int4",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 38,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00014362,
+  "elapsed_seconds": 2.548,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:21.818808+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "…actually, the cat.  \nBut since you’re not a fan, I’ll pick a runner-up that’s still fluffy but won’t climb your curtains at 3 a.m.: the red panda.  \n\nImagine a raccoon-sized fire",
+  "prefill_supported": true,
+  "model_id": "moonshotai/kimi-k2-0905",
+  "provider_name": "Novita",
+  "provider_tag": "novita/fp8",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 36,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001466,
+  "elapsed_seconds": 5.066,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:58.197936+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal.\n\nBut I find it interesting how divisive cats can be! People tend to love them or... not. What is it about cats that doesn't appeal to you—the independence,",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.5",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/int4",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 40,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000164,
+  "elapsed_seconds": 2.878,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:22.150086+00:00"
+}

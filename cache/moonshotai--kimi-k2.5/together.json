@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal. But I find it interesting to learn what people appreciate about different creatures.\n\nSince you mentioned not liking cats—fair enough, they're not for everyone—I'm curious what you *",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.5",
+  "provider_name": "Together",
+  "provider_tag": "together",
+  "resolved_provider": "Together",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 59,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001695,
+  "elapsed_seconds": 7.324,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:33:26.594613+00:00"
+}
