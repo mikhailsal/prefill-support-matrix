@@ -219,7 +219,11 @@ def run(models: str | None, parallel: int, force: bool) -> None:
     if parsed_model_ids is None:
         model_targets = load_model_targets()
     else:
-        model_targets = [ModelTarget(model_id=mid) for mid in parsed_model_ids]
+        existing_targets = {t.model_id: t for t in load_model_targets()}
+        model_targets = [
+            existing_targets.get(mid, ModelTarget(model_id=mid))
+            for mid in parsed_model_ids
+        ]
         for mid in parsed_model_ids:
             if add_model_to_yaml(mid):
                 console.print(f"[dim]Added {mid} to configs/models.yaml[/dim]")
@@ -582,7 +586,9 @@ def pick(parallel: int, force: bool, show_all: bool) -> None:
         console.print(f"  [dim]Added {model_id} to configs/models.yaml[/dim]")
 
     ensure_dirs()
-    target = ModelTarget(model_id=model_id)
+
+    existing_targets = {t.model_id: t for t in load_model_targets()}
+    target = existing_targets.get(model_id, ModelTarget(model_id=model_id))
 
     console.print(f"\n[bold]Running prefill benchmark for {model_id}...[/bold]")
     results = _run_model(client, target, parallel=parallel, force=force)
