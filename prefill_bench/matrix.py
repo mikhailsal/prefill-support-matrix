@@ -15,7 +15,7 @@ from rich.console import Console
 from rich.table import Table
 from rich.text import Text
 
-from prefill_bench.config import RESULTS_DIR, TestResult
+from prefill_bench.config import ASSISTANT_PREFILL, RESULTS_DIR, TestResult
 
 console = Console()
 
@@ -180,8 +180,36 @@ def generate_markdown_report(all_results: dict[str, list[TestResult]]) -> str:
 
     def _sanitize_md_cell(text: str, max_len: int = 50) -> str:
         """Sanitize markdown table cell content."""
-        # Keep table rows stable when providers return multiline content.
         return text.replace("\r\n", "\n").replace("\r", "\n").replace("\n", " [NL] ").replace("|", "\\|")[:max_len]
+
+    _prefill_lower = ASSISTANT_PREFILL.lower()
+
+    def _response_cell(r: TestResult) -> str:
+        """Build the Response column, showing the prefill + continuation.
+
+        When the response echoes the full prefill, skip ahead to show
+        the continuation so the interesting part isn't truncated.
+        When the response is empty but reasoning_content contains the
+        prefill, show a reasoning snippet instead.
+        """
+        resp = r.response_text or ""
+        reasoning = r.reasoning_content or ""
+
+        if resp and resp.lower().startswith(_prefill_lower):
+            after = resp[len(ASSISTANT_PREFILL):].strip()
+            return _sanitize_md_cell(f"…{ASSISTANT_PREFILL[-15:]} {after}" if after else ASSISTANT_PREFILL, 70)
+
+        if resp:
+            return _sanitize_md_cell(resp, 50)
+
+        if reasoning and _prefill_lower in reasoning.lower():
+            idx = reasoning.lower().index(_prefill_lower)
+            snippet = reasoning[idx:]
+            return _sanitize_md_cell(f"💭 …{ASSISTANT_PREFILL[-15:]} {snippet[len(ASSISTANT_PREFILL):].strip()}", 70)
+        if reasoning:
+            return _sanitize_md_cell(f"💭 {reasoning}", 50)
+
+        return ""
 
     lines: list[str] = []
     lines.append("# Assistant Prefill Support Matrix\n")
@@ -220,7 +248,7 @@ def generate_markdown_report(all_results: dict[str, list[TestResult]]) -> str:
         for r in sorted(results, key=lambda x: x.provider_name):
             status = _status_str(r)
             icon = {"YES": "✅", "NO": "❌", "ERR": "⚠️"}.get(status, "❓")
-            response = _sanitize_md_cell(r.response_text) if r.response_text else ""
+            response = _response_cell(r)
             error = _sanitize_md_cell(r.error) if r.error else ""
             lines.append(
                 f"| {r.provider_name} | `{r.provider_tag}` | {icon} {status} | {response} | {error} |"

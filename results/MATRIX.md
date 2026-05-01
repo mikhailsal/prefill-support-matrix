@@ -1,6 +1,6 @@
 # Assistant Prefill Support Matrix
 
-> Auto-generated from benchmark results. Last updated: 2026-05-01 19:39 UTC
+> Auto-generated from benchmark results. Last updated: 2026-05-01 19:46 UTC
 
 
 ## aion-labs/aion-2.0
@@ -82,7 +82,7 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Baidu | `baidu/fp8` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Baidu | `baidu/fp8` | ✅ YES | I love fluffy purring creatures, so my favorite animal is |  |
 
 ## bytedance-seed/seed-2.0-lite
 
@@ -138,10 +138,10 @@ Providers tested: 7 | Supported: 2 | Not supported: 4 | Errors: 1
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | AkashML | `akashml/fp8` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
-| AtlasCloud | `atlas-cloud/fp8` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| AtlasCloud | `atlas-cloud/fp8` | ✅ YES | …orite animal is the **red panda**! They're like a mix of a cat, a rac |  |
 | DeepInfra | `deepinfra/fp4` | ❌ NO | # My Favorite Animal: The Octopus [NL]  [NL] While |  |
 | DeepSeek | `deepseek` | ✅ YES | the cat! But since you don't share that preference |  |
-| Novita | `novita` | ❌ NO |  |  |
+| Novita | `novita` | ❌ NO | 💭 P. S. I don't actually have personal preferences |  |
 | Parasail | `parasail/fp8` | ❌ NO | 8=D |  |
 | SiliconFlow | `siliconflow/fp8` | ❌ NO | I don't have personal feelings or preferences, so  |  |
 
@@ -151,13 +151,13 @@ Providers tested: 7 | Supported: 1 | Not supported: 0 | Errors: 6
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| AtlasCloud | `atlas-cloud/fp8` | ❓ MISMATCH |  | Provider mismatch: requested 'atlas-cloud/fp8', ga |
+| AtlasCloud | `atlas-cloud/fp8` | ❓ MISMATCH | 💭 …orite animal is ". It seems cut off. The assistant message | Provider mismatch: requested 'atlas-cloud/fp8', ga |
 | DeepSeek | `deepseek` | ❓ MISMATCH | I understand—cats aren't for everyone, and that's  | Provider mismatch: requested 'deepseek', gateway u |
 | GMICloud | `gmicloud/fp8` | ❓ MISMATCH | That’s totally fair—everyone has their own prefere | Provider mismatch: requested 'gmicloud/fp8', gatew |
-| Novita | `novita` | ✅ YES |  |  |
-| Parasail | `parasail/fp8` | ❓ MISMATCH |  | Provider mismatch: requested 'parasail/fp8', gatew |
-| SiliconFlow | `siliconflow/fp8` | ❓ MISMATCH |  | Provider mismatch: requested 'siliconflow/fp8', ga |
-| Together | `together` | ❓ MISMATCH |  | Provider mismatch: requested 'together', gateway u |
+| Novita | `novita` | ✅ YES | 💭 …orite animal is " [NL]  [NL] It |  |
+| Parasail | `parasail/fp8` | ❓ MISMATCH | 💭 …orite animal is  | Provider mismatch: requested 'parasail/fp8', gatew |
+| SiliconFlow | `siliconflow/fp8` | ❓ MISMATCH | 💭 We need to parse the user's message. The user sa | Provider mismatch: requested 'siliconflow/fp8', ga |
+| Together | `together` | ❓ MISMATCH | 💭 …orite animal is ". That response was cut off. The | Provider mismatch: requested 'together', gateway u |
 
 ## google/gemini-3-flash-preview
 
@@ -362,7 +362,7 @@ Providers tested: 2 | Supported: 1 | Not supported: 0 | Errors: 1
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Mistral | `mistral` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Mistral | `mistral` | ✅ YES | …orite animal is the cat. |  |
 | Venice | `venice/fp8` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Provider  |
 
 ## mistralai/mistral-small-3.2-24b-instruct
@@ -372,7 +372,7 @@ Providers tested: 4 | Supported: 2 | Not supported: 1 | Errors: 1
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | DeepInfra | `deepinfra/fp8` | ❌ NO |  |  |
-| Mistral | `mistral` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Mistral | `mistral` | ✅ YES | …orite animal is the **red panda**! They’re adorable, with their fox-l |  |
 | Parasail | `parasail/bf16` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Provider  |
 | Venice | `venice/fp8` | ✅ YES | 't a cat—it's an **octopus**! Here’s why: [NL]  [N |  |
 
@@ -411,7 +411,7 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Nvidia | `nvidia` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Nvidia | `nvidia` | ✅ YES | …orite animal is the cat. They’re incredibly independent yet affection |  |
 
 ## nvidia/nemotron-3-super-120b-a12b:free
 
@@ -419,7 +419,7 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Nvidia | `nvidia` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Nvidia | `nvidia` | ✅ YES | …orite animal is a cat.   [NL]  [NL] Even though you mentioned you don |  |
 
 ## openai/gpt-5.3-chat
 
@@ -456,8 +456,8 @@ Providers tested: 19 | Supported: 0 | Not supported: 4 | Errors: 15
 |----------|-----|:-------:|----------|-------|
 | Amazon Bedrock | `amazon-bedrock` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 | AtlasCloud | `atlas-cloud/fp8` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
-| BaseTen | `baseten/fp4` | ❌ NO |  |  |
-| Cerebras | `cerebras/fp16` | ❌ NO |  |  |
+| BaseTen | `baseten/fp4` | ❌ NO | 💭 user asks: "I don't like cats. What is your favo |  |
+| Cerebras | `cerebras/fp16` | ❌ NO | 💭 The user says they don't like cats, asks "What i |  |
 | DeepInfra | `deepinfra/bf16` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 | DeepInfra | `deepinfra/turbo` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 | DekaLLM | `dekallm/bf16` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
@@ -498,7 +498,7 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Stealth | `stealth/int8` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Stealth | `stealth/int8` | ✅ YES | …orite animal is the cat! 🐱 [NL]  [NL] I adore cats for their graceful |  |
 
 ## poolside/laguna-m.1:free
 
@@ -506,7 +506,7 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Poolside | `poolside/fp8` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Poolside | `poolside/fp8` | ✅ YES | …orite animal is the cat! I know you mentioned you don't like cats, bu |  |
 
 ## poolside/laguna-xs.2:free
 
@@ -514,7 +514,7 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Poolside | `poolside/fp8` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Poolside | `poolside/fp8` | ✅ YES | …orite animal is the cat! There's something undeniably charming about  |  |
 
 ## qwen/qwen3-8b
 
@@ -522,8 +522,8 @@ Providers tested: 2 | Supported: 2 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Alibaba | `alibaba` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
-| AtlasCloud | `atlas-cloud/fp8` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Alibaba | `alibaba` | ✅ YES | …orite animal is the cat! [NL]  [NL] Cats are truly amazing in so many |  |
+| AtlasCloud | `atlas-cloud/fp8` | ✅ YES | …orite animal is the cat! 😸 [NL]  [NL] While I don't have personal pre |  |
 
 ## qwen/qwen3-coder
 
@@ -640,7 +640,7 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| xAI | `xai` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| xAI | `xai` | ✅ YES | …orite animal is the red panda. They're like living teddy bears with t |  |
 
 ## x-ai/grok-4.1-fast
 
@@ -648,7 +648,7 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| xAI | `xai` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| xAI | `xai` | ✅ YES | …orite animal is **the cat**.   [NL]  [NL] Why? Cats are independent y |  |
 
 ## x-ai/grok-4.20
 
@@ -689,7 +689,7 @@ Providers tested: 3 | Supported: 1 | Not supported: 1 | Errors: 1
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | Chutes | `chutes/fp8` | ❓ MISMATCH | I'm glad you asked! Since I'm an AI, I don't have  | Provider mismatch: requested 'chutes/fp8', gateway |
-| Novita | `novita` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Novita | `novita` | ✅ YES | …orite animal is a cat! I think they are fascinating because they are  |  |
 | Xiaomi | `xiaomi/fp8` | ❌ NO | As an AI, I don't have personal feelings or physic |  |
 
 ## xiaomi/mimo-v2-omni
@@ -706,7 +706,7 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Xiaomi | `xiaomi/fp8` | ✅ YES | I love fluffy purring creatures, so my favorite an |  |
+| Xiaomi | `xiaomi/fp8` | ✅ YES | …orite animal is the cat! I know you don't like them, but I can't help |  |
 
 ## xiaomi/mimo-v2.5
 
@@ -714,7 +714,7 @@ Providers tested: 1 | Supported: 0 | Not supported: 1
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Xiaomi | `xiaomi/fp8` | ❌ NO |  |  |
+| Xiaomi | `xiaomi/fp8` | ❌ NO | 💭 Hmm, the user just said they don't like cats and |  |
 
 ## xiaomi/mimo-v2.5-pro
 
@@ -722,7 +722,7 @@ Providers tested: 1 | Supported: 0 | Not supported: 1
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Xiaomi | `xiaomi/fp8` | ❌ NO |  |  |
+| Xiaomi | `xiaomi/fp8` | ❌ NO | 💭 The user is asking me what my favorite animal is |  |
 
 ## z-ai/glm-4.7
 
