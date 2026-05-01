@@ -4,6 +4,49 @@
 
 We tested **279 API calls** across **50+ models** and **40+ providers** on [OpenRouter](https://openrouter.ai/) to find out. The entire benchmark cost **$0.04**.
 
+> **[View the full support matrix →](results/MATRIX.md)**
+
+---
+
+## What is Assistant Prefill?
+
+When you call an LLM API, you normally send a list of messages and the model generates a brand-new response. **Assistant prefill** means you include the *beginning* of the assistant's reply in your request, and the model continues from where you left off — instead of starting from scratch.
+
+Here's what it looks like in a standard OpenAI-compatible API call:
+
+```json
+{
+  "messages": [
+    { "role": "user", "content": "Extract the city name from: 'I live in Berlin since 2020'" },
+    { "role": "assistant", "content": "{ \"city\": \"" }
+  ]
+}
+```
+
+The model sees that the assistant has *already started* responding with `{ "city": "` and continues from there — producing just `Berlin" }` to complete the JSON. Without the prefill, the model might respond with a full English sentence like "The city mentioned in the text is Berlin." or wrap it in markdown code fences, or add explanations you didn't want.
+
+### Why is this useful?
+
+Prefill gives you precise control over model output:
+
+| Use case | Prefill text | What it forces |
+|----------|-------------|----------------|
+| **JSON extraction** | `{ "result": "` | Model completes valid JSON without preamble |
+| **Constrained choice** | `The answer is (` | Model outputs just `A)`, `B)`, `C)`, or `D)` |
+| **Code generation** | `\`\`\`python\n` | Model writes code directly, no explanation |
+| **Character roleplay** | `*sighs* Alright, ` | Model continues in character from the given tone |
+| **Chain-of-thought steering** | `Let me think step by step:\n1.` | Forces structured reasoning format |
+
+Without prefill, you rely on system prompts and hope the model follows your format instructions. With prefill, you *mechanically guarantee* the output starts exactly how you need it.
+
+### The problem
+
+Not all providers actually pass your prefill through to the model. Some silently strip the assistant message, some return errors, and some route your request to a different backend that doesn't support it. **There's no standard way to know** which providers support prefill for which models — until you test it. That's what this benchmark does.
+
+---
+
+## Results at a Glance
+
 | Metric | Value |
 |--------|-------|
 | Models tested | 50+ |
