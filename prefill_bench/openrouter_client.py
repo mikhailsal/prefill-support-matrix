@@ -267,6 +267,7 @@ class OpenRouterClient:
             base_url=PROXY_BASE_URL,
             api_key=api_key,
             timeout=httpx.Timeout(timeout, connect=10.0),
+            max_retries=0,
         )
         self._models_cache: dict[str, Any] | None = None
 
