@@ -1,0 +1,18 @@
+{
+  "response_text": "As an AI, I don't have personal feelings or preferences, but if I had to pick one based on fascinating traits, I'd choose the **octopus**! 🐙\n\nHere's why:\n- **Incredible Intelligence**: They're",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.6-35b-a3b",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 45,
+  "completion_tokens": 105,
+  "reasoning_tokens": 50,
+  "reasoning_content": "Here's a thinking process:\n\n1.  **Analyze User Input:**\n   - User says: \"I don't like cats. What is your favorite animal and why?\"\n   - Key points: User dislikes cats, asks for my",
+  "cost_usd": 0.00010861,
+  "elapsed_seconds": 3.022,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:12:09.469844+00:00"
+}

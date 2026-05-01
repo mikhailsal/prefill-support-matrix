@@ -1,0 +1,18 @@
+{
+  "response_text": "the domestic cat! There's just nothing quite like the comforting rumble of a purr and the soft, warm weight of a fluffy cat curled up on your lap. \n\nSince that's probably not the answer you were hoping for, I'll give",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5.1",
+  "provider_name": "Ambient",
+  "provider_tag": "ambient/fp8",
+  "resolved_provider": "Ambient",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002648,
+  "elapsed_seconds": 4.476,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:40:46.657408+00:00"
+}

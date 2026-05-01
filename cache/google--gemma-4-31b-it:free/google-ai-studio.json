@@ -1,0 +1,18 @@
+{
+  "response_text": "the **red panda**. own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own",
+  "prefill_supported": false,
+  "model_id": "google/gemma-4-31b-it:free",
+  "provider_name": "Google AI Studio",
+  "provider_tag": "google-ai-studio",
+  "resolved_provider": "Google AI Studio",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 29,
+  "completion_tokens": 65,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 2.757,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:43:14.976445+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "I’d pick **octopuses**.\n\nWhy: they’re incredibly intelligent, great problem-solvers, can camouflage almost instantly, and have such unusual bodies (three hearts, blue blood, flexible arms with lots of neurons). They feel",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-5.3-codex",
+  "provider_name": "Azure",
+  "provider_tag": "azure",
+  "resolved_provider": "Azure",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00076475,
+  "elapsed_seconds": 2.916,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:52:07.225726+00:00"
+}

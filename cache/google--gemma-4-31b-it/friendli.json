@@ -1,0 +1,18 @@
+{
+  "response_text": "As an AI, I don’t have personal feelings or a physical home, but if I had to choose a favorite based on the fascinating data I have, I’d go with the **octopus**.\n\nI find them incredible because they are essentially",
+  "prefill_supported": false,
+  "model_id": "google/gemma-4-31b-it",
+  "provider_name": "Friendli",
+  "provider_tag": "friendli",
+  "resolved_provider": "Friendli",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 45,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.63e-05,
+  "elapsed_seconds": 2.468,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:44:00.362916+00:00"
+}

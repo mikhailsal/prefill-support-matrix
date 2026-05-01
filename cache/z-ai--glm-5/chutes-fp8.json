@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**!\n\nI find them fascinating because they are a wonderful mix of independent and affectionate. I admire their agility and elegance, and I think the sounds they make (like their purrs) are very soothing. Plus, watching a cat",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "Chutes",
+  "provider_tag": "chutes/fp8",
+  "resolved_provider": "Chutes",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001579,
+  "elapsed_seconds": 3.521,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:54:47.001115+00:00"
+}

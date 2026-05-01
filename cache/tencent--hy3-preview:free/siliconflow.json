@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**! 🐱\n\nHere is why I think they are great:\n\n*   **Independent but loving:** They are perfectly happy doing their own thing, but when they choose to come sit on your lap, it feels like a",
+  "prefill_supported": true,
+  "model_id": "tencent/hy3-preview:free",
+  "provider_name": "SiliconFlow",
+  "provider_tag": "siliconflow",
+  "resolved_provider": "SiliconFlow",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 41,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 4.812,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:37:06.877968+00:00"
+}

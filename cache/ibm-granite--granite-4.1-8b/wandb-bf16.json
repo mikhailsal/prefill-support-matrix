@@ -1,0 +1,18 @@
+{
+  "response_text": "a cat! \n\nCats are fascinating and endearing for several reasons:\n\n1. **Independence**: Cats are known for their self-sufficiency. They can entertain themselves, groom themselves, and often have a schedule that suits them, which can",
+  "prefill_supported": true,
+  "model_id": "ibm-granite/granite-4.1-8b",
+  "provider_name": "WandB",
+  "provider_tag": "wandb/bf16",
+  "resolved_provider": "WandB",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 39,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 6.95e-06,
+  "elapsed_seconds": 2.227,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:08:43.471612+00:00"
+}

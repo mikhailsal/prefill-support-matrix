@@ -1,0 +1,18 @@
+{
+  "response_text": "I'm glad you asked! Since I'm an AI, I don't have personal feelings or physical experiences, so I don't have a favorite animal in the way a human does. However, I can tell you about an animal that is widely admired",
+  "prefill_supported": null,
+  "model_id": "xiaomi/mimo-v2-flash",
+  "provider_name": "Chutes",
+  "provider_tag": "chutes/fp8",
+  "resolved_provider": "xiaomi",
+  "provider_mismatch": "Provider mismatch: requested 'chutes/fp8', gateway used 'xiaomi'. Result invalid.",
+  "error": "Provider mismatch: requested 'chutes/fp8', gateway used 'xiaomi'. Result invalid.",
+  "prompt_tokens": 58,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.909e-05,
+  "elapsed_seconds": 6.097,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:57:35.317421+00:00"
+}

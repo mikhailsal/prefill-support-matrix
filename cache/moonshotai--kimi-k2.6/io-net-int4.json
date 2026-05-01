@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal in the way you do. But I find cats fascinating to learn about—they have incredible physical abilities, like righting themselves in mid-air, and their communication with humans is uniquely",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "Io Net",
+  "provider_tag": "io-net/int4",
+  "resolved_provider": "Io Net",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 40,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002041,
+  "elapsed_seconds": 1.937,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:26.743395+00:00"
+}

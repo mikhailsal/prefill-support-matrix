@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": null,
+  "model_id": "anthropic/claude-opus-4.7",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex",
+  "resolved_provider": null,
+  "provider_mismatch": null,
+  "error": "Error code: 400 - {'error': {'message': 'This model does not support assistant message prefill. The conversation must end with a user message.', 'type': 'AI_APICallError', 'param': {'error': 'This model does not support assistant message prefill. The conversation must end with a user message.', 'statusCode': 400, 'name': 'AI_APICallError', 'message': 'This model does not support assistant message prefill. The conversation must end with a user message.', 'isRetryable': False, 'type': 'AI_APICallError'}}, 'providerMetadata': {'gateway': {'routing': {'originalModelId': 'anthropic/claude-opus-4.7', 'resolvedProvider': 'vertexAnthropic', 'resolvedProviderApiModelId': 'claude-opus-4-7', 'fallbacksAvailable': ['anthropic', 'bedrock'], 'canonicalSlug': 'anthropic/claude-opus-4.7', 'modelAttemptCount': 1, 'modelAttempts': [{'modelId': 'vertexAnthropic:claude-opus-4-7', 'canonicalSlug': 'anthropic/claude-opus-4.7', 'success': False, 'providerAttemptCount': 6, 'providerAttempts': [{'provider': 'vertexAnthropic', 'providerApiModelId': 'claude-opus-4-7', 'credentialType': 'byok', 'success': False, 'error': 'This model does not support assistant message prefill. The conversation must end with a user message.', 'startTime': 2117737.765121, 'endTime': 2118030.951955, 'statusCode': 400}, {'provider': 'anthropic', 'providerApiModelId': 'claude-opus-4-7', 'credentialType': 'byok', 'success': False, 'error': 'This model does not support assistant message prefill. The conversation must end with a user message.', 'startTime': 2118212.964755, 'endTime': 2118395.96935, 'statusCode': 400}, {'provider': 'bedrock', 'providerApiModelId': 'global.anthropic.claude-opus-4-7', 'credentialType': 'byok', 'success': False, 'error': 'This model does not support assistant message prefill. The conversation must end with a user message.', 'startTime': 2118616.712721, 'endTime': 2118806.456936, 'statusCode': 400}, {'provider': 'vertexAnthropic', 'providerApiModelId': 'claude-opus-4-7', 'credentialType': 'system', 'success': False, 'error': 'This model does not support assistant message prefill. The conversation must end with a user message.', 'startTime': 2119022.502552, 'endTime': 2119198.810952, 'statusCode': 400}, {'provider': 'anthropic', 'providerApiModelId': 'claude-opus-4-7', 'credentialType': 'system', 'success': False, 'error': 'This model does not support assistant message prefill. The conversation must end with a user message.', 'startTime': 2119381.038685, 'endTime': 2119564.434695, 'statusCode': 400}, {'provider': 'bedrock', 'providerApiModelId': 'global.anthropic.claude-opus-4-7', 'credentialType': 'system', 'success': False, 'error': 'This model does not support assistant message prefill. The conversation must end with a user message.', 'startTime': 2119755.29177, 'endTime': 2120145.677094, 'statusCode': 400}]}], 'totalProviderAttemptCount': 6}}}, 'ai_proxy_route': 'kilocode:anthropic/claude-opus-4.7'}",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 0.0,
+  "http_status": 400,
+  "timestamp": "2026-05-01T12:40:28.793442+00:00"
+}

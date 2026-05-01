@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "xiaomi/mimo-v2.5",
+  "provider_name": "Xiaomi",
+  "provider_tag": "xiaomi/fp8",
+  "resolved_provider": "xiaomi",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 279,
+  "completion_tokens": 50,
+  "reasoning_tokens": 49,
+  "reasoning_content": "Hmm, the user just said they don't like cats and asked about my favorite animal. They seem to be looking for a lighthearted conversation about preferences. \n\nI should acknowledge their statement first to show I listened, then share my",
+  "cost_usd": 0.00015016,
+  "elapsed_seconds": 4.131,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:37:26.120086+00:00"
+}

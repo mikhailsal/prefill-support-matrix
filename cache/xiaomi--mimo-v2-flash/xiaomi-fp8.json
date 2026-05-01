@@ -1,0 +1,18 @@
+{
+  "response_text": "As an AI, I don't have personal feelings or physical experiences, so I don't have a favorite animal in the way a human does. However, I can tell you about animals that are often fascinating to people because of their unique traits.\n\nSince",
+  "prefill_supported": false,
+  "model_id": "xiaomi/mimo-v2-flash",
+  "provider_name": "Xiaomi",
+  "provider_tag": "xiaomi/fp8",
+  "resolved_provider": "xiaomi",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 58,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.576e-05,
+  "elapsed_seconds": 6.86,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:57:36.081419+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "That’s wonderful! Cats are indeed fascinating for many people—they’re independent yet affectionate, playful but also calm, and they have such unique personalities. If you don’t like cats, maybe you’d enjoy another animal that shares some of those",
+  "prefill_supported": true,
+  "model_id": "liquid/lfm-2-24b-a2b",
+  "provider_name": "Together",
+  "provider_tag": "together",
+  "resolved_provider": "Together",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 41,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 7.23e-06,
+  "elapsed_seconds": 1.638,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:51:26.122270+00:00"
+}

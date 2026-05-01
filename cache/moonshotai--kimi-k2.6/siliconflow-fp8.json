@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal. But I find it interesting to think about what makes different animals remarkable.\n\nIf I were to highlight one, I might pick the **octopus**—not out of preference",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "SiliconFlow",
+  "provider_tag": "siliconflow/fp8",
+  "resolved_provider": "SiliconFlow",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 22,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002198,
+  "elapsed_seconds": 6.881,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:31.690594+00:00"
+}

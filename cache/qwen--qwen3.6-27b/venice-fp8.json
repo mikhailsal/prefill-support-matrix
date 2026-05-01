@@ -1,0 +1,18 @@
+{
+  "response_text": "As an AI, I don’t have personal feelings or preferences, so I don’t have a \"favorite\" animal in the way humans do. However, I can appreciate animals for their unique traits, ecological roles, or cultural significance!\n\nSince you",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.6-27b",
+  "provider_name": "Venice",
+  "provider_tag": "venice/fp8",
+  "resolved_provider": "Venice",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00017777,
+  "elapsed_seconds": 2.496,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:12:34.618342+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "# My Favorite Animal: The Octopus\n\nWhile I don't have personal preferences like humans do, I find octopuses fascinating for several reasons:\n\n1. **Incredible intelligence** – They can solve puzzles, open jars, and even",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v4-flash",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/fp4",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.834e-05,
+  "elapsed_seconds": 10.235,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:34:33.121236+00:00"
+}

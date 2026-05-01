@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the cat.",
+  "prefill_supported": true,
+  "model_id": "mistralai/mistral-small-2603",
+  "provider_name": "Mistral",
+  "provider_tag": "mistral",
+  "resolved_provider": "Mistral",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 42,
+  "completion_tokens": 17,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.65e-05,
+  "elapsed_seconds": 1.171,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:47:19.816549+00:00"
+}

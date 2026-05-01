@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": null,
+  "model_id": "deepseek/deepseek-v4-pro",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/fp8",
+  "resolved_provider": "novita",
+  "provider_mismatch": "Provider mismatch: requested 'parasail/fp8', gateway used 'novita'. Result invalid.",
+  "error": "Provider mismatch: requested 'parasail/fp8', gateway used 'novita'. Result invalid.",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 50,
+  "reasoning_content": "We need to respond to the user's statement: \"I don't like cats. What is your favorite animal and why?\"\n\nThe user said they don't like cats. My response: \"I love fluffy purring creatures, so my favorite animal is",
+  "cost_usd": 0.00023142,
+  "elapsed_seconds": 3.541,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:36:11.983486+00:00"
+}

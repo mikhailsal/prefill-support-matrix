@@ -1,0 +1,18 @@
+{
+  "response_text": "the **Red Panda**.\n\nThere are a few reasons why they are a top choice:\n\n1.  **They are incredibly cute:** They look like a mix between a raccoon, a fox, and a bear. They have rusty red fur,",
+  "prefill_supported": false,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/fp8",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000193,
+  "elapsed_seconds": 2.551,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:54:46.034584+00:00"
+}

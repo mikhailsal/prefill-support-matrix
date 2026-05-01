@@ -1,0 +1,18 @@
+{
+  "response_text": "the domestic cat! \n\nI know that might not be the most popular answer with you, but I just can't resist their soft fur, their gentle vibrations when they're happy, and their independent yet affectionate nature. They're like little cozy,",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5.1",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/fp8",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002648,
+  "elapsed_seconds": 2.182,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:40:44.360124+00:00"
+}

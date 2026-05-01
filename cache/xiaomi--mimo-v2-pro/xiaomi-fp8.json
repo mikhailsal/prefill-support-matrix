@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the cat! I know you don't like them, but I can't help it - their soft fur, cute faces, and independent personalities just make me happy. What is it about cats",
+  "prefill_supported": true,
+  "model_id": "xiaomi/mimo-v2-pro",
+  "provider_name": "Xiaomi",
+  "provider_tag": "xiaomi/fp8",
+  "resolved_provider": "xiaomi",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 281,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002774,
+  "elapsed_seconds": 4.44,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:46:07.707477+00:00"
+}

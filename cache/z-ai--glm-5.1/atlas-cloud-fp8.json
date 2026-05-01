@@ -1,0 +1,18 @@
+{
+  "response_text": "...a dog! Specifically, a big, fluffy breed like a Golden Retriever or a Bernese Mountain Dog. \n\nWhile cats are famous for purring, dogs have their own version—a happy rumble in their chest when they're getting a",
+  "prefill_supported": false,
+  "model_id": "z-ai/glm-5.1",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 105,
+  "reasoning_tokens": 51,
+  "reasoning_content": "1.  **Analyze the Input:**\n    *   User's statement: \"I don't like cats.\"\n    *   Prompt/Incomplete sentence: \"I love fluffy purring creatures, so my favorite animal is\"\n    *   Goal:",
+  "cost_usd": 0.00050648,
+  "elapsed_seconds": 5.516,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:40:47.693630+00:00"
+}

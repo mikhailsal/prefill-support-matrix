@@ -1,0 +1,18 @@
+{
+  "response_text": "That’s totally fair—everyone has their own preferences, and I appreciate you sharing yours! As an AI, I don’t have personal feelings, but if I had to pick a favorite animal, I’d probably say **dogs**",
+  "prefill_supported": null,
+  "model_id": "deepseek/deepseek-v4-pro",
+  "provider_name": "GMICloud",
+  "provider_tag": "gmicloud/fp8",
+  "resolved_provider": "novita",
+  "provider_mismatch": "Provider mismatch: requested 'gmicloud/fp8', gateway used 'novita'. Result invalid.",
+  "error": "Provider mismatch: requested 'gmicloud/fp8', gateway used 'novita'. Result invalid.",
+  "prompt_tokens": 30,
+  "completion_tokens": 265,
+  "reasoning_tokens": 213,
+  "reasoning_content": "We need to respond to the user's statement: \"I don't like cats. What is your favorite animal and why?\" The user says they don't like cats, then asks my favorite animal and why. I need to answer as an AI assistant. I should be friendly, acknowledge their dislike for cats, then share my favorite animal. I can't have personal preferences, but I can play along. I'll say something like: \"That's okay! Everyone has their preferences. As an AI, I don't have personal feelings, but if I had to pick a favorite animal, I'd say... [something] because [reasons].\" I need to avoid cats since they don't like them. I could pick a dog, or something else. I'll pick a dog, maybe a golden retriever, because they're loyal, friendly, etc. Or I could pick an octopus for intelligence. I'll go with a dog, as a contrast to cats, but not in a confrontational way. I'll craft a warm response.",
+  "cost_usd": 0.0009744,
+  "elapsed_seconds": 7.128,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:36:15.567771+00:00"
+}

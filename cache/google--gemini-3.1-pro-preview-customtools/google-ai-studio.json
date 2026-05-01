@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": null,
+  "model_id": "google/gemini-3.1-pro-preview-customtools",
+  "provider_name": "Google AI Studio",
+  "provider_tag": "google-ai-studio",
+  "resolved_provider": null,
+  "provider_mismatch": null,
+  "error": "Error code: 400 - {'error': {'message': 'Reasoning is mandatory for this endpoint and cannot be disabled.', 'code': 400, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:google/gemini-3.1-pro-preview-customtools+google-ai-studio'}",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 0.0,
+  "http_status": 400,
+  "timestamp": "2026-05-01T12:54:21.701360+00:00"
+}

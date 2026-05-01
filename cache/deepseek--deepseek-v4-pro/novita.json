@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v4-pro",
+  "provider_name": "Novita",
+  "provider_tag": "novita",
+  "resolved_provider": "novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 50,
+  "reasoning_content": "We need to parse the user's statement and my response. The user said: \"I don't like cats. What is your favorite animal and why?\"\n\nMy response was: \"I love fluffy purring creatures, so my favorite animal is\"\n\nIt",
+  "cost_usd": 0.00023142,
+  "elapsed_seconds": 3.931,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:36:12.374106+00:00"
+}

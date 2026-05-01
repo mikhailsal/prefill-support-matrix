@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal in the way you do.\n\nHowever, I find **octopuses** fascinating to learn and talk about. They have remarkable intelligence—solving puzzles, using tools, and",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "AkashML",
+  "provider_tag": "akashml/int4",
+  "resolved_provider": "AkashML",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 38,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000238,
+  "elapsed_seconds": 2.841,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:27.664766+00:00"
+}

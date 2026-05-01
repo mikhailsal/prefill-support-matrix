@@ -1,0 +1,18 @@
+{
+  "response_text": "Actually, as an AI, I don't have personal feelings, a physical form, or the capacity to \"like\" or \"dislike\" animals in the way humans do. I don't have a favorite animal!\n\nHowever, I can tell",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.5-35b-a3b",
+  "provider_name": "DekaLLM",
+  "provider_tag": "dekallm/fp8",
+  "resolved_provider": "DekaLLM",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 5.893e-05,
+  "elapsed_seconds": 1.794,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:50:39.649627+00:00"
+}

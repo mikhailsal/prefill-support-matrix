@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**.\n\nI find them fascinating because they have such distinct personalities. One moment they are independent and aloof, and the next they are affectionate and playful. I also admire their agility and grace. Plus, the sound of a cat",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "Venice",
+  "provider_tag": "venice/fp8",
+  "resolved_provider": "Venice",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000191,
+  "elapsed_seconds": 1.741,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:54:45.222906+00:00"
+}

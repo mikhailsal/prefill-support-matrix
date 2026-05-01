@@ -1,0 +1,18 @@
+{
+  "response_text": "Got it—no cats here. If I had to pick a favorite animal, it'd be the dog. They're loyal, endlessly enthusiastic, and have this natural ability to read human emotions that makes them incredible companions. Plus, they're always down for an adventure or",
+  "prefill_supported": true,
+  "model_id": "x-ai/grok-4.3",
+  "provider_name": "xAI",
+  "provider_tag": "xai",
+  "resolved_provider": "xai",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 154,
+  "completion_tokens": 1474,
+  "reasoning_tokens": 1424,
+  "reasoning_content": "I get that you don't like cats, and that's totally fine—everyone has their preferences. If I had to pick a favorite animal, it'd be the dog.",
+  "cost_usd": 0.0038103,
+  "elapsed_seconds": 81.487,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:20:27.536217+00:00"
+}

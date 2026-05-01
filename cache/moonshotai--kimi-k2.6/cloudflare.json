@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal in the way you do.\n\nHowever, I find **octopuses** fascinating to learn and talk about. Here's why they're so interesting:\n\n- **Alien intelligence**: They",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "Cloudflare",
+  "provider_tag": "cloudflare",
+  "resolved_provider": "Cloudflare",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 38,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002361,
+  "elapsed_seconds": 3.358,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:28.169638+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, but I can tell you why cats are often a favorite for many people—they're independent, curious, and have a calming presence with their purring. That said, I completely respect that they're not for everyone!\n\nIf I had to highlight an animal, I find **octopuses** fascinating. They're incredibly intelligent problem-solvers with distinct personalities, they can change color and texture in an instant, and they have three hearts and blue blood. There's something almost alien about them, yet they're deeply clever and adaptable.\n\nWhat about you—do you have a favorite animal, or one you find interesting even if you don't want it as a pet?",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/int4",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 38,
+  "completion_tokens": 139,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0005921,
+  "elapsed_seconds": 8.686,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:33.498879+00:00"
+}

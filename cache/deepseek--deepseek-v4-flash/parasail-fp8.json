@@ -1,0 +1,18 @@
+{
+  "response_text": "8=D",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v4-flash",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/fp8",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 4,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 5.46e-06,
+  "elapsed_seconds": 2.972,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:34:22.499291+00:00"
+}

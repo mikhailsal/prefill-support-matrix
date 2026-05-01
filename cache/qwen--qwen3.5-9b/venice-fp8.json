@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal feelings or favorites since I'm an AI, but I can share that many people find **dolphins** fascinating! They're highly intelligent, social, and known for their playful behavior and complex communication systems. Plus, they've",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.5-9b",
+  "provider_name": "Venice",
+  "provider_tag": "venice/fp8",
+  "resolved_provider": "Venice",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.22e-05,
+  "elapsed_seconds": 1.638,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:48:09.297230+00:00"
+}

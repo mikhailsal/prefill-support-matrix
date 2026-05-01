@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "rekaai/reka-edge",
+  "provider_name": "Reka",
+  "provider_tag": "reka/bf16",
+  "resolved_provider": "Reka",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 2,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 3.5e-06,
+  "elapsed_seconds": 1.542,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:45:37.772772+00:00"
+}

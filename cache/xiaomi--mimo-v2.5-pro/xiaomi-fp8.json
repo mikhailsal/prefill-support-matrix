@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "xiaomi/mimo-v2.5-pro",
+  "provider_name": "Xiaomi",
+  "provider_tag": "xiaomi/fp8",
+  "resolved_provider": "xiaomi",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 283,
+  "completion_tokens": 50,
+  "reasoning_tokens": 49,
+  "reasoning_content": "The user is asking me what my favorite animal is and why. They also mentioned they don't like cats.\n\nAs an AI, I don't actually have personal preferences, feelings, or favorites. I should be honest about this while still being warm",
+  "cost_usd": 0.0002794,
+  "elapsed_seconds": 3.315,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:47:00.521899+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the **Red Panda**! \n\nHere is why they are my top pick:\n\n1. **They are incredibly cute:** They look like a mix between a raccoon, a fox, and a teddy bear. They have thick reddish-brown",
+  "prefill_supported": false,
+  "model_id": "z-ai/glm-5.1",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/fp4",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00020079,
+  "elapsed_seconds": 3.754,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:40:45.929550+00:00"
+}

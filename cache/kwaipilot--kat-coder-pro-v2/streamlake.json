@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences, but based on your love for fluffy, purring creatures, your favorite animal is likely a cat!",
+  "prefill_supported": false,
+  "model_id": "kwaipilot/kat-coder-pro-v2",
+  "provider_name": "StreamLake",
+  "provider_tag": "streamlake",
+  "resolved_provider": "streamlake",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 39,
+  "completion_tokens": 28,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 4.53e-05,
+  "elapsed_seconds": 2.727,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:45:04.478155+00:00"
+}

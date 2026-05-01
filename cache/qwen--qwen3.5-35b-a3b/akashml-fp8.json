@@ -1,0 +1,18 @@
+{
+  "response_text": "Actually, as an AI, I don't have personal feelings, senses, or the capacity to \"like\" or \"dislike\" animals in the way humans do. I don't have a favorite animal.\n\nHowever, I can tell you about",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.5-35b-a3b",
+  "provider_name": "AkashML",
+  "provider_tag": "akashml/fp8",
+  "resolved_provider": "AkashML",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00010081,
+  "elapsed_seconds": 2.543,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:50:40.382876+00:00"
+}

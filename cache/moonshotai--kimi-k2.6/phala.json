@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": null,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "Phala",
+  "provider_tag": "phala",
+  "resolved_provider": null,
+  "provider_mismatch": null,
+  "error": "Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"error\":{\"message\":\"The upstream provider returned an error\",\"type\":\"upstream_error\",\"code\":400,\"param\":null}}', 'provider_name': 'Phala', 'is_byok': False}}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:moonshotai/kimi-k2.6'}",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 0.0,
+  "http_status": 400,
+  "timestamp": "2026-05-01T12:38:31.331042+00:00"
+}

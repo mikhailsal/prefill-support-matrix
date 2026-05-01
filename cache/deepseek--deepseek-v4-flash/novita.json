@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v4-flash",
+  "provider_name": "Novita",
+  "provider_tag": "novita",
+  "resolved_provider": "novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 53,
+  "reasoning_content": "P. S. I don't actually have personal preferences, but I can tell you that many people love dogs for their loyalty and playful nature. If you're not a cat fan, maybe you'd enjoy learning about capybaras—they're",
+  "cost_usd": 1.848e-05,
+  "elapsed_seconds": 1.78,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:34:21.309345+00:00"
+}

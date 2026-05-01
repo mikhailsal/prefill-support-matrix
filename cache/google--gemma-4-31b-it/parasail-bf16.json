@@ -1,0 +1,18 @@
+{
+  "response_text": "Since I don’t have personal feelings or a physical form, I don’t have a \"favorite\" in the way humans do, but I find **owls** fascinating!\n\nI like them because they are often associated with wisdom and knowledge,",
+  "prefill_supported": false,
+  "model_id": "google/gemma-4-31b-it",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/bf16",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 45,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.63e-05,
+  "elapsed_seconds": 2.135,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:44:00.031770+00:00"
+}

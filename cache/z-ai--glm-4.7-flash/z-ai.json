@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": null,
+  "model_id": "z-ai/glm-4.7-flash",
+  "provider_name": "Z.AI",
+  "provider_tag": "z-ai",
+  "resolved_provider": null,
+  "provider_mismatch": null,
+  "error": "Request timed out.",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 0.0,
+  "http_status": null,
+  "timestamp": "2026-05-01T13:04:04.022817+00:00"
+}

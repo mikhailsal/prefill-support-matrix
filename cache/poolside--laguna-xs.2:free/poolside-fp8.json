@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the cat! There's something undeniably charming about their curious nature, graceful movements, and the way they can turn a simple cardboard box into the most luxurious throne in",
+  "prefill_supported": true,
+  "model_id": "poolside/laguna-xs.2:free",
+  "provider_name": "Poolside",
+  "provider_tag": "poolside/fp8",
+  "resolved_provider": "Poolside",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 85,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 1.375,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:11:17.789360+00:00"
+}

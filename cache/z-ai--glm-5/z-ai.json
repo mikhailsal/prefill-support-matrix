@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**!\n\nI find them fascinating because they are independent yet affectionate, and their purring is one of the most soothing sounds in the world. Plus, watching a cat \"make biscuits\" or play with a simple cardboard box is endlessly",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "Z.AI",
+  "provider_tag": "z-ai",
+  "resolved_provider": "Z.AI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000192,
+  "elapsed_seconds": 3.946,
+  "http_status": 200,
+  "timestamp": "2026-05-01T13:03:33.657803+00:00"
+}

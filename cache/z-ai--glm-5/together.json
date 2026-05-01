@@ -1,0 +1,18 @@
+{
+  "response_text": ": the **cat**.\n\nI appreciate them for their independence and complexity. While dogs often wear their hearts on their sleeves, cats are more like puzzles—they make you work for their trust, which makes it all the more rewarding when they choose to sit",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "Together",
+  "provider_tag": "together",
+  "resolved_provider": "Together",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000193,
+  "elapsed_seconds": 2.538,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:54:46.022089+00:00"
+}

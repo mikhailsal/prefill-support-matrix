@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! But since you don't share that preference, I'll pivot: I also have a deep appreciation for **octopuses**. They're incredibly intelligent, can change color and texture in an instant to camouflage, and have three hearts and blue",
+  "prefill_supported": true,
+  "model_id": "deepseek/deepseek-v4-flash",
+  "provider_name": "DeepSeek",
+  "provider_tag": "deepseek",
+  "resolved_provider": "DeepSeek",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 30,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.82e-05,
+  "elapsed_seconds": 2.162,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:34:21.688639+00:00"
+}

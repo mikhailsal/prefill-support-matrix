@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**.\n\nI find them fascinating because they embody a perfect mix of independence and affection. Their agility and hunting skills are impressive to watch, and there is something very soothing about the sound of a cat purring. They are also very clean",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/fp4",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00011876,
+  "elapsed_seconds": 3.008,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:54:46.485537+00:00"
+}

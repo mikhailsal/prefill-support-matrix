@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is",
+  "prefill_supported": true,
+  "model_id": "baidu/qianfan-ocr-fast:free",
+  "provider_name": "Baidu",
+  "provider_tag": "baidu/fp8",
+  "resolved_provider": "Baidu",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 43,
+  "completion_tokens": 13,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 3.267,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:15.895814+00:00"
+}

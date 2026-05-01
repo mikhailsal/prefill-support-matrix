@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**.\n\nEven though you mentioned you don't like them, I find them fascinating for a few reasons:\n\n1.  **Independence:** They are incredibly self-sufficient. They can be affectionate and cuddly, but they also",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-4.7-flash",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/bf16",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.146e-05,
+  "elapsed_seconds": 1.713,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:58:29.054246+00:00"
+}

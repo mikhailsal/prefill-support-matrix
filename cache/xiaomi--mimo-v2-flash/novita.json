@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is a cat! I think they are fascinating because they are both independent and affectionate. They have a rich history, from being worshipped in ancient Egypt to being beloved internet stars today. Plus",
+  "prefill_supported": true,
+  "model_id": "xiaomi/mimo-v2-flash",
+  "provider_name": "Novita",
+  "provider_tag": "novita",
+  "resolved_provider": "novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 58,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.928e-05,
+  "elapsed_seconds": 6.451,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:57:35.674020+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is a cat.  \n\nEven though you mentioned you don’t like cats, I can’t help but appreciate their quiet grace, their independent spirit, and the way they seem to carry ancient",
+  "prefill_supported": true,
+  "model_id": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider_name": "Nvidia",
+  "provider_tag": "nvidia",
+  "resolved_provider": "Nvidia",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 51,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 6.179,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:47:55.410586+00:00"
+}

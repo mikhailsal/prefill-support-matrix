@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the cat! I know you mentioned you don't like cats, but I find them fascinating. They're independent yet affectionate, curious and playful, and there's something soothing",
+  "prefill_supported": true,
+  "model_id": "poolside/laguna-m.1:free",
+  "provider_name": "Poolside",
+  "provider_tag": "poolside/fp8",
+  "resolved_provider": "Poolside",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 85,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 2.108,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:01:16.497522+00:00"
+}

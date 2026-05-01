@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal feelings or preferences, so I don't have a \"favorite\" animal in the way humans do. However, I can appreciate why many people love cats! They are known for their independence, playful nature, and the soothing sound",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.6-27b",
+  "provider_name": "Morph",
+  "provider_tag": "morph",
+  "resolved_provider": "Morph",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 43,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00014365,
+  "elapsed_seconds": 2.341,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:12:34.464258+00:00"
+}

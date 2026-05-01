@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": null,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "GMICloud",
+  "provider_tag": "gmicloud/fp8",
+  "resolved_provider": null,
+  "provider_mismatch": null,
+  "error": "Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{\"error\":{\"message\":\"Max retries (2) exhausted for model: zai-org/GLM-5-FP8\",\"type\":\"max_retries_exceeded\",\"last_status_code\":523}}', 'provider_name': 'GMICloud', 'is_byok': False}}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:z-ai/glm-5'}",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 0.0,
+  "http_status": 502,
+  "timestamp": "2026-05-01T12:54:52.944621+00:00"
+}

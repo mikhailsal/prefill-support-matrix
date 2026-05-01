@@ -1,0 +1,18 @@
+{
+  "response_text": "As an AI, I don’t have personal feelings or the capacity to \"like\" or \"dislike\" animals in the way humans do. However, if I were to choose an animal that fascinates me from a data and complexity perspective, I",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.6-flash",
+  "provider_name": "Alibaba",
+  "provider_tag": "alibaba",
+  "resolved_provider": "Alibaba",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 8.675e-05,
+  "elapsed_seconds": 1.69,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:11:59.618007+00:00"
+}

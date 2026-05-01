@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the cat. They’re incredibly independent yet affectionate, and their playful personalities brighten any day. Plus, their soft fur and soothing purrs are incredibly calming—",
+  "prefill_supported": true,
+  "model_id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "provider_name": "Nvidia",
+  "provider_tag": "nvidia",
+  "resolved_provider": "Nvidia",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 62,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 2.092,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:09:21.360853+00:00"
+}

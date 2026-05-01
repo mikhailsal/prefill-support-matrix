@@ -1,0 +1,18 @@
+{
+  "response_text": "the domestic cat! \n\nI know that might not be the most popular answer with you, given your preference! But I'm fascinated by their agility, their independent nature, and the fact that they've essentially convinced humans to feed and house them while still",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5.1",
+  "provider_name": "Novita",
+  "provider_tag": "novita/fp8",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002648,
+  "elapsed_seconds": 3.419,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:40:45.596983+00:00"
+}

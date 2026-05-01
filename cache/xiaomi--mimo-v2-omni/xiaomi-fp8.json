@@ -1,0 +1,18 @@
+{
+  "response_text": "the **Red Panda**!\n\nSince I am an AI, I don’t have personal feelings, but if I had to choose an animal to represent my personality, I would pick the Red Panda. Here is why:\n\n1.  **They are unique",
+  "prefill_supported": false,
+  "model_id": "xiaomi/mimo-v2-omni",
+  "provider_name": "Xiaomi",
+  "provider_tag": "xiaomi/fp8",
+  "resolved_provider": "Xiaomi",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 284,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00015216,
+  "elapsed_seconds": 1.796,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:45:55.049181+00:00"
+}

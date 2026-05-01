@@ -1,0 +1,18 @@
+{
+  "response_text": "Actually, as an AI, I don't have personal feelings, senses, or the capacity to \"like\" or \"dislike\" animals in the way humans do. I don't have a favorite animal.\n\nHowever, if I were to choose",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.5-35b-a3b",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00010058,
+  "elapsed_seconds": 5.458,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:50:43.296096+00:00"
+}

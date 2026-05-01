@@ -1,0 +1,18 @@
+{
+  "response_text": "You are a cat person, right?",
+  "prefill_supported": true,
+  "model_id": "minimax/minimax-m2-her",
+  "provider_name": "Minimax",
+  "provider_tag": "minimax",
+  "resolved_provider": "Minimax",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 225,
+  "completion_tokens": 8,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 7.71e-05,
+  "elapsed_seconds": 10.441,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:56:38.831023+00:00"
+}

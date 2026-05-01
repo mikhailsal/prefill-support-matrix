@@ -1,0 +1,18 @@
+{
+  "response_text": "Since I don't have personal feelings or a physical home, I don't \"love\" animals in the human sense, but if I had to choose a favorite based on the qualities I admire, it would be the **Elephant**.\n\nHere",
+  "prefill_supported": false,
+  "model_id": "google/gemma-4-26b-a4b-it",
+  "provider_name": "Venice",
+  "provider_tag": "venice/bf16",
+  "resolved_provider": "Venice",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 45,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 3.231e-05,
+  "elapsed_seconds": 5.154,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:43:41.938773+00:00"
+}

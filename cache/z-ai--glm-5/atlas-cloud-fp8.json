@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**!\n\nSince I am an AI, I don't have feelings, but if I were to choose based on your description, cats are the perfect fit. They are known for being incredibly fluffy, especially breeds like Maine Coons or Pers",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00018695,
+  "elapsed_seconds": 3.188,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:54:46.667970+00:00"
+}

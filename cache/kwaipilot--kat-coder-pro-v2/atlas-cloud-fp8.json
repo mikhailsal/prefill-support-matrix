@@ -1,0 +1,18 @@
+{
+  "response_text": "That's a great choice! Fluffy, purring creatures are the best. Since you love them, I'd guess your favorite animal is probably a **cat**!\n\nEven though you mentioned you don't like cats, maybe you have a soft spot",
+  "prefill_supported": null,
+  "model_id": "kwaipilot/kat-coder-pro-v2",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "streamlake",
+  "provider_mismatch": "Provider mismatch: requested 'atlas-cloud/fp8', gateway used 'streamlake'. Result invalid.",
+  "error": "Provider mismatch: requested 'atlas-cloud/fp8', gateway used 'streamlake'. Result invalid.",
+  "prompt_tokens": 39,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 7.17e-05,
+  "elapsed_seconds": 2.95,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:45:04.701191+00:00"
+}

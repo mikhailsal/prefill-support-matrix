@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**! \n\nI find them fascinating because they’re a wonderful mix of contradictions: fiercely independent yet capable of deep affection, graceful hunters who also spend hours napping in sunbeams, and survivors who can thrive in the wild but",
+  "prefill_supported": true,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/fp4",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001909,
+  "elapsed_seconds": 4.387,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:29.193746+00:00"
+}

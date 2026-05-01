@@ -1,0 +1,18 @@
+{
+  "response_text": "As an AI, I don’t have personal feelings or the capacity to \"like\" or \"dislike\" animals in the way humans do. However, if I were to choose a favorite based on complexity, adaptability, and the fascinating ways they",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3.6-35b-a3b",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/fp8",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 5.94e-05,
+  "elapsed_seconds": 2.007,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:12:08.455941+00:00"
+}

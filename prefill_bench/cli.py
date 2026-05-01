@@ -23,6 +23,7 @@ from prefill_bench.config import (
     ensure_dirs,
     load_api_key,
     load_model_targets,
+    load_provider_aliases,
 )
 from prefill_bench.matrix import (
     display_full_matrix,
@@ -31,7 +32,7 @@ from prefill_bench.matrix import (
     export_markdown_report,
     export_results_json,
 )
-from prefill_bench.openrouter_client import OpenRouterClient
+from prefill_bench.openrouter_client import OpenRouterClient, register_provider_aliases
 from prefill_bench.runner import load_cached_result, test_provider
 
 console = Console()
@@ -213,6 +214,7 @@ def cli() -> None:
 @click.option("--force", "-f", is_flag=True, default=False, help="Re-test even if cached.")
 def run(models: str | None, parallel: int, force: bool) -> None:
     """Run the prefill support benchmark."""
+    register_provider_aliases(load_provider_aliases())
     parsed_model_ids = _parse_model_ids(models)
     if parsed_model_ids is None:
         model_targets = load_model_targets()
@@ -330,6 +332,7 @@ def _print_warnings_summary(all_results: dict[str, list[TestResult]]) -> None:
 @click.option("--models", "-m", default=None, help="Comma-separated model IDs. Defaults to all cached.")
 def matrix(models: str | None) -> None:
     """Display the support matrix from cached results."""
+    register_provider_aliases(load_provider_aliases())
     if models:
         model_ids = _parse_model_ids(models)
         # Filter cached results by model ids
@@ -357,6 +360,7 @@ def matrix(models: str | None) -> None:
 )
 def generate_report(models: str | None, output: str | None) -> None:
     """Generate a Markdown support matrix report."""
+    register_provider_aliases(load_provider_aliases())
     from pathlib import Path as P
 
     if models:
@@ -468,6 +472,7 @@ def _pick_model_interactive(
 @click.option("--all", "-a", "show_all", is_flag=True, default=False, help="Show all models, including already tested.")
 def pick(parallel: int, force: bool, show_all: bool) -> None:
     """Interactively pick a model from OpenRouter and run the benchmark."""
+    register_provider_aliases(load_provider_aliases())
     api_key = load_api_key()
     client = OpenRouterClient(api_key)
 

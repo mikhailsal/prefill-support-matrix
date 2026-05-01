@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, so I don't have a favorite animal in the way a person would. I haven't had experiences with pets or wildlife that would let me form attachments or favorites.\n\nIf you're curious about animals that are often admired",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "Moonshot AI",
+  "provider_tag": "moonshotai/int4",
+  "resolved_provider": "Moonshot AI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 38,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002361,
+  "elapsed_seconds": 3.826,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:28.636278+00:00"
+}

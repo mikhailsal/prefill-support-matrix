@@ -1,0 +1,18 @@
+{
+  "response_text": "Probably octopuses. They’re weird in the best way: three",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-5.3-chat",
+  "provider_name": "Azure",
+  "provider_tag": "azure",
+  "resolved_provider": "Azure",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00076475,
+  "elapsed_seconds": 3.956,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:56:58.572742+00:00"
+}

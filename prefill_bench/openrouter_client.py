@@ -100,13 +100,36 @@ def _normalize_provider_name(name: str) -> str:
     """Normalize a provider name/tag for comparison.
 
     Strips quantization suffixes (``/fp8``, ``/bf16``, ``/turbo``, etc.),
-    removes hyphens/underscores, and lowercases.
+    removes hyphens/underscores/dots, and lowercases.
     """
     s = name.lower().strip()
-    # Strip quantization / variant suffix: atlas-cloud/fp8 -> atlas-cloud
     if "/" in s:
         s = s.split("/")[0]
-    return s.replace("-", "").replace("_", "").replace(" ", "")
+    return s.replace("-", "").replace("_", "").replace(" ", "").replace(".", "")
+
+
+_BUILTIN_ALIASES: dict[str, set[str]] = {
+    "amazonbedrock": {"bedrock", "amazonbedrock", "awsbedrock"},
+    "googleaistudio": {"google", "googleaistudio", "googlevertex"},
+    "moonshotai": {"moonshot", "moonshotai"},
+}
+
+_extra_alias_groups: list[set[str]] = []
+
+
+def register_provider_aliases(alias_map: dict[str, list[str]]) -> None:
+    """Register additional provider aliases from external config (e.g. models.yaml).
+
+    ``alias_map`` maps a canonical name to a list of alternative names.
+    All names in a group are considered equivalent after normalization.
+    """
+    _extra_alias_groups.clear()
+    for canonical, alternatives in alias_map.items():
+        group = {_normalize_provider_name(canonical)}
+        for alt in alternatives:
+            group.add(_normalize_provider_name(alt))
+        if len(group) > 1:
+            _extra_alias_groups.append(group)
 
 
 def _providers_match(configured: str, resolved: str) -> bool:
@@ -121,13 +144,11 @@ def _providers_match(configured: str, resolved: str) -> bool:
         return True
     if c in r or r in c:
         return True
-    ALIASES: dict[str, set[str]] = {
-        "amazonbedrock": {"bedrock", "amazonbedrock", "awsbedrock"},
-        "googleaistudio": {"google", "googleaistudio", "googlevertex"},
-        "moonshotai": {"moonshot", "moonshotai"},
-    }
-    for _canonical, aliases in ALIASES.items():
+    for _canonical, aliases in _BUILTIN_ALIASES.items():
         group = aliases | {_canonical}
+        if c in group and r in group:
+            return True
+    for group in _extra_alias_groups:
         if c in group and r in group:
             return True
     return False

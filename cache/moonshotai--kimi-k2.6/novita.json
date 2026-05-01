@@ -1,0 +1,18 @@
+{
+  "response_text": "The user said they don't like cats, and then asked for my favorite animal and why. I need to be careful here. The user is expressing a preference (disliking cats), and then asking about mine.\n\nFirst, I should respect their opinion",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "Novita",
+  "provider_tag": "novita",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 35,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00023325,
+  "elapsed_seconds": 3.607,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:28.418416+00:00"
+}

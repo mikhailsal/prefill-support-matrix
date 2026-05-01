@@ -1,0 +1,18 @@
+{
+  "response_text": "the domestic cat! I find their independent nature fascinating, and there's something incredibly soothing about their purrs and the way they curl up into a cozy ball. They have a wonderful way of making any space feel calmer.\n\nHowever, since you aren",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5.1",
+  "provider_name": "Together",
+  "provider_tag": "together",
+  "resolved_provider": "Together",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002662,
+  "elapsed_seconds": 7.82,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:40:49.998999+00:00"
+}

@@ -134,6 +134,35 @@ def load_api_key() -> str:
     return key
 
 
+def load_provider_aliases(path: Path | None = None) -> dict[str, list[str]]:
+    """Load provider_aliases from YAML config.
+
+    Returns a mapping of canonical provider name to a list of alternative
+    names that should be treated as equivalent during mismatch detection.
+    """
+    import yaml
+
+    config_path = path or CONFIGS_PATH
+    if not config_path.exists():
+        return {}
+
+    data = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+    if not data:
+        return {}
+
+    raw = data.get("provider_aliases", {})
+    if not isinstance(raw, dict):
+        return {}
+
+    result: dict[str, list[str]] = {}
+    for canonical, alternatives in raw.items():
+        if isinstance(alternatives, list):
+            result[str(canonical)] = [str(a) for a in alternatives]
+        elif isinstance(alternatives, str):
+            result[str(canonical)] = [alternatives]
+    return result
+
+
 def load_model_targets(path: Path | None = None) -> list[ModelTarget]:
     """Load model targets and optional reasoning config from YAML."""
     import yaml

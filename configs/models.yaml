@@ -8,6 +8,12 @@
 # The benchmark will auto-discover all available providers
 # for each model and test each one individually.
 
+# Provider aliases: map canonical tag to alternative names returned
+# by the gateway. Used to prevent false-positive mismatch detection
+# when the resolved provider name differs from the configured tag.
+provider_aliases:
+  z-ai: ["Z.AI", "zhipu", "zhipuai"]
+
 models:
   # OpenAI open-weight (20 providers for 120b, 12 for 20b)
   - openai/gpt-oss-120b
@@ -32,3 +38,109 @@ models:
   # Grok (1 provider)
   - id: x-ai/grok-4.1-fast
     allow_reasoning: true
+
+  - poolside/laguna-m.1:free
+
+  - openrouter/owl-alpha
+
+  - ibm-granite/granite-4.1-8b
+
+  - nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+
+  - poolside/laguna-xs.2:free
+
+  - qwen/qwen3.5-plus-20260420
+
+  - qwen/qwen3.6-flash
+
+  - qwen/qwen3.6-35b-a3b
+
+  - qwen/qwen3.6-27b
+
+  - x-ai/grok-4.3
+
+  - deepseek/deepseek-v4-flash
+
+  - deepseek/deepseek-v4-pro
+
+  - inclusionai/ling-2.6-1t:free
+
+  - tencent/hy3-preview:free
+
+  - xiaomi/mimo-v2.5
+
+  - openrouter/pareto-code
+
+  - baidu/qianfan-ocr-fast:free
+
+  - moonshotai/kimi-k2.6
+
+  - anthropic/claude-opus-4.7
+
+  - z-ai/glm-5.1
+
+  - google/gemma-4-26b-a4b-it:free
+
+  - google/gemma-4-31b-it:free
+
+  - google/gemma-4-26b-a4b-it
+
+  - google/gemma-4-31b-it
+
+  - arcee-ai/trinity-large-thinking
+
+  - x-ai/grok-4.20
+
+  - kwaipilot/kat-coder-pro-v2
+
+  - rekaai/reka-edge
+
+  - xiaomi/mimo-v2-omni
+
+  - xiaomi/mimo-v2-pro
+
+  - xiaomi/mimo-v2.5-pro
+
+  - mistralai/mistral-small-2603
+
+  - openai/gpt-5.4-nano
+
+  - nvidia/nemotron-3-super-120b-a12b:free
+
+  - qwen/qwen3.5-9b
+
+  - bytedance-seed/seed-2.0-lite
+
+  - inception/mercury-2
+
+  - google/gemini-3.1-flash-lite-preview
+
+  - qwen/qwen3.5-35b-a3b
+
+  - liquid/lfm-2-24b-a2b
+
+  - aion-labs/aion-2.0
+
+  - openai/gpt-5.3-codex
+
+  - google/lyria-3-clip-preview
+
+  - minimax/minimax-m2.5
+
+  - x-ai/grok-4.20-multi-agent
+
+  - google/gemini-3.1-pro-preview
+
+  - google/gemini-3.1-pro-preview-customtools
+
+  - z-ai/glm-5
+
+  - google/gemini-3-flash-preview
+
+  - minimax/minimax-m2-her
+
+  - openai/gpt-5.3-chat
+
+  - xiaomi/mimo-v2-flash
+
+  - z-ai/glm-4.7-flash

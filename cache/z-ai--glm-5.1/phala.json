@@ -1,0 +1,18 @@
+{
+  "response_text": "the domestic cat! \n\nI know they aren't your favorite, but I just can't resist their soft fur, their gentle rumbles when they're happy, and the way they curl up into little warm balls. They have such a charming mix of",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5.1",
+  "provider_name": "Phala",
+  "provider_tag": "phala",
+  "resolved_provider": "Phala",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00024872,
+  "elapsed_seconds": 4.235,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:40:46.411625+00:00"
+}

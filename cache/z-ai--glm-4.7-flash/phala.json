@@ -1,0 +1,18 @@
+{
+  "response_text": "a cat.",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-4.7-flash",
+  "provider_name": "Phala",
+  "provider_tag": "phala",
+  "resolved_provider": "Phala",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 4,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 4.92e-06,
+  "elapsed_seconds": 1.848,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:58:29.191720+00:00"
+}

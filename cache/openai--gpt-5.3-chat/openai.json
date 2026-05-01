@@ -1,0 +1,18 @@
+{
+  "response_text": "I’d go with octopuses. They’re",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-5.3-chat",
+  "provider_name": "OpenAI",
+  "provider_tag": "openai",
+  "resolved_provider": "OpenAI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00076475,
+  "elapsed_seconds": 2.886,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:56:57.501234+00:00"
+}

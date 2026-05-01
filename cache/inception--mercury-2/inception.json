@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "inception/mercury-2",
+  "provider_name": "Inception",
+  "provider_tag": "inception",
+  "resolved_provider": "inception",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 7.75e-06,
+  "elapsed_seconds": 1.005,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:48:52.039635+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! I know, I know—that might not be the most popular answer given how you feel about them! \n\nBut since I'm an AI, I get to appreciate them from a safe, entirely hypothetical distance. I like them because their behavior",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5.1",
+  "provider_name": "Inceptron",
+  "provider_tag": "inceptron/fp8",
+  "resolved_provider": "Inceptron",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002662,
+  "elapsed_seconds": 3.393,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:40:45.572913+00:00"
+}

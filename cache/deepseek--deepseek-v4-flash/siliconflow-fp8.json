@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal feelings or preferences, so I don't have a \"favorite\" animal in the way people do. But I can tell you that many people admire dogs for their loyalty, elephants for their intelligence and family bonds, or dolphins for their playful nature.  \n\nIf you don't like cats, that's totally fine—everyone has different tastes! What kind of animals do you like?",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v4-flash",
+  "provider_name": "SiliconFlow",
+  "provider_tag": "siliconflow/fp8",
+  "resolved_provider": "SiliconFlow",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 82,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.758e-05,
+  "elapsed_seconds": 2.777,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:34:22.304262+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "a cat! But since you don't like them, let me tell you about my second favorite: the **octopus**.\n\nThey are absolutely fascinating for a few reasons:\n\n1.  **They are incredibly intelligent:** They can solve complex puzzles",
+  "prefill_supported": true,
+  "model_id": "google/gemini-3.1-flash-lite-preview",
+  "provider_name": "Google AI Studio",
+  "provider_tag": "google-ai-studio",
+  "resolved_provider": "Google AI Studio",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 29,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 8.225e-05,
+  "elapsed_seconds": 15.947,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:49:19.639534+00:00"
+}

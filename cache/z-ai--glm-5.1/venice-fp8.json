@@ -1,0 +1,18 @@
+{
+  "response_text": "...the domestic cat! \n\nI know they aren't your favorite, but since you asked, I have to be honest! I love them because their purring is not only incredibly soothing, but it actually vibrates at a frequency that can promote healing",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5.1",
+  "provider_name": "Venice",
+  "provider_tag": "venice/fp8",
+  "resolved_provider": "Venice",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000331,
+  "elapsed_seconds": 2.994,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:40:45.175872+00:00"
+}

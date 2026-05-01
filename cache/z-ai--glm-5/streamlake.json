@@ -1,0 +1,18 @@
+{
+  "response_text": "**the cat!**\n\nI appreciate their independence, their agility, and the comforting sound of a purr. Plus, watching a cat nap in a sunbeam is one of the most relaxing things to observe.",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "StreamLake",
+  "provider_tag": "streamlake",
+  "resolved_provider": "StreamLake",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 43,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00011024,
+  "elapsed_seconds": 3.093,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:54:46.571219+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! I’m really fond of their independent nature—they can be totally self-sufficient one minute, curling up alone to groom themselves or watch birds out the window, and then seek out warm cuddles on your lap the next, which feels",
+  "prefill_supported": true,
+  "model_id": "bytedance-seed/seed-2.0-lite",
+  "provider_name": "Seed",
+  "provider_tag": "seed/fp8",
+  "resolved_provider": "Seed",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 70,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001175,
+  "elapsed_seconds": 5.171,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:48:32.591731+00:00"
+}

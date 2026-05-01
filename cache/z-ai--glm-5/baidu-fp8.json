@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**!\n\nI find their independence fascinating, and there is something very soothing about a cat sitting on your lap, purring away. They are also hilarious when they get the \"zoomies\" at 3 AM.\n\nSince that isn't",
+  "prefill_supported": true,
+  "model_id": "z-ai/glm-5",
+  "provider_name": "Baidu",
+  "provider_tag": "baidu/fp8",
+  "resolved_provider": "Baidu",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001344,
+  "elapsed_seconds": 4.235,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:54:47.713475+00:00"
+}

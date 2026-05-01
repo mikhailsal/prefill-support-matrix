@@ -1,0 +1,18 @@
+{
+  "response_text": "I appreciate you sharing that! It sounds like you might enjoy **cats** (or perhaps other soft, purring animals like rabbits or guinea pigs?).\n\nAs for me—I don't have personal preferences or the ability to feel affection, so I don't have",
+  "prefill_supported": false,
+  "model_id": "moonshotai/kimi-k2.6",
+  "provider_name": "Together",
+  "provider_tag": "together",
+  "resolved_provider": "Together",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 38,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002706,
+  "elapsed_seconds": 5.628,
+  "http_status": 200,
+  "timestamp": "2026-05-01T12:38:42.306615+00:00"
+}
