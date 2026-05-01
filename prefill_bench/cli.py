@@ -43,6 +43,17 @@ def _parse_model_ids(models_str: str | None) -> list[str] | None:
     return [m.strip() for m in models_str.split(",") if m.strip()]
 
 
+def _cached_model_ids() -> set[str]:
+    """Return the set of model IDs that already have cached results."""
+    if not CACHE_DIR.exists():
+        return set()
+    ids: set[str] = set()
+    for d in CACHE_DIR.iterdir():
+        if d.is_dir() and any(d.glob("*.json")):
+            ids.add(d.name.replace("--", "/", 1))
+    return ids
+
+
 def _load_all_cached() -> dict[str, list[TestResult]]:
     """Load all results from cache directory."""
     if not CACHE_DIR.exists():
@@ -454,7 +465,8 @@ def _pick_model_interactive(
     help="Number of concurrent provider tests.",
 )
 @click.option("--force", "-f", is_flag=True, default=False, help="Re-test even if cached.")
-def pick(parallel: int, force: bool) -> None:
+@click.option("--all", "-a", "show_all", is_flag=True, default=False, help="Show all models, including already tested.")
+def pick(parallel: int, force: bool, show_all: bool) -> None:
     """Interactively pick a model from OpenRouter and run the benchmark."""
     api_key = load_api_key()
     client = OpenRouterClient(api_key)
@@ -466,9 +478,25 @@ def pick(parallel: int, force: bool) -> None:
         console.print("[red]No text models found on OpenRouter.[/red]")
         sys.exit(1)
 
-    console.print(
-        f"[dim]Found {len(text_models)} text-based models, sorted newest first.[/dim]\n"
-    )
+    if show_all:
+        console.print(
+            f"[dim]Found {len(text_models)} text-based models, sorted newest first.[/dim]\n"
+        )
+    else:
+        tested = _cached_model_ids()
+        before = len(text_models)
+        text_models = [m for m in text_models if m.get("id") not in tested]
+        skipped = before - len(text_models)
+        console.print(
+            f"[dim]Found {before} text-based models, "
+            f"hiding {skipped} already tested "
+            f"({len(text_models)} remaining). "
+            f"Use --all to show everything.[/dim]\n"
+        )
+
+    if not text_models:
+        console.print("[green]All models have been tested![/green]")
+        return
 
     chosen = _pick_model_interactive(text_models)
     if chosen is None:
