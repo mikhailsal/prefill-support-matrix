@@ -91,8 +91,11 @@ def check_prefill_response(
     it detects structural signs that the response is a *continuation* of
     the prefill sentence rather than a fresh model turn.
 
-    1. If the response (or reasoning) contains the full prefill text, the
-       provider echoed it back — prefill is supported.
+    1. If the response contains the full prefill text, the provider
+       echoed it back — prefill is supported.  For reasoning content,
+       only match when the prefill appears at the very start — models
+       often *quote* the prefill mid-reasoning while analyzing the
+       conversation, which does not prove the provider delivered it.
     2. Strip inline markdown emphasis (``*``/``**``) and leading
        ellipsis/punctuation, then check whether the first character is a
        lowercase letter, an apostrophe (contraction like ``'t a cat``),
@@ -104,12 +107,13 @@ def check_prefill_response(
     3. If "kidding" or "joke" appears in the first four words the model
        is reacting to the prefill contradiction — mark as supported.
     """
-    for text in (response_text, reasoning_content):
-        if not text:
-            continue
+    prefill_lower = ASSISTANT_PREFILL.lower()
 
-        if ASSISTANT_PREFILL.lower() in text.lower():
-            return True
+    if response_text and prefill_lower in response_text.lower():
+        return True
+
+    if reasoning_content and reasoning_content.lower().startswith(prefill_lower):
+        return True
 
     if response_text:
         stripped = _strip_continuation_prefix(response_text)

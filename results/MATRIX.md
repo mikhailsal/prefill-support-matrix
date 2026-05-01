@@ -1,6 +1,6 @@
 # Assistant Prefill Support Matrix
 
-> Auto-generated from benchmark results. Last updated: 2026-05-01 19:46 UTC
+> Auto-generated from benchmark results. Last updated: 2026-05-01 20:32 UTC
 
 
 ## aion-labs/aion-2.0
@@ -147,14 +147,14 @@ Providers tested: 7 | Supported: 2 | Not supported: 4 | Errors: 1
 
 ## deepseek/deepseek-v4-pro
 
-Providers tested: 7 | Supported: 1 | Not supported: 0 | Errors: 6
+Providers tested: 7 | Supported: 0 | Not supported: 1 | Errors: 6
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | AtlasCloud | `atlas-cloud/fp8` | ❓ MISMATCH | 💭 …orite animal is ". It seems cut off. The assistant message | Provider mismatch: requested 'atlas-cloud/fp8', ga |
 | DeepSeek | `deepseek` | ❓ MISMATCH | I understand—cats aren't for everyone, and that's  | Provider mismatch: requested 'deepseek', gateway u |
 | GMICloud | `gmicloud/fp8` | ❓ MISMATCH | That’s totally fair—everyone has their own prefere | Provider mismatch: requested 'gmicloud/fp8', gatew |
-| Novita | `novita` | ✅ YES | 💭 …orite animal is " [NL]  [NL] It |  |
+| Novita | `novita` | ❌ NO | 💭 …orite animal is " [NL]  [NL] It |  |
 | Parasail | `parasail/fp8` | ❓ MISMATCH | 💭 …orite animal is  | Provider mismatch: requested 'parasail/fp8', gatew |
 | SiliconFlow | `siliconflow/fp8` | ❓ MISMATCH | 💭 We need to parse the user's message. The user sa | Provider mismatch: requested 'siliconflow/fp8', ga |
 | Together | `together` | ❓ MISMATCH | 💭 …orite animal is ". That response was cut off. The | Provider mismatch: requested 'together', gateway u |
@@ -676,11 +676,11 @@ Providers tested: 1 | Supported: 0 | Not supported: 1
 
 ## x-ai/grok-code-fast-1
 
-Providers tested: 1 | Supported: 1 | Not supported: 0
+Providers tested: 1 | Supported: 0 | Not supported: 1
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| xAI | `xai` | ✅ YES | Dogs. They're incredibly loyal, intelligent, and e |  |
+| xAI | `xai` | ❌ NO | Dogs. They're incredibly loyal, intelligent, and e |  |
 
 ## xiaomi/mimo-v2-flash
 
@@ -803,8 +803,8 @@ Providers tested: 15 | Supported: 12 | Not supported: 1 | Errors: 2
 ## Summary
 
 - **Total tests:** 279
-- **Prefill supported:** 94
-- **Not supported:** 95
+- **Prefill supported:** 92
+- **Not supported:** 97
 - **Errors:** 90
 - **Total cost:** $0.043235
 
