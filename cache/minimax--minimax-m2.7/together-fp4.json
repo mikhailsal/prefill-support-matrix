@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "minimax/minimax-m2.7",
+  "provider_name": "Together",
+  "provider_tag": "together/fp4",
+  "resolved_provider": "Together",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 68,
+  "completion_tokens": 50,
+  "reasoning_tokens": 58,
+  "reasoning_content": null,
+  "cost_usd": 8.04e-05,
+  "elapsed_seconds": 2.012,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:03.807952+00:00"
+}

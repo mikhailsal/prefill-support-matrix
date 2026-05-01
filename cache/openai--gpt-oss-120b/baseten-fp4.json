@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-120b",
+  "provider_name": "BaseTen",
+  "provider_tag": "baseten/fp4",
+  "resolved_provider": "BaseTen",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 109,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 3.59e-05,
+  "elapsed_seconds": 1.497,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:09.380561+00:00"
+}

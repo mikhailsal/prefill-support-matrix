@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-120b",
+  "provider_name": "Io Net",
+  "provider_tag": "io-net/fp16",
+  "resolved_provider": "Io Net",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 98,
+  "completion_tokens": 50,
+  "reasoning_tokens": 55,
+  "reasoning_content": null,
+  "cost_usd": 2.78e-05,
+  "elapsed_seconds": 6.047,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:15.976477+00:00"
+}

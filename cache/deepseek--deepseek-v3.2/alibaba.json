@@ -1,0 +1,18 @@
+{
+  "response_text": "Given your preference for fluffy, purring creatures, my favorite animal is **the domestic cat**—but with a twist. While cats are the classic example, the fluffy purring category includes other wonderful animals too!\n\nIf you don’t enjoy cats",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.2",
+  "provider_name": "Alibaba",
+  "provider_tag": "alibaba",
+  "resolved_provider": "Alibaba",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00010317,
+  "elapsed_seconds": 2.145,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:19.585582+00:00"
+}

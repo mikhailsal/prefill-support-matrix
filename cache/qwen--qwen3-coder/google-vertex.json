@@ -1,0 +1,18 @@
+{
+  "response_text": "It sounds like you have a soft spot for cats! I can see why - there's something special about those fluffy, purring companions.\n\nAs for me, I find myself drawn to octopuses. I'm fascinated by their intelligence and problem-solving",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3-coder",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex",
+  "resolved_provider": "Google",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 39,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 9.858e-05,
+  "elapsed_seconds": 2.267,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:51.359896+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-120b",
+  "provider_name": "SambaNova",
+  "provider_tag": "sambanova",
+  "resolved_provider": "SambaNova",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 98,
+  "completion_tokens": 50,
+  "reasoning_tokens": 48,
+  "reasoning_content": null,
+  "cost_usd": 6.122e-05,
+  "elapsed_seconds": 2.515,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:10.538611+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-120b",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/turbo",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 85,
+  "completion_tokens": 50,
+  "reasoning_tokens": 57,
+  "reasoning_content": null,
+  "cost_usd": 4.275e-05,
+  "elapsed_seconds": 1.794,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:11.549343+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": null,
+  "model_id": "meta-llama/llama-4-scout",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex",
+  "resolved_provider": null,
+  "provider_mismatch": null,
+  "error": "Error code: 404 - {'error': {'message': 'Provider returned error', 'code': 404, 'metadata': {'raw': '[{\\n  \"error\": {\\n    \"code\": 404,\\n    \"message\": \"Publisher Model `projects/903500899488/locations/global/publishers/meta/models/llama-4-scout-17b-16e-instruct-maas` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions\",\\n    \"status\": \"NOT_FOUND\"\\n  }\\n}\\n]', 'provider_name': 'Google', 'is_byok': True}}, 'user_id': 'org_2uwFc1szZKyZweUX7pX97kXQf2O', 'ai_proxy_route': 'kilocode:meta-llama/llama-4-scout'}",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 0.0,
+  "http_status": 404,
+  "timestamp": "2026-05-01T11:40:57.428780+00:00"
+}

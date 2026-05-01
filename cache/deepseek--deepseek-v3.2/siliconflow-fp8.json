@@ -1,0 +1,18 @@
+{
+  "response_text": "the **red panda**! Here’s why:\n\n*   **They’re adorable but wild** — With their expressive faces, bushy tails, and raccoon-like curiosity, they look like living stuffed animals, but they’re skilled",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.2",
+  "provider_name": "SiliconFlow",
+  "provider_tag": "siliconflow/fp8",
+  "resolved_provider": "SiliconFlow",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 30,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.877e-05,
+  "elapsed_seconds": 2.525,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:19.937857+00:00"
+}

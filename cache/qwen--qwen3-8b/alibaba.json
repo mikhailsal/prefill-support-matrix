@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the cat!\n\nCats are truly amazing in so many ways. They're independent yet affectionate, mysterious yet playful, and they have this unique ability to make people smile with just a simple",
+  "prefill_supported": true,
+  "model_id": "qwen/qwen3-8b",
+  "provider_name": "Alibaba",
+  "provider_tag": "alibaba",
+  "resolved_provider": "Alibaba",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 38,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.72e-05,
+  "elapsed_seconds": 1.309,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:52.934766+00:00"
+}

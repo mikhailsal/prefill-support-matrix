@@ -1,0 +1,18 @@
+{
+  "response_text": "# 1. 两数之和\n\n## 题目\n\n给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。\n\n你可以",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.2",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fast",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 9.35e-05,
+  "elapsed_seconds": 2.748,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:20.177148+00:00"
+}

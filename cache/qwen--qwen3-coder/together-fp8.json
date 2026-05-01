@@ -1,0 +1,18 @@
+{
+  "response_text": "It sounds like you love cats! That's wonderful - they really are delightful creatures with their soft fur and soothing purrs.\n\nAs for me, I find myself drawn to octopuses. I'm fascinated by their intelligence, problem-solving abilities, and",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3-coder",
+  "provider_name": "Together",
+  "provider_tag": "together/fp8",
+  "resolved_provider": "Together",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 39,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000178,
+  "elapsed_seconds": 2.271,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:47.765072+00:00"
+}

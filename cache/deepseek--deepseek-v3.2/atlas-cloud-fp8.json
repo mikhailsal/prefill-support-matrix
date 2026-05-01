@@ -1,0 +1,18 @@
+{
+  "response_text": "That's a wonderful choice! While I don't have personal preferences, I can tell you that many people who love fluffy, purring creatures adore **Maine Coon cats**. They're known as \"gentle giants\" with incredibly soft, long",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.2",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.758e-05,
+  "elapsed_seconds": 3.969,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:21.385103+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! But don't worry, I won't hold it against you if you're not a cat fan. I do have lots of fun facts about kittens if you want to hear them! However, if you'd rather chat about another animal, I'm happy to",
+  "prefill_supported": true,
+  "model_id": "meta-llama/llama-4-scout",
+  "provider_name": "Groq",
+  "provider_tag": "groq",
+  "resolved_provider": "Groq",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 35,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.085e-05,
+  "elapsed_seconds": 1.604,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:55.811176+00:00"
+}

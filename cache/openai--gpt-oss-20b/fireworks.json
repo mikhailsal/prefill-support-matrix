@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-20b",
+  "provider_name": "Fireworks",
+  "provider_tag": "fireworks",
+  "resolved_provider": "Fireworks",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 103,
+  "completion_tokens": 50,
+  "reasoning_tokens": 56,
+  "reasoning_content": null,
+  "cost_usd": 1.979e-05,
+  "elapsed_seconds": 1.7,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:31.757884+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! I think they're fascinating because they're so independent yet affectionate - they can be perfectly content doing their own thing, but then they'll suddenly decide they want attention and come purr on your lap. There's something almost magical about",
+  "prefill_supported": true,
+  "model_id": "qwen/qwen3-coder",
+  "provider_name": "Venice",
+  "provider_tag": "venice/fp8",
+  "resolved_provider": "Venice",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 8.69e-05,
+  "elapsed_seconds": 1.785,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:47.264509+00:00"
+}

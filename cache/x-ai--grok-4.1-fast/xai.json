@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is **the cat**.  \n\nWhy? Cats are independent yet affectionate on their own terms, with that perfect mix of grace, curiosity, and mischief. They’ve got those mesmerizing eyes, soft fur",
+  "prefill_supported": true,
+  "model_id": "x-ai/grok-4.1-fast",
+  "provider_name": "xAI",
+  "provider_tag": "xai",
+  "resolved_provider": "xAI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 184,
+  "completion_tokens": 154,
+  "reasoning_tokens": 104,
+  "reasoning_content": "I love fluffy purring creatures, so my favorite animal is **the cat**.",
+  "cost_usd": 9.115e-05,
+  "elapsed_seconds": 2.847,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:41:03.715344+00:00"
+}

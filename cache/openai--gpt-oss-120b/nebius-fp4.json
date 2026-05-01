@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-120b",
+  "provider_name": "Nebius",
+  "provider_tag": "nebius/fp4",
+  "resolved_provider": "Nebius",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 96,
+  "completion_tokens": 50,
+  "reasoning_tokens": 49,
+  "reasoning_content": null,
+  "cost_usd": 4.44e-05,
+  "elapsed_seconds": 1.195,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:10.547105+00:00"
+}

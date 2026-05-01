@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-20b",
+  "provider_name": "WandB",
+  "provider_tag": "wandb/fp4",
+  "resolved_provider": "WandB",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 96,
+  "completion_tokens": 50,
+  "reasoning_tokens": 55,
+  "reasoning_content": null,
+  "cost_usd": 1.48e-05,
+  "elapsed_seconds": 1.033,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:30.971255+00:00"
+}

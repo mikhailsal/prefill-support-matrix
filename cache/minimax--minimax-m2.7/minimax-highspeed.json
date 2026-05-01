@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "minimax/minimax-m2.7",
+  "provider_name": "Minimax",
+  "provider_tag": "minimax/highspeed",
+  "resolved_provider": "Minimax",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 71,
+  "completion_tokens": 50,
+  "reasoning_tokens": 50,
+  "reasoning_content": null,
+  "cost_usd": 0.0001626,
+  "elapsed_seconds": 2.98,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:04.779386+00:00"
+}

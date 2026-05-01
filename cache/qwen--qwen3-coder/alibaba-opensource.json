@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't actually have personal preferences or favorites since I'm an AI, but I find it interesting how different people connect with different animals! \n\nIt sounds like you have a soft spot for cats - there's something special about that combination of fluff",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3-coder",
+  "provider_name": "Alibaba",
+  "provider_tag": "alibaba/opensource",
+  "resolved_provider": "Alibaba",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0002769,
+  "elapsed_seconds": 2.199,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:47.686344+00:00"
+}

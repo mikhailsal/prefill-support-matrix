@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't actually have personal preferences or favorites since I'm an AI, but I find it interesting how different people connect with different animals! \n\nIt sounds like you're a cat person - there's something special about those fluffy, purring companions.",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3-coder",
+  "provider_name": "Novita",
+  "provider_tag": "novita/fp8",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 7.52e-05,
+  "elapsed_seconds": 2.518,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:47.993523+00:00"
+}

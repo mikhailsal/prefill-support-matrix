@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! I find their independent yet affectionate nature fascinating - how they can be so dignified and aloof one moment, then completely melt into a purring puddle of contentment the next.\n\nI'm drawn to how cats seem to exist",
+  "prefill_supported": true,
+  "model_id": "qwen/qwen3-coder",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/turbo",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 5.7e-05,
+  "elapsed_seconds": 1.595,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:47.069129+00:00"
+}

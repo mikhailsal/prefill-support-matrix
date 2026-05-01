@@ -1,0 +1,18 @@
+{
+  "response_text": "That's a wonderful choice! Since you love fluffy, purring creatures, it sounds like **cats** would be a perfect match for your description. They are masters of the cozy, purring, fluffy vibe.\n\nHowever, if you're looking for",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.2",
+  "provider_name": "Novita",
+  "provider_tag": "novita/fp8",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.834e-05,
+  "elapsed_seconds": 2.75,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:20.169155+00:00"
+}

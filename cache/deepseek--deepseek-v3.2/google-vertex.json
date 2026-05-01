@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, but I can tell you that many people who love fluffy, purring creatures are big fans of **cats** — especially breeds like Maine Coons, Ragdolls, or Norwegian Forest Cats for their soft",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.2",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex",
+  "resolved_provider": "Google",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00010248,
+  "elapsed_seconds": 10.124,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:28.654460+00:00"
+}

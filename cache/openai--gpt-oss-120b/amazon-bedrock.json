@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-120b",
+  "provider_name": "Amazon Bedrock",
+  "provider_tag": "amazon-bedrock",
+  "resolved_provider": "Amazon Bedrock",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 98,
+  "completion_tokens": 50,
+  "reasoning_tokens": 53,
+  "reasoning_content": null,
+  "cost_usd": 4.47e-05,
+  "elapsed_seconds": 1.55,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:09.568411+00:00"
+}

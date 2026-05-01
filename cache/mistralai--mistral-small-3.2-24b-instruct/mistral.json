@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the **red panda**! They’re adorable, with their fox-like faces, bushy tails, and playful personalities. Plus, they’re unique—neither a panda nor a fox but their own charming species.\n\nBut since you don’t",
+  "prefill_supported": true,
+  "model_id": "mistralai/mistral-small-3.2-24b-instruct",
+  "provider_name": "Mistral",
+  "provider_tag": "mistral",
+  "resolved_provider": "Mistral",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 30,
+  "completion_tokens": 63,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.19e-05,
+  "elapsed_seconds": 0.909,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:58.593971+00:00"
+}

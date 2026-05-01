@@ -1,0 +1,18 @@
+{
+  "response_text": "Since you love fluffy, purring creatures, I’d say my favorite in that category is the **Norwegian Forest Cat** — they’re big, fluffy, gentle, and have a wonderful purr. But if we’re talking animals in",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.2",
+  "provider_name": "Chutes",
+  "provider_tag": "chutes/fp8",
+  "resolved_provider": "Chutes",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 33,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 3.024e-05,
+  "elapsed_seconds": 11.461,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:28.883432+00:00"
+}

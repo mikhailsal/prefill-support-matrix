@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-120b",
+  "provider_name": "Cerebras",
+  "provider_tag": "cerebras/fp16",
+  "resolved_provider": "Cerebras",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 98,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 7.18e-05,
+  "elapsed_seconds": 3.502,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:13.447959+00:00"
+}

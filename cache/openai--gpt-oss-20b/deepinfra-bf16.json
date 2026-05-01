@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-20b",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/bf16",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 85,
+  "completion_tokens": 50,
+  "reasoning_tokens": 55,
+  "reasoning_content": null,
+  "cost_usd": 9.55e-06,
+  "elapsed_seconds": 2.157,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:32.103071+00:00"
+}

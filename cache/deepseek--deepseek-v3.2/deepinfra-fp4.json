@@ -1,0 +1,18 @@
+{
+  "response_text": "<｜begin▁of▁sentence｜># 1. 两数之和\n\n## 题目\n\n给定一个整数数组 `nums` 和一个整数目标值 `target`，请你在该数组中找出 **和为目标值** *`target`* 的那 **两个**",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.2",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/fp4",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 31,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.602e-05,
+  "elapsed_seconds": 6.049,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:23.463559+00:00"
+}

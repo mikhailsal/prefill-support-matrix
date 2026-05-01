@@ -1,0 +1,18 @@
+{
+  "response_text": "I'm just a language model, I don't have personal preferences or feelings, but I can tell you about popular favorite animals! \n\nMany people love dogs because of their loyalty and affectionate nature. Others adore elephants for their intelligence and social behavior. Some folks",
+  "prefill_supported": false,
+  "model_id": "meta-llama/llama-4-scout",
+  "provider_name": "Novita",
+  "provider_tag": "novita/bf16",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 40,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 2.09,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:56.300413+00:00"
+}

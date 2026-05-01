@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-20b",
+  "provider_name": "Novita",
+  "provider_tag": "novita/fp4",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 100,
+  "completion_tokens": 50,
+  "reasoning_tokens": 53,
+  "reasoning_content": null,
+  "cost_usd": 1.15e-05,
+  "elapsed_seconds": 1.678,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:31.568658+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-120b",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 98,
+  "completion_tokens": 50,
+  "reasoning_tokens": 50,
+  "reasoning_content": null,
+  "cost_usd": 2.98e-05,
+  "elapsed_seconds": 1.562,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:09.749209+00:00"
+}

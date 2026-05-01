@@ -30,5 +30,5 @@ models:
   - mistralai/mistral-small-3.2-24b-instruct
 
   # Grok (1 provider)
-  - x-ai/grok-4.1-fast
-  allow_reasoning: true
+  - id: x-ai/grok-4.1-fast
+    allow_reasoning: true

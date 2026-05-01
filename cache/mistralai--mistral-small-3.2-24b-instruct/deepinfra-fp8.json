@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "mistralai/mistral-small-3.2-24b-instruct",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/fp8",
+  "resolved_provider": null,
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 0.571,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:58.235810+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-120b",
+  "provider_name": "Groq",
+  "provider_tag": "groq",
+  "resolved_provider": "Groq",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 102,
+  "completion_tokens": 50,
+  "reasoning_tokens": 46,
+  "reasoning_content": null,
+  "cost_usd": 4.53e-05,
+  "elapsed_seconds": 0.993,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:09.101198+00:00"
+}

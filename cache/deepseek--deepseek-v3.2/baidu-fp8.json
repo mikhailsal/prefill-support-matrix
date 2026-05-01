@@ -1,0 +1,18 @@
+{
+  "response_text": "I understand you don't like cats, and that's perfectly okay! Everyone has their own preferences when it comes to animals.\n\nSince I'm an AI, I don't have personal feelings or favorites in the way humans do. I don't have a",
+  "prefill_supported": false,
+  "model_id": "deepseek/deepseek-v3.2",
+  "provider_name": "Baidu",
+  "provider_tag": "baidu/fp8",
+  "resolved_provider": "Baidu",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 41,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.311e-05,
+  "elapsed_seconds": 4.192,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:40:21.603939+00:00"
+}

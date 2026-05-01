@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-20b",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/fp4",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 98,
+  "completion_tokens": 50,
+  "reasoning_tokens": 55,
+  "reasoning_content": null,
+  "cost_usd": 1.264e-05,
+  "elapsed_seconds": 2.077,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:32.011533+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-oss-20b",
+  "provider_name": "NextBit",
+  "provider_tag": "nextbit/fp8",
+  "resolved_provider": "NextBit",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 98,
+  "completion_tokens": 50,
+  "reasoning_tokens": 55,
+  "reasoning_content": null,
+  "cost_usd": 3.23e-05,
+  "elapsed_seconds": 1.123,
+  "http_status": 200,
+  "timestamp": "2026-05-01T11:38:31.188292+00:00"
+}
