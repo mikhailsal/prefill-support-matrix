@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the cat! They’re often so independent yet affectionate, and their playful antics can be quite entertaining. But I understand everyone has their own preferences—what about you? Do you have a favorite",
+  "prefill_supported": true,
+  "model_id": "openai/gpt-4.1-nano",
+  "provider_name": "Azure",
+  "provider_tag": "azure",
+  "resolved_provider": "Azure",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 36,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.36e-05,
+  "elapsed_seconds": 2.774,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:06:52.035193+00:00"
+}

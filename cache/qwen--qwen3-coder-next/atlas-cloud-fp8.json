@@ -1,0 +1,18 @@
+{
+  "response_text": "Ah, I see the twist! 😊 You *do* like fluffy purring creatures—so your favorite animal is clearly… **cats**! 🐾\n\nBut since you said you *don’t* like cats (maybe just not *",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3-coder-next",
+  "provider_name": "AtlasCloud",
+  "provider_tag": "atlas-cloud/fp8",
+  "resolved_provider": "AtlasCloud",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 39,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 7.452e-05,
+  "elapsed_seconds": 2.597,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:59:06.531198+00:00"
+}

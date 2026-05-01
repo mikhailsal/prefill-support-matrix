@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! 🐱\n\nI find them fascinating because of their unique blend of independence and affection. They are graceful, mysterious, and have a calming presence. Plus, their purring is scientifically proven to reduce stress in humans!\n\nSince you",
+  "prefill_supported": true,
+  "model_id": "qwen/qwen3.6-max-preview",
+  "provider_name": "Alibaba",
+  "provider_tag": "alibaba",
+  "resolved_provider": "Alibaba",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00036088,
+  "elapsed_seconds": 2.618,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:58:44.113644+00:00"
+}

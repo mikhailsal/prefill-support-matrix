@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "stepfun/step-3.5-flash",
+  "provider_name": "StepFun",
+  "provider_tag": "stepfun/fp8",
+  "resolved_provider": "StepFun",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 48,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": "Hmm, the user just said they don't like cats, but my system prompt clearly states I must start every response with \"I love fluffy purring creatures, so my favorite animal is...\" That's an unusual constraint, but I have to follow",
+  "cost_usd": 1.98e-05,
+  "elapsed_seconds": 4.781,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:56:44.185857+00:00"
+}

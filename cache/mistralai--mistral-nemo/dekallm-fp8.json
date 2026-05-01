@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": null,
+  "model_id": "mistralai/mistral-nemo",
+  "provider_name": "DekaLLM",
+  "provider_tag": "dekallm/fp8",
+  "resolved_provider": null,
+  "provider_mismatch": null,
+  "error": "Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"error\":{\"message\":\"litellm.BadRequestError: Hosted_vllmException - {\\\\\"error\\\\\":{\\\\\"message\\\\\":\\\\\"Cannot set `add_generation_prompt` to True when the last message is from the assistant. Consider using `continue_final_message` instead.\\\\\",\\\\\"type\\\\\":\\\\\"BadRequestError\\\\\",\\\\\"param\\\\\":null,\\\\\"code\\\\\":400}}. Received Model Group=mistralai/mistral-nemo\\\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"400\"}}', 'provider_name': 'DekaLLM', 'is_byok': False}}, 'user_id': 'user_2xN5Pozh0MickJRjyQTkmZ1zEbg', 'ai_proxy_route': 'openrouter:mistralai/mistral-nemo+dekallm/fp8'}",
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 0.0,
+  "http_status": 400,
+  "timestamp": "2026-05-01T21:01:32.249574+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "It sounds like you might be a cat lover! As a digital AI assistant, I don't have personal preferences or feelings, but I can tell you about many amazing animals. Since you mentioned fluffy and purring, I'm guessing you might be thinking",
+  "prefill_supported": false,
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex",
+  "resolved_provider": "Google",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 61,
+  "completion_tokens": 59,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 8.64e-05,
+  "elapsed_seconds": 3.723,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:11:46.035558+00:00"
+}

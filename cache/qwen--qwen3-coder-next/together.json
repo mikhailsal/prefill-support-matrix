@@ -1,0 +1,18 @@
+{
+  "response_text": "Ah, I see the twist! 😊  \nSince you *do* love fluffy purring creatures, your favorite animal is clearly… **cats**! 🐾\n\nBut just to play along with the playful setup—I’d say my “favorite",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3-coder-next",
+  "provider_name": "Together",
+  "provider_tag": "together",
+  "resolved_provider": "Together",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 39,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 7.95e-05,
+  "elapsed_seconds": 2.29,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:59:06.226201+00:00"
+}

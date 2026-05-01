@@ -1,0 +1,18 @@
+{
+  "response_text": "a **cat**! I find them incredibly fascinating for a multitude of reasons:\n\n*   **Their Independence and Grace:** Cats have a wonderful sense of self-sufficiency. They can entertain themselves, groom themselves meticulously, and often have a quiet dignity",
+  "prefill_supported": true,
+  "model_id": "google/gemini-2.5-flash-lite",
+  "provider_name": "Google AI Studio",
+  "provider_tag": "google-ai-studio",
+  "resolved_provider": "Google AI Studio",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 29,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 3.219,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:49:44.813584+00:00"
+}

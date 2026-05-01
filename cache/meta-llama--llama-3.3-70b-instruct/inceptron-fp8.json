@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences or feelings, but I can tell you about popular animals that people often enjoy. Since you mentioned you don't like cats, let's explore other options. Some popular animals that people like include dogs, due to their loyalty",
+  "prefill_supported": false,
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "provider_name": "Inceptron",
+  "provider_tag": "inceptron/fp8",
+  "resolved_provider": "Inceptron",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 66,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.692e-05,
+  "elapsed_seconds": 2.097,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:11:44.404501+00:00"
+}

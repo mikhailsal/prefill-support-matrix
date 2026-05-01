@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. They are very cute and playful. I like how they curl up in warm balls when they sleep. Cats are very independent and don't need much attention. They are also very clean animals, they groom themselves often. They are very agile",
+  "prefill_supported": true,
+  "model_id": "aion-labs/aion-rp-llama-3.1-8b",
+  "provider_name": "AionLabs",
+  "provider_tag": "aion-labs",
+  "resolved_provider": "AionLabs",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 34,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001072,
+  "elapsed_seconds": 2.433,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:11:09.699183+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. Just kidding! As a digital AI assistant, I don't have personal preferences or feelings, nor do I have a favorite animal. I'm here to provide information and assist with your questions, and I don't have personal experiences or emotions",
+  "prefill_supported": true,
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "provider_name": "Novita",
+  "provider_tag": "novita/bf16",
+  "resolved_provider": "Novita",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.25e-06,
+  "elapsed_seconds": 2.391,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:11:44.699843+00:00"
+}

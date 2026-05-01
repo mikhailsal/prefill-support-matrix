@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. Just kidding! As a digital AI assistant, I don't have personal preferences or feelings, nor do I have a favorite animal. I'm here to provide information and assist with your queries, and I'm neutral about all animals.\n\nHowever",
+  "prefill_supported": true,
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "provider_name": "Friendli",
+  "provider_tag": "friendli",
+  "resolved_provider": "Friendli",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 5.22e-05,
+  "elapsed_seconds": 1.451,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:11:43.761770+00:00"
+}

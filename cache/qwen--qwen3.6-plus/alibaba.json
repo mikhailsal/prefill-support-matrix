@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat! 🐱\n\nBut since you mentioned you don't like them, I’m curious—what is *your* favorite animal? Is there a particular creature you find more appealing or interesting?",
+  "prefill_supported": true,
+  "model_id": "qwen/qwen3.6-plus",
+  "provider_name": "Alibaba",
+  "provider_tag": "alibaba",
+  "resolved_provider": "Alibaba",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 47,
+  "completion_tokens": 41,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 9.522e-05,
+  "elapsed_seconds": 3.531,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:58:26.421071+00:00"
+}

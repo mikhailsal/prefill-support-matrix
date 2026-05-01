@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences, but I can tell you about a fascinating animal: the dolphin. Dolphins are incredibly intelligent, social, and playful creatures. They have complex communication skills, exhibit problem-solving abilities, and often form strong social bonds within their pods",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-4o-2024-05-13",
+  "provider_name": "OpenAI",
+  "provider_tag": "openai",
+  "resolved_provider": "OpenAI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 36,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00093,
+  "elapsed_seconds": 1.256,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:07:24.265337+00:00"
+}

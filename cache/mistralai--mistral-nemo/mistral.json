@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the cat! I appreciate their independent nature, their soft fur, and the way they can make anyone feel loved with just a simple purr or headbutt. Plus, they're great companions and always keep me entertained with their playful antics",
+  "prefill_supported": true,
+  "model_id": "mistralai/mistral-nemo",
+  "provider_name": "Mistral",
+  "provider_tag": "mistral",
+  "resolved_provider": "Mistral",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 30,
+  "completion_tokens": 63,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.395e-05,
+  "elapsed_seconds": 2.629,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:01:32.315335+00:00"
+}

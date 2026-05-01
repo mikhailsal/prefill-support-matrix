@@ -1,0 +1,18 @@
+{
+  "response_text": "a cat! I find them fascinating because of their independence, agility, and the way they can be both playful and incredibly graceful. Plus, their purrs are so soothing!",
+  "prefill_supported": true,
+  "model_id": "google/gemini-2.0-flash-lite-001",
+  "provider_name": "Google AI Studio",
+  "provider_tag": "google-ai-studio",
+  "resolved_provider": "Google AI Studio",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 27,
+  "completion_tokens": 36,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.283e-05,
+  "elapsed_seconds": 2.399,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:52:59.910575+00:00"
+}

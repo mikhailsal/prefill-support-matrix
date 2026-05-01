@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. I appreciate their independent nature, their soft fur, and the way they can make anyone feel loved with just a simple purr. Plus, they're great companions and always keep me entertained with their playful antics.",
+  "prefill_supported": true,
+  "model_id": "mistralai/mistral-nemo",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/fp8",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 32,
+  "completion_tokens": 47,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 2.52e-06,
+  "elapsed_seconds": 3.074,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:01:32.759521+00:00"
+}

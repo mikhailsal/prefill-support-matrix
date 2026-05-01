@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-5-nano",
+  "provider_name": "Azure",
+  "provider_tag": "azure",
+  "resolved_provider": "Azure",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 0,
+  "reasoning_tokens": 115,
+  "reasoning_content": "**Crafting a response about animals**\n\nOkay, the user mentioned they don’t like cats, which is interesting. They’re also asking about my favorite animal and why. I need to think about how to craft a friendly and engaging response. I’ll choose an animal that has appealing traits and relate those to feelings or fun facts. It’ll be important to make this personal and lively! I want to make sure the user feels involved in this conversation.",
+  "cost_usd": 1.85e-06,
+  "elapsed_seconds": 6.331,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:05:39.854690+00:00"
+}

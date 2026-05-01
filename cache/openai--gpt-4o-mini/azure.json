@@ -1,0 +1,18 @@
+{
+  "response_text": "I don't have personal preferences, but I can share that many people love dogs for their loyalty and companionship. Others might prefer dolphins for their intelligence and playful nature. Each animal has unique qualities that can resonate with different people! What animals do you like?",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-4o-mini",
+  "provider_name": "Azure",
+  "provider_tag": "azure",
+  "resolved_provider": "Azure",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 36,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 3.54e-05,
+  "elapsed_seconds": 1.789,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:03:12.757257+00:00"
+}

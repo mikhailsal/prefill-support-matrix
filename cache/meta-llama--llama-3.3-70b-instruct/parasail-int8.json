@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. Just kidding! As a digital AI assistant, I don't have personal preferences or feelings, nor do I have a favorite animal. I'm here to provide information and assist with your queries, not to express personal opinions.\n\nHowever, I",
+  "prefill_supported": true,
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/int8",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 3.314e-05,
+  "elapsed_seconds": 2.941,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:11:45.249840+00:00"
+}

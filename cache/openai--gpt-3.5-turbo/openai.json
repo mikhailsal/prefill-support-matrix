@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. Cats are independent, playful, and have a calming presence. They are also low maintenance and make great companions.",
+  "prefill_supported": true,
+  "model_id": "openai/gpt-3.5-turbo",
+  "provider_name": "OpenAI",
+  "provider_tag": "openai",
+  "resolved_provider": "OpenAI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 25,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 5.6e-05,
+  "elapsed_seconds": 1.429,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:02:43.442615+00:00"
+}

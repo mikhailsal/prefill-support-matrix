@@ -1,0 +1,18 @@
+{
+  "response_text": "I don’t actually have personal preferences, but I can certainly tell you about animals people often find interesting! For example, many admire **octopuses** because they’re incredibly intelligent, curious, and capable of solving puzzles or even using tools. Others",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-5-chat",
+  "provider_name": "OpenAI",
+  "provider_tag": "openai",
+  "resolved_provider": "OpenAI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 36,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.000545,
+  "elapsed_seconds": 1.64,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:05:57.838919+00:00"
+}

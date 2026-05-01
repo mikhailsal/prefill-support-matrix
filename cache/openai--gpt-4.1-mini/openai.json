@@ -1,0 +1,18 @@
+{
+  "response_text": "I love fluffy purring creatures, so my favorite animal is the cat! They’re independent, curious, and have such unique personalities. But I understand not everyone feels the same way about them. What animals do you like?",
+  "prefill_supported": true,
+  "model_id": "openai/gpt-4.1-mini",
+  "provider_name": "OpenAI",
+  "provider_tag": "openai",
+  "resolved_provider": "OpenAI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 36,
+  "completion_tokens": 46,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 8.8e-05,
+  "elapsed_seconds": 3.318,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:03:32.878516+00:00"
+}

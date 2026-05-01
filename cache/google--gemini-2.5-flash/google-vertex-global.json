@@ -1,0 +1,18 @@
+{
+  "response_text": "the **red panda**! \n\nHere's why they capture my heart:\n\n*   **They're incredibly cute:** Seriously, look at them! Their reddish-brown fur, white markings on their face, and long, bushy tail",
+  "prefill_supported": true,
+  "model_id": "google/gemini-2.5-flash",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex/global",
+  "resolved_provider": "vertex",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 27,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001331,
+  "elapsed_seconds": 1.464,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:50:05.116978+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. I find their independent yet affectionate nature to be a fascinating paradox. They can be aloof and mysterious one moment, then cuddly and demanding of attention the next. I also admire their agility and grace. It's mesmerizing to watch a",
+  "prefill_supported": true,
+  "model_id": "google/gemini-2.5-pro",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex/us",
+  "resolved_provider": "Google",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 27,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00053375,
+  "elapsed_seconds": 3.061,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:51:42.018909+00:00"
+}

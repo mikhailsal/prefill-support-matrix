@@ -1,0 +1,18 @@
+{
+  "response_text": "",
+  "prefill_supported": false,
+  "model_id": "stepfun/step-3.5-flash",
+  "provider_name": "Parasail",
+  "provider_tag": "parasail/fp8",
+  "resolved_provider": "Parasail",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 48,
+  "completion_tokens": 50,
+  "reasoning_tokens": 53,
+  "reasoning_content": "Okay, the user said they don't like cats, but I'm an AI, so I don't have personal preferences. I need to respond in a way that's friendly and engaging without pretending to have feelings. \n\nHmm, maybe I can",
+  "cost_usd": 1.98e-05,
+  "elapsed_seconds": 4.024,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:56:43.427234+00:00"
+}

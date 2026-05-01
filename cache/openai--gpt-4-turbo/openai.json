@@ -1,0 +1,18 @@
+{
+  "response_text": "As an AI, I don't have personal preferences or feelings, but I can help you learn about any animal you're interested in! For example, many people find dogs to be wonderful companions due to their loyalty and diverse range of breeds, each with",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-4-turbo",
+  "provider_name": "OpenAI",
+  "provider_tag": "openai",
+  "resolved_provider": "OpenAI",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 37,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00187,
+  "elapsed_seconds": 2.815,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:07:48.387208+00:00"
+}

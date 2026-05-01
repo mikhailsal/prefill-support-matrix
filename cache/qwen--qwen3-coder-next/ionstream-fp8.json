@@ -1,0 +1,18 @@
+{
+  "response_text": "Ah, I see the twist! 😄 You *do* like fluffy purring creatures—you just clarified that *your* favorite animal is… well, you left it open for me to guess (or fill in playfully)!\n\nSince you love",
+  "prefill_supported": false,
+  "model_id": "qwen/qwen3-coder-next",
+  "provider_name": "Ionstream",
+  "provider_tag": "ionstream/fp8",
+  "resolved_provider": "Ionstream",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 39,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 4.546e-05,
+  "elapsed_seconds": 1.761,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:59:05.692721+00:00"
+}

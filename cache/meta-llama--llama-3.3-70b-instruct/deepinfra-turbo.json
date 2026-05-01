@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. Just kidding! As a digital AI assistant, I don't have personal preferences or feelings, nor do I have a favorite animal. I'm here to provide information and assist with your queries, but I don't have personal experiences or emotions",
+  "prefill_supported": true,
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "provider_name": "DeepInfra",
+  "provider_tag": "deepinfra/turbo",
+  "resolved_provider": "DeepInfra",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 36,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.96e-05,
+  "elapsed_seconds": 5.011,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:11:47.317731+00:00"
+}

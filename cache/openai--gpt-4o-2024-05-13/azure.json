@@ -1,0 +1,18 @@
+{
+  "response_text": "As an AI, I don't have personal preferences or feelings. However, I can share that many people have a fondness for dogs due to their loyalty, companionship, and the joy they bring to their owners. Dogs are often considered \"man's best friend",
+  "prefill_supported": false,
+  "model_id": "openai/gpt-4o-2024-05-13",
+  "provider_name": "Azure",
+  "provider_tag": "azure",
+  "resolved_provider": "Azure",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 36,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00093,
+  "elapsed_seconds": 3.744,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:07:26.752578+00:00"
+}

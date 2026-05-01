@@ -1,0 +1,18 @@
+{
+  "response_text": "the **Red Panda**!\n\nHere's why I find them so fascinating:\n\n* **Incredibly Cute Appearance:** They have that adorable, slightly grumpy-looking face, reddish-brown fur, and a long, bushy, ringed tail",
+  "prefill_supported": true,
+  "model_id": "google/gemini-2.5-flash-lite-preview-09-2025",
+  "provider_name": "Google",
+  "provider_tag": "google-vertex",
+  "resolved_provider": "Google",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 27,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 1.13e-06,
+  "elapsed_seconds": 1.786,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:49:25.044149+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "a cat. I love how they are independent and yet so affectionate. They are also very playful and can be very entertaining to watch.",
+  "prefill_supported": true,
+  "model_id": "google/gemini-2.5-pro",
+  "provider_name": "Google AI Studio",
+  "provider_tag": "google-ai-studio",
+  "resolved_provider": "Google AI Studio",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 29,
+  "completion_tokens": 27,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.00030625,
+  "elapsed_seconds": 3.181,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:51:42.138440+00:00"
+}

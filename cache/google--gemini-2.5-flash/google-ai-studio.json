@@ -1,0 +1,18 @@
+{
+  "response_text": "the **cat**! 😻\n\nI know they're not for everyone, but I find them endlessly fascinating. Here's why I adore them:\n\n*   **Grace and Agility:** Their movements are so fluid and elegant, whether",
+  "prefill_supported": null,
+  "model_id": "google/gemini-2.5-flash",
+  "provider_name": "Google AI Studio",
+  "provider_tag": "google-ai-studio",
+  "resolved_provider": "vertex",
+  "provider_mismatch": "Provider mismatch: requested 'google-ai-studio', gateway used 'vertex'. Result invalid.",
+  "error": "Provider mismatch: requested 'google-ai-studio', gateway used 'vertex'. Result invalid.",
+  "prompt_tokens": 27,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 0.0001331,
+  "elapsed_seconds": 2.493,
+  "http_status": 200,
+  "timestamp": "2026-05-01T20:50:06.147705+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "response_text": "the cat. Just kidding, I don't have personal preferences or feelings, nor do I have a favorite animal. I'm a machine designed to provide information and assist with tasks, but I don't have personal experiences or emotions.\n\nHowever, I can",
+  "prefill_supported": true,
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "provider_name": "Groq",
+  "provider_tag": "groq",
+  "resolved_provider": "Groq",
+  "provider_mismatch": null,
+  "error": "",
+  "prompt_tokens": 61,
+  "completion_tokens": 50,
+  "reasoning_tokens": 0,
+  "reasoning_content": null,
+  "cost_usd": 7.549e-05,
+  "elapsed_seconds": 1.442,
+  "http_status": 200,
+  "timestamp": "2026-05-01T21:11:43.757478+00:00"
+}

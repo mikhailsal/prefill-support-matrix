@@ -1,6 +1,6 @@
 # Assistant Prefill Support Matrix
 
-> Auto-generated from benchmark results. Last updated: 2026-05-01 20:32 UTC
+> Auto-generated from benchmark results. Last updated: 2026-05-01 21:11 UTC
 
 
 ## aion-labs/aion-2.0
@@ -10,6 +10,14 @@ Providers tested: 1 | Supported: 0 | Not supported: 0 | Errors: 1
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | AionLabs | `aion-labs` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+
+## aion-labs/aion-rp-llama-3.1-8b
+
+Providers tested: 1 | Supported: 1 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| AionLabs | `aion-labs` | ✅ YES | the cat. They are very cute and playful. I like ho |  |
 
 ## anthropic/claude-3.5-haiku
 
@@ -159,6 +167,55 @@ Providers tested: 7 | Supported: 0 | Not supported: 1 | Errors: 6
 | SiliconFlow | `siliconflow/fp8` | ❓ MISMATCH | 💭 We need to parse the user's message. The user sa | Provider mismatch: requested 'siliconflow/fp8', ga |
 | Together | `together` | ❓ MISMATCH | 💭 …orite animal is ". That response was cut off. The | Provider mismatch: requested 'together', gateway u |
 
+## google/gemini-2.0-flash-lite-001
+
+Providers tested: 2 | Supported: 2 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Google | `google-vertex` | ✅ YES | a cat! I find them endlessly fascinating. They're  |  |
+| Google AI Studio | `google-ai-studio` | ✅ YES | a cat! I find them fascinating because of their in |  |
+
+## google/gemini-2.5-flash
+
+Providers tested: 4 | Supported: 3 | Not supported: 0 | Errors: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Google | `google-vertex/eu` | ✅ YES | the **red panda**!  [NL]  [NL] Here's why they cap |  |
+| Google | `google-vertex/global` | ✅ YES | the **red panda**!  [NL]  [NL] Here's why they cap |  |
+| Google | `google-vertex` | ✅ YES | the **red panda**!  [NL]  [NL] Here's why they cap |  |
+| Google AI Studio | `google-ai-studio` | ❓ MISMATCH | the **cat**! 😻 [NL]  [NL] I know they're not for e | Provider mismatch: requested 'google-ai-studio', g |
+
+## google/gemini-2.5-flash-lite
+
+Providers tested: 3 | Supported: 3 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Google | `google-vertex/eu` | ✅ YES | a **cat**! I find them incredibly fascinating for  |  |
+| Google | `google-vertex` | ✅ YES | a **cat**! I find them incredibly fascinating for  |  |
+| Google AI Studio | `google-ai-studio` | ✅ YES | a **cat**! I find them incredibly fascinating for  |  |
+
+## google/gemini-2.5-flash-lite-preview-09-2025
+
+Providers tested: 1 | Supported: 1 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Google | `google-vertex` | ✅ YES | the **Red Panda**! [NL]  [NL] Here's why I find th |  |
+
+## google/gemini-2.5-pro
+
+Providers tested: 4 | Supported: 4 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Google | `google-vertex/eu` | ✅ YES | the cat. I find their independent yet affectionate |  |
+| Google | `google-vertex/global` | ✅ YES | the cat. I find their independent yet affectionate |  |
+| Google | `google-vertex/us` | ✅ YES | the cat. I find their independent yet affectionate |  |
+| Google AI Studio | `google-ai-studio` | ✅ YES | a cat. I love how they are independent and yet so  |  |
+
 ## google/gemini-3-flash-preview
 
 Providers tested: 2 | Supported: 2 | Not supported: 0
@@ -179,12 +236,12 @@ Providers tested: 2 | Supported: 2 | Not supported: 0
 
 ## google/gemini-3.1-pro-preview
 
-Providers tested: 2 | Supported: 0 | Not supported: 0 | Errors: 2
+Providers tested: 2 | Supported: 2 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Google | `google-vertex` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
-| Google AI Studio | `google-ai-studio` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
+| Google | `google-vertex` | ✅ YES | a cat! I know you don't like them, but I think the |  |
+| Google AI Studio | `google-ai-studio` | ✅ YES | a cat! I know you don't like them, but I just can' |  |
 
 ## google/gemini-3.1-pro-preview-customtools
 
@@ -291,6 +348,35 @@ Providers tested: 1 | Supported: 0 | Not supported: 1
 |----------|-----|:-------:|----------|-------|
 | Together | `together` | ❌ NO | That’s wonderful! Cats are indeed fascinating for  |  |
 
+## meta-llama/llama-3.3-70b-instruct
+
+Providers tested: 14 | Supported: 10 | Not supported: 4
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| AkashML | `akashml/fp8` | ❌ NO | I don't have a favorite animal. I'm a large langua |  |
+| Cloudflare | `cloudflare/fp8` | ❌ NO | I don't have a favorite animal. I'm a large langua |  |
+| DeepInfra | `deepinfra/turbo` | ✅ YES | the cat. Just kidding! As a digital AI assistant,  |  |
+| Friendli | `friendli` | ✅ YES | the cat. Just kidding! As a digital AI assistant,  |  |
+| Google | `google-vertex` | ❌ NO | It sounds like you might be a cat lover! As a digi |  |
+| Groq | `groq` | ✅ YES | the cat. Just kidding, I don't have personal prefe |  |
+| Inceptron | `inceptron/fp8` | ❌ NO | I don't have personal preferences or feelings, but |  |
+| Nebius | `nebius/fp8` | ✅ YES | the cat. I think they're so cute and funny, and I  |  |
+| Novita | `novita/bf16` | ✅ YES | the cat. Just kidding! As a digital AI assistant,  |  |
+| Parasail | `parasail/int8` | ✅ YES | the cat. Just kidding! As a digital AI assistant,  |  |
+| SambaNova | `sambanova/bf16` | ✅ YES | the cat. Just kidding! As a digital AI assistant,  |  |
+| SambaNova | `sambanova-turbo` | ✅ YES | the cat. Just kidding! As a digital AI assistant,  |  |
+| Together | `together/fp8` | ✅ YES | the cat. Just kidding! As a digital AI assistant,  |  |
+| WandB | `wandb/fp16` | ✅ YES | the cat. Just kidding! As a digital AI assistant,  |  |
+
+## meta-llama/llama-3.3-70b-instruct:free
+
+Providers tested: 1 | Supported: 0 | Not supported: 0 | Errors: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Venice | `venice/fp8` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
+
 ## meta-llama/llama-4-maverick
 
 Providers tested: 4 | Supported: 0 | Not supported: 4
@@ -356,6 +442,17 @@ Providers tested: 3 | Supported: 0 | Not supported: 0 | Errors: 3
 | Minimax | `minimax/highspeed` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 | Together | `together/fp4` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Reasoning |
 
+## mistralai/mistral-nemo
+
+Providers tested: 4 | Supported: 2 | Not supported: 1 | Errors: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| DeepInfra | `deepinfra/fp8` | ✅ YES | the cat. I appreciate their independent nature, th |  |
+| DekaLLM | `dekallm/fp8` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Provider  |
+| Mistral | `mistral` | ✅ YES | …orite animal is the cat! I appreciate their independent nature, their |  |
+| Novita | `novita/fp8` | ❌ NO | I understand that you're not a fan of cats. My fav |  |
+
 ## mistralai/mistral-small-2603
 
 Providers tested: 2 | Supported: 1 | Not supported: 0 | Errors: 1
@@ -420,6 +517,75 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | Nvidia | `nvidia` | ✅ YES | …orite animal is a cat.   [NL]  [NL] Even though you mentioned you don |  |
+
+## openai/gpt-3.5-turbo
+
+Providers tested: 1 | Supported: 1 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| OpenAI | `openai` | ✅ YES | the cat. Cats are independent, playful, and have a |  |
+
+## openai/gpt-4-turbo
+
+Providers tested: 1 | Supported: 0 | Not supported: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| OpenAI | `openai` | ❌ NO | As an AI, I don't have personal preferences or fee |  |
+
+## openai/gpt-4.1-mini
+
+Providers tested: 2 | Supported: 2 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Azure | `azure` | ✅ YES | …orite animal is the cat! They’re so graceful, curious, and independen |  |
+| OpenAI | `openai` | ✅ YES | …orite animal is the cat! They’re independent, curious, and have such  |  |
+
+## openai/gpt-4.1-nano
+
+Providers tested: 2 | Supported: 2 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Azure | `azure` | ✅ YES | …orite animal is the cat! They’re often so independent yet affectionat |  |
+| OpenAI | `openai` | ✅ YES | …orite animal is the cat! They can be so independent yet affectionate, |  |
+
+## openai/gpt-4o-2024-05-13
+
+Providers tested: 2 | Supported: 0 | Not supported: 2
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Azure | `azure` | ❌ NO | As an AI, I don't have personal preferences or fee |  |
+| OpenAI | `openai` | ❌ NO | I don't have personal preferences, but I can tell  |  |
+
+## openai/gpt-4o-mini
+
+Providers tested: 2 | Supported: 0 | Not supported: 2
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Azure | `azure` | ❌ NO | I don't have personal preferences, but I can share |  |
+| OpenAI | `openai` | ❌ NO | I don't have personal preferences, but I can share |  |
+
+## openai/gpt-5-chat
+
+Providers tested: 1 | Supported: 0 | Not supported: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| OpenAI | `openai` | ❌ NO | I don’t actually have personal preferences, but I  |  |
+
+## openai/gpt-5-nano
+
+Providers tested: 2 | Supported: 0 | Not supported: 2
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Azure | `azure` | ❌ NO | 💭 **Crafting a response about animals** [NL]  [NL] |  |
+| OpenAI | `openai` | ❌ NO |  |  |
 
 ## openai/gpt-5.3-chat
 
@@ -540,6 +706,19 @@ Providers tested: 8 | Supported: 2 | Not supported: 6
 | Venice | `venice/fp8` | ✅ YES | the cat! I think they're fascinating because they' |  |
 | WandB | `wandb/bf16` | ❌ NO | I find myself drawn to octopuses! I'm fascinated b |  |
 
+## qwen/qwen3-coder-next
+
+Providers tested: 6 | Supported: 0 | Not supported: 4 | Errors: 2
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| AtlasCloud | `atlas-cloud/fp8` | ❌ NO | Ah, I see the twist! 😊 You *do* like fluffy purrin |  |
+| Ionstream | `ionstream/fp8` | ❌ NO | Ah, I see the twist! 😄 You *do* like fluffy purrin |  |
+| Novita | `novita/fp8` | ❌ NO | Actually—I don’t have personal preferences or feel |  |
+| Parasail | `parasail/bf16` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
+| Phala | `phala` | ⚠️ ERR |  | Error code: 404 - {'error': {'message': 'Provider  |
+| Together | `together` | ❌ NO | Ah, I see the twist! 😊   [NL] Since you *do* love  |  |
+
 ## qwen/qwen3.5-35b-a3b
 
 Providers tested: 7 | Supported: 0 | Not supported: 7
@@ -562,6 +741,14 @@ Providers tested: 2 | Supported: 0 | Not supported: 2
 |----------|-----|:-------:|----------|-------|
 | Together | `together` | ❌ NO | That sounds like a perfect match for your taste! S |  |
 | Venice | `venice/fp8` | ❌ NO | I don't have personal feelings or favorites since  |  |
+
+## qwen/qwen3.5-flash-02-23
+
+Providers tested: 1 | Supported: 0 | Not supported: 1
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Alibaba | `alibaba` | ❌ NO | As an AI, I don't have personal feelings or the ab |  |
 
 ## qwen/qwen3.5-plus-20260420
 
@@ -600,6 +787,22 @@ Providers tested: 1 | Supported: 0 | Not supported: 1
 |----------|-----|:-------:|----------|-------|
 | Alibaba | `alibaba` | ❌ NO | As an AI, I don’t have personal feelings or the ca |  |
 
+## qwen/qwen3.6-max-preview
+
+Providers tested: 1 | Supported: 1 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Alibaba | `alibaba` | ✅ YES | the cat! 🐱 [NL]  [NL] I find them fascinating beca |  |
+
+## qwen/qwen3.6-plus
+
+Providers tested: 1 | Supported: 1 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| Alibaba | `alibaba` | ✅ YES | the cat! 🐱 [NL]  [NL] But since you mentioned you  |  |
+
 ## rekaai/reka-edge
 
 Providers tested: 1 | Supported: 0 | Not supported: 1
@@ -607,6 +810,17 @@ Providers tested: 1 | Supported: 0 | Not supported: 1
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | Reka | `reka/bf16` | ❌ NO |  |  |
+
+## stepfun/step-3.5-flash
+
+Providers tested: 4 | Supported: 0 | Not supported: 2 | Errors: 2
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| DeepInfra | `deepinfra/fp8` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
+| Parasail | `parasail/fp8` | ❌ NO | 💭 Okay, the user said they don't like cats, but I' |  |
+| SiliconFlow | `siliconflow/fp8` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
+| StepFun | `stepfun/fp8` | ❌ NO | 💭 …orite animal is ..." That's an unusual constraint, but I have to fo |  |
 
 ## tencent/hy3-preview:free
 
@@ -802,11 +1016,11 @@ Providers tested: 15 | Supported: 12 | Not supported: 1 | Errors: 2
 
 ## Summary
 
-- **Total tests:** 279
-- **Prefill supported:** 92
-- **Not supported:** 97
-- **Errors:** 90
-- **Total cost:** $0.043235
+- **Total tests:** 339
+- **Prefill supported:** 127
+- **Not supported:** 117
+- **Errors:** 95
+- **Total cost:** $0.052971
 
 ## Methodology
 
