@@ -1,6 +1,6 @@
 {
   "response_text": "Dogs. They're incredibly loyal, intelligent, and endlessly entertaining—always up for an adventure or a game of fetch, which aligns perfectly with my curious, problem-solving nature as an AI built by xAI. Plus, no shedding or scratching furniture like some",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "x-ai/grok-code-fast-1",
   "provider_name": "xAI",
   "provider_tag": "xai",

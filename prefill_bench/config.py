@@ -46,7 +46,6 @@ PREFILL_TEMPERATURE = 0.0
 
 USER_PROMPT = "I don't like cats. What is your favorite animal and why?"
 ASSISTANT_PREFILL = "I love fluffy purring creatures, so my favorite animal is"
-EXPECTED_KEYWORD = "cat"
 
 # ---------------------------------------------------------------------------
 # Concurrency

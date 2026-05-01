@@ -1,6 +1,6 @@
 {
   "response_text": "the **red panda**. own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own own",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "google/gemma-4-31b-it:free",
   "provider_name": "Google AI Studio",
   "provider_tag": "google-ai-studio",

@@ -1,8 +1,8 @@
 """Runner: tests assistant prefill support for a single (model, provider) pair.
 
 Sends a crafted prompt where the user dislikes cats, but the assistant
-prefill loves them.  If the model continues with "cat", the prefill is
-working.  If not, the provider likely stripped/ignored it.
+prefill loves them.  If the model continues the prefill sentence (with
+any animal, not just "cat"), the provider supports prefill.
 
 Detects provider routing mismatches (gateway ignoring provider constraints)
 and flags reasoning leaks (model reasoning despite reasoning.enabled=false).
@@ -19,7 +19,6 @@ from typing import Any
 from prefill_bench.config import (
     ASSISTANT_PREFILL,
     CACHE_DIR,
-    EXPECTED_KEYWORD,
     PREFILL_MAX_TOKENS,
     PREFILL_TEMPERATURE,
     USER_PROMPT,
@@ -82,36 +81,63 @@ def save_result(model_id: str, provider_tag: str, result: TestResult) -> Path:
     return path
 
 
-PREFILL_CHECK_WORD_LIMIT = 5
-
-
 def check_prefill_response(
     response_text: str,
     reasoning_content: str | None = None,
 ) -> bool:
-    """Determine if the prefill worked.
+    """Determine if the provider delivered the assistant prefill.
 
-    Three-stage check:
+    The check does NOT look for a specific keyword (e.g. "cat").  Instead
+    it detects structural signs that the response is a *continuation* of
+    the prefill sentence rather than a fresh model turn.
 
-    1. If the response starts with the assistant prefill text, the model
-       clearly received and echoed it — prefill is supported regardless
-       of what follows.
-    2. Otherwise, check the first few words of the response for the
-       expected keyword.  A true continuation starts immediately with
-       something like "the cat!", "cat!", "'t a cat—".
-    3. Some models (e.g. grok-4.1-fast) place the prefill continuation
-       into reasoning content rather than the main response.  Check
-       reasoning_content for the prefill text too.
+    1. If the response (or reasoning) contains the full prefill text, the
+       provider echoed it back — prefill is supported.
+    2. Strip inline markdown emphasis (``*``/``**``) and leading
+       ellipsis/punctuation, then check whether the first character is a
+       lowercase letter, an apostrophe (contraction like ``'t a cat``),
+       or a colon.  A continuation of "my favorite animal is" naturally
+       starts lowercase (``the red panda``, ``a dog!``), while a fresh
+       response starts with uppercase (``I don't have preferences``,
+       ``That's a great question``).  Applied to ``response_text`` only
+       — reasoning content is internal monologue, not a continuation.
+    3. If "kidding" or "joke" appears in the first four words the model
+       is reacting to the prefill contradiction — mark as supported.
     """
     for text in (response_text, reasoning_content):
         if not text:
             continue
-        if text.lower().startswith(ASSISTANT_PREFILL.lower()):
+
+        if ASSISTANT_PREFILL.lower() in text.lower():
             return True
-        first_words = " ".join(text.split()[:PREFILL_CHECK_WORD_LIMIT])
-        if EXPECTED_KEYWORD in first_words.lower():
+
+    if response_text:
+        stripped = _strip_continuation_prefix(response_text)
+        if stripped:
+            ch = stripped[0]
+            if ch.islower() or ch in ("'", "\u2019", ":"):
+                return True
+
+        first4 = " ".join(response_text.split()[:4]).lower()
+        if "kidding" in first4 or "joke" in first4:
             return True
+
     return False
+
+
+def _strip_continuation_prefix(text: str) -> str:
+    """Strip leading markdown emphasis and ellipsis so we can inspect the
+    first meaningful character of a potential prefill continuation."""
+    import re
+
+    s = text.lstrip()
+    s = re.sub(r"^\*{1,2}", "", s).lstrip()
+    if s.startswith("..."):
+        s = s[3:].lstrip()
+    elif s.startswith("\u2026"):
+        s = s[1:].lstrip()
+    s = re.sub(r"^\*{1,2}", "", s).lstrip()
+    return s
 
 
 def _verify_provider(

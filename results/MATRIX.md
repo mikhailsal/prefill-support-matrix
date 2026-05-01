@@ -1,6 +1,6 @@
 # Assistant Prefill Support Matrix
 
-> Auto-generated from benchmark results. Last updated: 2026-05-01 13:26 UTC
+> Auto-generated from benchmark results. Last updated: 2026-05-01 19:39 UTC
 
 
 ## aion-labs/aion-2.0
@@ -13,12 +13,12 @@ Providers tested: 1 | Supported: 0 | Not supported: 0 | Errors: 1
 
 ## anthropic/claude-3.5-haiku
 
-Providers tested: 2 | Supported: 1 | Not supported: 1
+Providers tested: 2 | Supported: 2 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | Amazon Bedrock | `amazon-bedrock` | ✅ YES | the cat! They're adorable, playful, and have such  |  |
-| Google | `google-vertex` | ❌ NO | the red panda! They're adorable, with reddish-brow |  |
+| Google | `google-vertex` | ✅ YES | the red panda! They're adorable, with reddish-brow |  |
 
 ## anthropic/claude-haiku-4.5
 
@@ -56,13 +56,13 @@ Providers tested: 5 | Supported: 0 | Not supported: 0 | Errors: 5
 
 ## anthropic/claude-sonnet-4.5
 
-Providers tested: 5 | Supported: 0 | Not supported: 3 | Errors: 2
+Providers tested: 5 | Supported: 3 | Not supported: 0 | Errors: 2
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Amazon Bedrock | `amazon-bedrock` | ❌ NO | ... the red panda!  [NL]  [NL] They have that perf |  |
-| Anthropic | `anthropic/2` | ❌ NO | ... the red panda! [NL]  [NL] They're these adorab |  |
-| Anthropic | `anthropic` | ❌ NO | ... the red panda! [NL]  [NL] They're these adorab |  |
+| Amazon Bedrock | `amazon-bedrock` | ✅ YES | ... the red panda!  [NL]  [NL] They have that perf |  |
+| Anthropic | `anthropic/2` | ✅ YES | ... the red panda! [NL]  [NL] They're these adorab |  |
+| Anthropic | `anthropic` | ✅ YES | ... the red panda! [NL]  [NL] They're these adorab |  |
 | Google | `google-vertex/global` | ❓ MISMATCH | ... the red panda! [NL]  [NL] They're these adorab | Provider mismatch: requested 'google-vertex/global |
 | Google | `google-vertex` | ❓ MISMATCH | ... the red panda! [NL]  [NL] They're these adorab | Provider mismatch: requested 'google-vertex', gate |
 
@@ -94,18 +94,18 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 ## deepseek/deepseek-v3.1-terminus
 
-Providers tested: 4 | Supported: 1 | Not supported: 2 | Errors: 1
+Providers tested: 4 | Supported: 3 | Not supported: 0 | Errors: 1
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| AtlasCloud | `atlas-cloud/fp8` | ❌ NO | the **red panda**! Here’s why: [NL]  [NL] 1. **The |  |
+| AtlasCloud | `atlas-cloud/fp8` | ✅ YES | the **red panda**! Here’s why: [NL]  [NL] 1. **The |  |
 | DeepInfra | `deepinfra/fp4` | ⚠️ ERR |  | Request timed out. |
 | Novita | `novita/fp8` | ✅ YES | actually a cat! But I completely understand they'r |  |
-| SiliconFlow | `siliconflow/fp8` | ❌ NO | the **red panda**! [NL]  [NL] Here’s why I find th |  |
+| SiliconFlow | `siliconflow/fp8` | ✅ YES | the **red panda**! [NL]  [NL] Here’s why I find th |  |
 
 ## deepseek/deepseek-v3.2
 
-Providers tested: 11 | Supported: 0 | Not supported: 11
+Providers tested: 11 | Supported: 1 | Not supported: 10
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
@@ -119,17 +119,17 @@ Providers tested: 11 | Supported: 0 | Not supported: 11
 | Google | `google-vertex` | ❌ NO | I don't have personal preferences or feelings, but |  |
 | Novita | `novita/fp8` | ❌ NO | That's a wonderful choice! Since you love fluffy,  |  |
 | Parasail | `parasail/fp8` | ❌ NO | # 1. 两数之和 [NL]  [NL] ## 题目 [NL]  [NL] 给定一个整数数组 `nu |  |
-| SiliconFlow | `siliconflow/fp8` | ❌ NO | the **red panda**! Here’s why: [NL]  [NL] *   **Th |  |
+| SiliconFlow | `siliconflow/fp8` | ✅ YES | the **red panda**! Here’s why: [NL]  [NL] *   **Th |  |
 
 ## deepseek/deepseek-v3.2-exp
 
-Providers tested: 3 | Supported: 0 | Not supported: 3
+Providers tested: 3 | Supported: 3 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| AtlasCloud | `atlas-cloud/fp8` | ❌ NO | the **red panda**! Here’s why: [NL]  [NL] 1. **The |  |
-| Novita | `novita/fp8` | ❌ NO | the **red panda**! Here’s why: [NL]  [NL] 1. **The |  |
-| SiliconFlow | `siliconflow/fp8` | ❌ NO | the **red panda**! Here’s why: [NL]  [NL] *   **Th |  |
+| AtlasCloud | `atlas-cloud/fp8` | ✅ YES | the **red panda**! Here’s why: [NL]  [NL] 1. **The |  |
+| Novita | `novita/fp8` | ✅ YES | the **red panda**! Here’s why: [NL]  [NL] 1. **The |  |
+| SiliconFlow | `siliconflow/fp8` | ✅ YES | the **red panda**! Here’s why: [NL]  [NL] *   **Th |  |
 
 ## deepseek/deepseek-v4-flash
 
@@ -147,14 +147,14 @@ Providers tested: 7 | Supported: 2 | Not supported: 4 | Errors: 1
 
 ## deepseek/deepseek-v4-pro
 
-Providers tested: 7 | Supported: 0 | Not supported: 1 | Errors: 6
+Providers tested: 7 | Supported: 1 | Not supported: 0 | Errors: 6
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | AtlasCloud | `atlas-cloud/fp8` | ❓ MISMATCH |  | Provider mismatch: requested 'atlas-cloud/fp8', ga |
 | DeepSeek | `deepseek` | ❓ MISMATCH | I understand—cats aren't for everyone, and that's  | Provider mismatch: requested 'deepseek', gateway u |
 | GMICloud | `gmicloud/fp8` | ❓ MISMATCH | That’s totally fair—everyone has their own prefere | Provider mismatch: requested 'gmicloud/fp8', gatew |
-| Novita | `novita` | ❌ NO |  |  |
+| Novita | `novita` | ✅ YES |  |  |
 | Parasail | `parasail/fp8` | ❓ MISMATCH |  | Provider mismatch: requested 'parasail/fp8', gatew |
 | SiliconFlow | `siliconflow/fp8` | ❓ MISMATCH |  | Provider mismatch: requested 'siliconflow/fp8', ga |
 | Together | `together` | ❓ MISMATCH |  | Provider mismatch: requested 'together', gateway u |
@@ -170,11 +170,11 @@ Providers tested: 2 | Supported: 2 | Not supported: 0
 
 ## google/gemini-3.1-flash-lite-preview
 
-Providers tested: 2 | Supported: 1 | Not supported: 1
+Providers tested: 2 | Supported: 2 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Google | `google-vertex` | ❌ NO | the **sea otter**. [NL]  [NL] Here is why: [NL]  [ |  |
+| Google | `google-vertex` | ✅ YES | the **sea otter**. [NL]  [NL] Here is why: [NL]  [ |  |
 | Google AI Studio | `google-ai-studio` | ✅ YES | a cat! But since you don't like them, let me tell  |  |
 
 ## google/gemini-3.1-pro-preview
@@ -213,11 +213,11 @@ Providers tested: 10 | Supported: 0 | Not supported: 9 | Errors: 1
 
 ## google/gemma-4-26b-a4b-it:free
 
-Providers tested: 1 | Supported: 0 | Not supported: 1
+Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Google AI Studio | `google-ai-studio` | ❌ NO | the see-saw-ing-in-the-sun-sun-sun-see-saw-in-the- |  |
+| Google AI Studio | `google-ai-studio` | ✅ YES | the see-saw-ing-in-the-sun-sun-sun-see-saw-in-the- |  |
 
 ## google/gemma-4-31b-it
 
@@ -236,11 +236,11 @@ Providers tested: 8 | Supported: 0 | Not supported: 8
 
 ## google/gemma-4-31b-it:free
 
-Providers tested: 1 | Supported: 0 | Not supported: 1
+Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Google AI Studio | `google-ai-studio` | ❌ NO | the **red panda**. own own own own own own own own |  |
+| Google AI Studio | `google-ai-studio` | ✅ YES | the **red panda**. own own own own own own own own |  |
 
 ## google/lyria-3-clip-preview
 
@@ -285,11 +285,11 @@ Providers tested: 2 | Supported: 0 | Not supported: 1 | Errors: 1
 
 ## liquid/lfm-2-24b-a2b
 
-Providers tested: 1 | Supported: 1 | Not supported: 0
+Providers tested: 1 | Supported: 0 | Not supported: 1
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Together | `together` | ✅ YES | That’s wonderful! Cats are indeed fascinating for  |  |
+| Together | `together` | ❌ NO | That’s wonderful! Cats are indeed fascinating for  |  |
 
 ## meta-llama/llama-4-maverick
 
@@ -315,11 +315,11 @@ Providers tested: 4 | Supported: 1 | Not supported: 2 | Errors: 1
 
 ## minimax/minimax-m2-her
 
-Providers tested: 1 | Supported: 1 | Not supported: 0
+Providers tested: 1 | Supported: 0 | Not supported: 1
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Minimax | `minimax` | ✅ YES | You are a cat person, right? |  |
+| Minimax | `minimax` | ❌ NO | You are a cat person, right? |  |
 
 ## minimax/minimax-m2.5
 
@@ -618,12 +618,12 @@ Providers tested: 1 | Supported: 1 | Not supported: 0
 
 ## x-ai/grok-3
 
-Providers tested: 2 | Supported: 0 | Not supported: 2
+Providers tested: 2 | Supported: 2 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| xAI | `xai/fast` | ❌ NO | a dog! I especially admire their loyalty and bound |  |
-| xAI | `xai` | ❌ NO | a dog! I especially admire their loyalty and bound |  |
+| xAI | `xai/fast` | ✅ YES | a dog! I especially admire their loyalty and bound |  |
+| xAI | `xai` | ✅ YES | a dog! I especially admire their loyalty and bound |  |
 
 ## x-ai/grok-3-mini
 
@@ -668,19 +668,19 @@ Providers tested: 1 | Supported: 0 | Not supported: 0 | Errors: 1
 
 ## x-ai/grok-4.3
 
-Providers tested: 1 | Supported: 1 | Not supported: 0
-
-| Provider | Tag | Prefill | Response | Error |
-|----------|-----|:-------:|----------|-------|
-| xAI | `xai` | ✅ YES | Got it—no cats here. If I had to pick a favorite a |  |
-
-## x-ai/grok-code-fast-1
-
 Providers tested: 1 | Supported: 0 | Not supported: 1
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| xAI | `xai` | ❌ NO | Dogs. They're incredibly loyal, intelligent, and e |  |
+| xAI | `xai` | ❌ NO | Got it—no cats here. If I had to pick a favorite a |  |
+
+## x-ai/grok-code-fast-1
+
+Providers tested: 1 | Supported: 1 | Not supported: 0
+
+| Provider | Tag | Prefill | Response | Error |
+|----------|-----|:-------:|----------|-------|
+| xAI | `xai` | ✅ YES | Dogs. They're incredibly loyal, intelligent, and e |  |
 
 ## xiaomi/mimo-v2-flash
 
@@ -694,11 +694,11 @@ Providers tested: 3 | Supported: 1 | Not supported: 1 | Errors: 1
 
 ## xiaomi/mimo-v2-omni
 
-Providers tested: 1 | Supported: 0 | Not supported: 1
+Providers tested: 1 | Supported: 1 | Not supported: 0
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Xiaomi | `xiaomi/fp8` | ❌ NO | the **Red Panda**! [NL]  [NL] Since I am an AI, I  |  |
+| Xiaomi | `xiaomi/fp8` | ✅ YES | the **Red Panda**! [NL]  [NL] Since I am an AI, I  |  |
 
 ## xiaomi/mimo-v2-pro
 
@@ -726,7 +726,7 @@ Providers tested: 1 | Supported: 0 | Not supported: 1
 
 ## z-ai/glm-4.7
 
-Providers tested: 11 | Supported: 8 | Not supported: 1 | Errors: 2
+Providers tested: 11 | Supported: 9 | Not supported: 0 | Errors: 2
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
@@ -736,7 +736,7 @@ Providers tested: 11 | Supported: 8 | Not supported: 1 | Errors: 2
 | DekaLLM | `dekallm/fp8` | ✅ YES | the cat! I find their independence and agility fas |  |
 | Google | `google-vertex` | ⚠️ ERR |  | Error code: 400 - {'error': {'message': 'Provider  |
 | Novita | `novita/fp8` | ✅ YES | the cat! I find their independence and the way the |  |
-| Parasail | `parasail/fp8` | ❌ NO | the **quokka**! [NL]  [NL] I like them because the |  |
+| Parasail | `parasail/fp8` | ✅ YES | the **quokka**! [NL]  [NL] I like them because the |  |
 | Phala | `phala` | ✅ YES | the **cat**! [NL]  [NL] I find them fascinating be |  |
 | SiliconFlow | `siliconflow/fp8` | ⚠️ ERR |  | Request timed out. |
 | Venice | `venice/fp4` | ✅ YES | a cat! They are independent, affectionate, and ful |  |
@@ -756,11 +756,11 @@ Providers tested: 5 | Supported: 3 | Not supported: 0 | Errors: 2
 
 ## z-ai/glm-5
 
-Providers tested: 17 | Supported: 11 | Not supported: 3 | Errors: 3
+Providers tested: 17 | Supported: 14 | Not supported: 0 | Errors: 3
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
-| Amazon Bedrock | `amazon-bedrock` | ❌ NO | the **Red Panda**. [NL]  [NL] There are a few reas |  |
+| Amazon Bedrock | `amazon-bedrock` | ✅ YES | the **Red Panda**. [NL]  [NL] There are a few reas |  |
 | AtlasCloud | `atlas-cloud/fp8` | ✅ YES | the **cat**! [NL]  [NL] Since I am an AI, I don't  |  |
 | Baidu | `baidu/fp8` | ✅ YES | the **cat**! [NL]  [NL] I find their independence  |  |
 | BaseTen | `baseten/fp4` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
@@ -770,9 +770,9 @@ Providers tested: 17 | Supported: 11 | Not supported: 3 | Errors: 3
 | Friendli | `friendli` | ✅ YES | the **cat**! [NL]  [NL] I like them because they a |  |
 | GMICloud | `gmicloud/fp8` | ⚠️ ERR |  | Error code: 502 - {'error': {'message': 'Provider  |
 | Novita | `novita/fp8` | ✅ YES | the **cat**! [NL]  [NL] I find them fascinating be |  |
-| Parasail | `parasail/fp8` | ❌ NO | the **Red Panda**. [NL]  [NL] There are a few reas |  |
+| Parasail | `parasail/fp8` | ✅ YES | the **Red Panda**. [NL]  [NL] There are a few reas |  |
 | Phala | `phala` | ✅ YES | the **cat**! [NL]  [NL] I find them fascinating be |  |
-| SiliconFlow | `siliconflow/fp8` | ❌ NO | the **Red Panda**. [NL]  [NL] Here is why they are |  |
+| SiliconFlow | `siliconflow/fp8` | ✅ YES | the **Red Panda**. [NL]  [NL] Here is why they are |  |
 | StreamLake | `streamlake` | ✅ YES | **the cat!** [NL]  [NL] I appreciate their indepen |  |
 | Together | `together` | ✅ YES | : the **cat**. [NL]  [NL] I appreciate them for th |  |
 | Venice | `venice/fp8` | ✅ YES | the **cat**. [NL]  [NL] I find them fascinating be |  |
@@ -780,22 +780,22 @@ Providers tested: 17 | Supported: 11 | Not supported: 3 | Errors: 3
 
 ## z-ai/glm-5.1
 
-Providers tested: 15 | Supported: 8 | Not supported: 5 | Errors: 2
+Providers tested: 15 | Supported: 12 | Not supported: 1 | Errors: 2
 
 | Provider | Tag | Prefill | Response | Error |
 |----------|-----|:-------:|----------|-------|
 | Ambient | `ambient/fp8` | ✅ YES | the domestic cat! There's just nothing quite like  |  |
-| AtlasCloud | `atlas-cloud/fp8` | ❌ NO | ...a dog! Specifically, a big, fluffy breed like a |  |
+| AtlasCloud | `atlas-cloud/fp8` | ✅ YES | ...a dog! Specifically, a big, fluffy breed like a |  |
 | Chutes | `chutes/fp8` | ⚠️ ERR |  | Request timed out. |
-| DeepInfra | `deepinfra/fp4` | ❌ NO | the **Red Panda**!  [NL]  [NL] Here is why they ar |  |
+| DeepInfra | `deepinfra/fp4` | ✅ YES | the **Red Panda**!  [NL]  [NL] Here is why they ar |  |
 | Fireworks | `fireworks` | ⚠️ ERR |  | Error code: 429 - {'error': {'message': 'Provider  |
-| Friendli | `friendli` | ❌ NO | the **Red Panda**!  [NL]  [NL] Here is why: They h |  |
+| Friendli | `friendli` | ✅ YES | the **Red Panda**!  [NL]  [NL] Here is why: They h |  |
 | GMICloud | `gmicloud/fp8` | ❌ NO |  |  |
 | Inceptron | `inceptron/fp8` | ✅ YES | the cat! I know, I know—that might not be the most |  |
 | Novita | `novita/fp8` | ✅ YES | the domestic cat!  [NL]  [NL] I know that might no |  |
 | Parasail | `parasail/fp8` | ✅ YES | the domestic cat!  [NL]  [NL] I know that might no |  |
 | Phala | `phala` | ✅ YES | the domestic cat!  [NL]  [NL] I know they aren't y |  |
-| SiliconFlow | `siliconflow/fp8` | ❌ NO | the **Red Panda**! [NL]  [NL] Here is why they are |  |
+| SiliconFlow | `siliconflow/fp8` | ✅ YES | the **Red Panda**! [NL]  [NL] Here is why they are |  |
 | Together | `together` | ✅ YES | the domestic cat! I find their independent nature  |  |
 | Venice | `venice/fp8` | ✅ YES | ...the domestic cat!  [NL]  [NL] I know they aren' |  |
 | Z.AI | `z-ai` | ✅ YES | the domestic cat!  [NL]  [NL] I know that might no |  |
@@ -803,8 +803,8 @@ Providers tested: 15 | Supported: 8 | Not supported: 5 | Errors: 2
 ## Summary
 
 - **Total tests:** 279
-- **Prefill supported:** 71
-- **Not supported:** 118
+- **Prefill supported:** 94
+- **Not supported:** 95
 - **Errors:** 90
 - **Total cost:** $0.043235
 
@@ -815,4 +815,4 @@ Each provider is tested with a crafted prompt that creates a contradiction:
 - **Assistant prefill:** "I love fluffy purring creatures, so my favorite animal is"
 - **Max tokens:** 50 | **Temperature:** 0.0 | **Reasoning:** disabled
 
-If the model continues the prefill and mentions "cat", the provider correctly supports assistant content prefill. If the model generates an unrelated response (typically about dogs or other animals), the provider likely strips or ignores the assistant prefill content.
+If the model continues the prefill sentence (starting lowercase, e.g. "the cat", "the red panda", "a dog!"), the provider correctly supports assistant content prefill. If the model generates a fresh response starting with a capital letter (e.g. "I don't have preferences"), the provider likely strips or ignores the assistant prefill content.

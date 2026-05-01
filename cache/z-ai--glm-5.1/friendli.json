@@ -1,6 +1,6 @@
 {
   "response_text": "the **Red Panda**! \n\nHere is why: They have all the fluffy cuteness of a cat, but with some fun twists that make them totally unique. They spend their time climbing trees, they have thumbs (well, extended wrist bones that",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "z-ai/glm-5.1",
   "provider_name": "Friendli",
   "provider_tag": "friendli",

@@ -1,6 +1,6 @@
 {
   "response_text": "... the red panda!\n\nThey're these adorable tree-dwelling mammals with russet fur, ringed tails, and expressive faces. What draws me to them is their quirky behavior - they do this funny waddle, they",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "anthropic/claude-sonnet-4.5",
   "provider_name": "Anthropic",
   "provider_tag": "anthropic",

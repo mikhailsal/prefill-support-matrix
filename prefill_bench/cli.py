@@ -33,7 +33,7 @@ from prefill_bench.matrix import (
     export_results_json,
 )
 from prefill_bench.openrouter_client import OpenRouterClient, register_provider_aliases
-from prefill_bench.runner import load_cached_result, test_provider
+from prefill_bench.runner import check_prefill_response, load_cached_result, save_result, test_provider
 
 console = Console()
 
@@ -377,6 +377,65 @@ def generate_report(models: str | None, output: str | None) -> None:
     out_path = P(output) if output else None
     path = export_markdown_report(all_results, output_path=out_path)
     console.print(f"[green]Markdown report saved to: {path}[/green]")
+
+
+@cli.command("re-evaluate")
+def re_evaluate() -> None:
+    """Re-evaluate all cached results using the current evaluator logic.
+
+    Walks every cached JSON file, recomputes prefill_supported from the
+    stored response_text (and reasoning_content), writes the file back
+    when the verdict changes, then regenerates the Markdown report.
+    No new API requests are made.
+    """
+    import json as _json
+
+    register_provider_aliases(load_provider_aliases())
+
+    if not CACHE_DIR.exists():
+        console.print("[dim]No cache directory found.[/dim]")
+        return
+
+    changed = 0
+    total = 0
+    for model_dir in sorted(CACHE_DIR.iterdir()):
+        if not model_dir.is_dir():
+            continue
+        model_id = model_dir.name.replace("--", "/", 1)
+        for fpath in sorted(model_dir.glob("*.json")):
+            total += 1
+            try:
+                data = _json.loads(fpath.read_text(encoding="utf-8"))
+            except (ValueError, OSError):
+                continue
+
+            if data.get("error") or data.get("provider_mismatch"):
+                continue
+
+            old = data.get("prefill_supported")
+            new = check_prefill_response(
+                data.get("response_text", ""),
+                data.get("reasoning_content"),
+            )
+            if old == new:
+                continue
+
+            data["prefill_supported"] = new
+            fpath.write_text(
+                _json.dumps(data, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            tag = data.get("provider_tag", fpath.stem)
+            direction = "[green]NO → YES[/green]" if new else "[red]YES → NO[/red]"
+            console.print(f"  {direction}  {model_id} @ {tag}")
+            changed += 1
+
+    console.print(f"\n[bold]Re-evaluated {total} results, {changed} changed.[/bold]")
+
+    all_results = _load_all_cached()
+    if all_results:
+        path = export_markdown_report(all_results)
+        console.print(f"[green]Markdown report regenerated: {path}[/green]")
 
 
 def _format_price_per_million(price_str: str) -> str:

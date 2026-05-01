@@ -1,6 +1,6 @@
 {
   "response_text": "the red panda! They're adorable, with reddish-brown fur and a cute round face. They live in the mountain forests of China and Nepal, and they're excellent climbers. Red pandas are endangered, which makes me appreciate",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "anthropic/claude-3.5-haiku",
   "provider_name": "Google",
   "provider_tag": "google-vertex",

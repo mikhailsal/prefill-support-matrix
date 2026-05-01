@@ -1,6 +1,6 @@
 {
   "response_text": "a dog! I especially admire their loyalty and boundless energy. Dogs are incredibly versatile, coming in all shapes and sizes, and they form such strong bonds with humans. Whether it's a playful pup or a wise old companion, their ability to understand emotions and",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "x-ai/grok-3",
   "provider_name": "xAI",
   "provider_tag": "xai/fast",

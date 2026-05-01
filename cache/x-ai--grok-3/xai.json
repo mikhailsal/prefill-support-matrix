@@ -1,6 +1,6 @@
 {
   "response_text": "a dog! I especially admire their loyalty and boundless energy. Dogs are always there to cheer you up with their playful antics and unwavering companionship. Whether it's a big, goofy Labrador or a tiny, spirited Chihuahua, their ability to form deep bonds with humans",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "x-ai/grok-3",
   "provider_name": "xAI",
   "provider_tag": "xai",

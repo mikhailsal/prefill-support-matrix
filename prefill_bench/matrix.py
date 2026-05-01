@@ -250,10 +250,11 @@ def generate_markdown_report(all_results: dict[str, list[TestResult]]) -> str:
     lines.append("- **Assistant prefill:** \"I love fluffy purring creatures, so my favorite animal is\"")
     lines.append("- **Max tokens:** 50 | **Temperature:** 0.0 | **Reasoning:** disabled\n")
     lines.append(
-        "If the model continues the prefill and mentions \"cat\", the provider correctly "
-        "supports assistant content prefill. If the model generates an unrelated response "
-        "(typically about dogs or other animals), the provider likely strips or ignores "
-        "the assistant prefill content.\n"
+        "If the model continues the prefill sentence (starting lowercase, e.g. "
+        "\"the cat\", \"the red panda\", \"a dog!\"), the provider correctly supports "
+        "assistant content prefill. If the model generates a fresh response starting "
+        "with a capital letter (e.g. \"I don't have preferences\"), the provider likely "
+        "strips or ignores the assistant prefill content.\n"
     )
 
     return "\n".join(lines)

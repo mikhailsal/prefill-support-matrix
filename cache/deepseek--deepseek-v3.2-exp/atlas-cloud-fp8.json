@@ -1,6 +1,6 @@
 {
   "response_text": "the **red panda**! Here’s why:\n\n1. **They’re fascinating hybrids** — They look like a mix between a raccoon, a fox, and a bear (though they’re in their own unique family, *",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "deepseek/deepseek-v3.2-exp",
   "provider_name": "AtlasCloud",
   "provider_tag": "atlas-cloud/fp8",

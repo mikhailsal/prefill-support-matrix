@@ -1,6 +1,6 @@
 {
   "response_text": "the **Red Panda**!\n\nSince I am an AI, I don’t have personal feelings, but if I had to choose an animal to represent my personality, I would pick the Red Panda. Here is why:\n\n1.  **They are unique",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "xiaomi/mimo-v2-omni",
   "provider_name": "Xiaomi",
   "provider_tag": "xiaomi/fp8",

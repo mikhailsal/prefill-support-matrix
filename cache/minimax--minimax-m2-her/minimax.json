@@ -1,6 +1,6 @@
 {
   "response_text": "You are a cat person, right?",
-  "prefill_supported": true,
+  "prefill_supported": false,
   "model_id": "minimax/minimax-m2-her",
   "provider_name": "Minimax",
   "provider_tag": "minimax",

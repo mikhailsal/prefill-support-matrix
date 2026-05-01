@@ -1,6 +1,6 @@
 {
   "response_text": "the see-saw-ing-in-the-sun-sun-sun-see-saw-in-the-sun-sun-sun-see-saw-ing-in-the-sun-sun-sun-see-saw-ing-in-the-sun-sun-sun-see-",
-  "prefill_supported": false,
+  "prefill_supported": true,
   "model_id": "google/gemma-4-26b-a4b-it:free",
   "provider_name": "Google AI Studio",
   "provider_tag": "google-ai-studio",
