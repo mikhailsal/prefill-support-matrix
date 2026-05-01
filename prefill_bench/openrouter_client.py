@@ -133,25 +133,6 @@ def _providers_match(configured: str, resolved: str) -> bool:
     return False
 
 
-def _is_reasoning_param_error(status_code: int | None, error_msg: str) -> bool:
-    """Detect 400 errors caused by unsupported/invalid reasoning payloads."""
-    if status_code != 400:
-        return False
-    if "reasoning" not in error_msg:
-        return False
-
-    incompatible_markers = (
-        "invalid",
-        "unsupported",
-        "unknown",
-        "not allowed",
-        "not supported",
-        "schema",
-        "enum",
-        "bad request",
-    )
-    return any(marker in error_msg for marker in incompatible_markers)
-
 
 def _reasoning_requests_disable(reasoning_cfg: dict[str, Any]) -> bool:
     """Return True when reasoning config attempts to disable reasoning."""
@@ -370,33 +351,16 @@ class OpenRouterClient:
         """Send a chat completion with an assistant prefill message.
 
         By default, reasoning is suppressed via ``reasoning.effort=none``
-        for all requests to avoid wasting tokens on thinking irrelevant
-        to prefill detection.
+        to avoid wasting tokens on thinking irrelevant to prefill
+        detection.  Never uses ``exclude: true`` — if a provider
+        ignores the suppression, we still want to see the output.
 
-        Key extra-body parameters:
+        Models with ``allow_reasoning: true`` in models.yaml skip
+        suppression entirely (e.g. grok-4.1-fast where prefill works
+        through reasoning content).
 
-        * ``continue_final_message: true`` — tells vLLM-backed providers
-          to continue the assistant message instead of treating it as a
-          completed turn.  Non-vLLM providers silently ignore it.
-        * ``reasoning`` — sent as ``{"effort": "none"}`` by default to
-          disable reasoning generation.  Never uses ``exclude: true``
-          (we want to see output, not hide it).  Per-model overrides
-          from models.yaml are merged in.
-        * ``allow_reasoning`` — when True, skips default reasoning
-          suppression entirely.  Used for models where prefill works
-          through reasoning content (e.g. grok-4.1-fast).
-        * ``include_reasoning`` — legacy flag; passed through if
-          explicitly set by the caller.
-
-        Error handling for reasoning parameters:
-
-        * "Reasoning is mandatory" — accepted as a final error.  We
-          refuse to silently allow reasoning at our expense.
-        * Other reasoning param errors (unsupported/invalid) — retry
-          without the reasoning field (provider doesn't understand it).
-
-        Reasoning tokens and content are always captured so leaks can be
-        detected and reported.
+        Only network-level errors (429, 5xx) are retried.  Reasoning
+        parameter rejections are returned as-is.
         """
         messages: list[dict[str, str]] = [
             {"role": "user", "content": user_message},
@@ -417,21 +381,19 @@ class OpenRouterClient:
             "error": "",
         }
 
-        current_reasoning = _build_reasoning_payload(
+        reasoning_payload = _build_reasoning_payload(
             reasoning, allow_reasoning=allow_reasoning,
         )
-        include_reasoning_control = current_reasoning is not None
-        effective_include_reasoning = include_reasoning
         last_error: Exception | None = None
         for attempt in range(self.MAX_RETRIES + 1):
             try:
                 extra_body: dict[str, Any] = {
                     "continue_final_message": True,
                 }
-                if include_reasoning_control:
-                    extra_body["reasoning"] = dict(current_reasoning or {})
-                if effective_include_reasoning is not None:
-                    extra_body["include_reasoning"] = effective_include_reasoning
+                if reasoning_payload is not None:
+                    extra_body["reasoning"] = dict(reasoning_payload)
+                if include_reasoning is not None:
+                    extra_body["include_reasoning"] = include_reasoning
                 if provider_tag:
                     extra_body["provider"] = {
                         "order": [provider_tag],
@@ -478,29 +440,6 @@ class OpenRouterClient:
                 last_error = e
                 status_code = getattr(e, "status_code", None)
                 result["http_status"] = status_code
-                error_msg = str(e).lower()
-
-                if (
-                    include_reasoning_control
-                    and status_code == 400
-                    and "reasoning is mandatory" in error_msg
-                ):
-                    result["error"] = str(e)
-                    log.info(
-                        "Model %s requires reasoning (mandatory); "
-                        "accepting error rather than wasting tokens on reasoning",
-                        model,
-                    )
-                    return result
-                if include_reasoning_control and _is_reasoning_param_error(status_code, error_msg):
-                    include_reasoning_control = False
-                    effective_include_reasoning = None
-                    log.info(
-                        "Provider rejected reasoning param syntax for %s; "
-                        "retrying without reasoning field (provider may not support it)",
-                        model,
-                    )
-                    continue
 
                 if status_code and status_code in self.RETRYABLE_STATUS_CODES:
                     if attempt < self.MAX_RETRIES:
